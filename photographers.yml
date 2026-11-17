@@ -1,0 +1,66 @@
+# ─────────────────────────────────────────────────────────────
+#  YOUR PHOTOGRAPHERS
+#
+#  To add someone, copy one block (from "- name:" down to the
+#  "lists:" line), paste it below the others and change the details.
+#  Keep the spaces at the start of each line exactly as they are.
+#
+#  name:   how their name shows in the book
+#  site:   the web page where their photos are
+#  lists:  your categories, in square brackets, separated by commas
+#  note:   (optional) a line of your own about them
+#
+#  Optional extras, only if a site doesn't work well:
+#  pages:  several pages to collect from, instead of just "site"
+#  feeds:  an RSS feed address to use as well
+#  follow: open the links on the page that contain this text
+#          and take the main photo from each (good for shops/galleries)
+#
+#  After you save ("Commit changes"), the book updates itself
+#  within a few minutes.
+# ─────────────────────────────────────────────────────────────
+
+following:
+
+  - name: Roman Fox
+    site: https://www.snapsbyfox.com
+    lists: [Street, Travel]
+
+  - name: James Popsys
+    site: https://www.jamespopsys.com
+    lists: [Landscape, Travel]
+
+  - name: Jason Kummerfeldt
+    site: https://graincheck.darkroom.com
+    follow: /products/
+    lists: [Film, Landscape]
+    note: Grainydays. His print shop on Darkroom.
+
+
+# ─────────────────────────────────────────────────────────────
+#  SUGGESTED: people you might like. They show in their own
+#  section of the book. To keep someone, move their block up
+#  into "following". To drop them, delete their block.
+# ─────────────────────────────────────────────────────────────
+
+suggested:
+
+  - name: Craig Whitehead
+    site: https://www.sixstreetunder.com
+    lists: [Street]
+    note: Fine-art street photography built on light, shadow and colour. Close to Roman Fox's eye.
+
+  - name: Willem Verbeeck
+    site: https://www.willemverbeeck.com
+    lists: [Film, Street]
+    note: Film photographer of quiet American cities and towns. Fits alongside Grainydays.
+
+  - name: Sean Tucker
+    site: https://www.seantucker.photography
+    lists: [Street, Portrait]
+    note: London street and portrait work, and thoughtful writing about photography.
+
+  - name: Thomas Heaton
+    site: https://www.thomasheaton.co.uk
+    lists: [Landscape]
+    note: UK landscape photographer, in the same outdoor and travel world as James Popsys.
