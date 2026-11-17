@@ -58,6 +58,152 @@ following:
     site: https://www.thomasheaton.co.uk
     lists: [Landscape]
     note: UK landscape photographer, in the same outdoor and travel world as James Popsys.
+  # ── Masters ─────────────────────────────────────────────
+
+  - name: Saul Leiter
+    site: https://www.saulleiterfoundation.org
+    lists: [Masters, Color]
+    note: Rain, reflections and soft colour in 1950s New York.
+
+  - name: Fan Ho
+    site: https://fanho-forgetmenot.com
+    lists: [Masters, Street]
+    note: Light and shadow in 1950s and 60s Hong Kong.
+
+  - name: Vivian Maier
+    site: https://www.vivianmaier.com
+    lists: [Masters, Street]
+    note: The nanny whose street photographs were found after her death.
+
+  - name: Joel Meyerowitz
+    site: https://joelmeyerowitz.com
+    lists: [Masters, Color, Street]
+    note: Early champion of colour street photography.
+
+  - name: Ernst Haas
+    site: https://ernst-haas.com
+    lists: [Masters, Color]
+    note: Colour pioneer. Motion, abstraction and New York.
+
+  - name: Fred Herzog
+    site: https://www.equinoxgallery.com/artists/fred-herzog
+    lists: [Masters, Color, Street]
+    note: Vancouver streets in Kodachrome, decades before colour was accepted.
+
+  - name: Alex Webb
+    site: https://www.webbnorriswebb.co
+    lists: [Masters, Color, Street]
+    note: Dense, layered colour. Shared site with Rebecca Norris Webb.
+
+  - name: Elliott Erwitt
+    site: https://www.elliotterwitt.com
+    lists: [Masters, Street]
+    note: Wit, dogs and absurd everyday moments.
+
+  - name: Daido Moriyama
+    site: https://www.moriyamadaido.com/en/
+    lists: [Masters, Street]
+    note: Grainy, high-contrast Tokyo.
+
+  - name: Harry Gruyaert
+    site: https://www.magnumphotos.com/photographer/harry-gruyaert/
+    lists: [Masters, Color]
+    note: Bold colour from Belgium, Morocco and India.
+
+  - name: Henri Cartier-Bresson
+    site: https://www.henricartierbresson.org/en/
+    lists: [Masters, Street]
+    note: The decisive moment.
+
+  # ── Contemporary street ─────────────────────────────────
+
+  - name: Matt Stuart
+    site: https://www.mattstuart.com
+    lists: [Street]
+    note: Funny, perfectly timed London moments.
+
+  - name: Tatsuo Suzuki
+    site: https://tatsuosuzuki.com
+    lists: [Street]
+    note: Gritty black-and-white Tokyo.
+
+  - name: Shin Noguchi
+    site: https://shinnoguchiphotography.com
+    lists: [Street]
+    note: Quiet, odd moments of daily life in Kamakura and Tokyo.
+
+  - name: Rinzi Ruiz
+    site: https://www.rinziruizphotography.com
+    lists: [Street]
+    note: Light and shadow in Los Angeles.
+
+  - name: Jesse Marlow
+    site: https://www.jessemarlow.com
+    lists: [Street, Color]
+    note: Colour, geometry and coincidence in Melbourne.
+
+  - name: Siegfried Hansen
+    site: https://siegfried-hansen.de
+    lists: [Street, Color]
+    note: Graphic lines and shapes in Hamburg.
+
+  - name: Trent Parke
+    site: https://www.magnumphotos.com/photographer/trent-parke/
+    lists: [Street]
+    note: Chasing harsh Australian light.
+
+  - name: Gueorgui Pinkhassov
+    site: https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/
+    lists: [Street, Color]
+    note: Reflections, details and rich colour.
+
+  # ── Vietnam ─────────────────────────────────────────────
+
+  - name: Philip Jones Griffiths
+    site: https://philipjonesgriffiths.org/timeline/vietnam/
+    lists: [Vietnam, Masters]
+    note: Vietnam Inc. The war and everyday Vietnamese life, 1960s and 70s.
+
+  - name: Catherine Karnow
+    site: https://catherinekarnow.com
+    lists: [Vietnam]
+    note: National Geographic photographer. Vietnam since 1990.
+
+  - name: Réhahn
+    site: https://www.rehahnphotographer.com
+    lists: [Vietnam]
+    note: Based in Hoi An. Portraits and Hoi An's yellow streets.
+
+  - name: Justin Mott
+    site: https://justinmott.com/street-photography-vietnam
+    lists: [Vietnam, Street]
+    note: Vietnam-based American. Hanoi and Saigon streets.
+
+  - name: Maika Elan
+    site: https://maikaelan.com
+    lists: [Vietnam]
+    note: Vietnamese documentary photographer. World Press Photo winner.
+
+  - name: Adrien Jean
+    site: https://www.adrienjeanphotography.com/saigonoi
+    lists: [Vietnam, Street]
+    note: French photographer in Saigon since 2014.
+
+  - name: Tran Tuan Viet
+    site: https://trantuanviet.com
+    lists: [Vietnam]
+    note: Hanoi-based Vietnamese photographer.
+
+  - name: Nguyen The Son
+    site: https://nguyenartfoundation.com/artist/nguyen-the-son/
+    pages: [https://artvietnamgallery.com/product-category/artist/vietnamese-artists/nguyen-the-son/]
+    lists: [Vietnam]
+    note: Hanoi artist-photographer. Old Quarter house fronts.
+
+  - name: Vietnam Streets
+    site: https://vietnamstreets.org
+    lists: [Vietnam, Street]
+    note: A collective of photographers shooting Vietnamese street life.
 
 
 suggested: []
