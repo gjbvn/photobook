@@ -163,6 +163,10 @@ class PageParser(HTMLParser):
         self.feeds = []
         self.og_image = None
         self.title = None
+        self.meta = {}          # og:site_name, author, og:title
+        self.ld_names = []      # names of people from JSON-LD
+        self._in_ld = False
+        self._ld_buf = []
         self._skip_depth = 0
         self._in_title = False
         self.is_wordpress = False
@@ -173,10 +177,14 @@ class PageParser(HTMLParser):
             self._skip_depth += 1
         if tag == "title":
             self._in_title = True
+        if tag == "script" and "ld+json" in a.get("type", "").lower():
+            self._in_ld, self._ld_buf = True, []
         if tag == "base" and a.get("href"):
             self.base = urllib.parse.urljoin(self.base, a["href"])
         if tag == "meta":
             prop = (a.get("property") or a.get("name") or "").lower()
+            if prop in ("og:site_name", "author", "og:title", "twitter:title") and a.get("content") and prop not in self.meta:
+                self.meta[prop] = a["content"].strip()
             if prop in ("og:image", "twitter:image") and not self.og_image:
                 self.og_image = a.get("content")
             if prop == "generator" and "wordpress" in a.get("content", "").lower():
@@ -212,8 +220,29 @@ class PageParser(HTMLParser):
             self._skip_depth -= 1
         if tag == "title":
             self._in_title = False
+        if tag == "script" and self._in_ld:
+            self._in_ld = False
+            try:
+                self._read_ld(json.loads("".join(self._ld_buf)))
+            except Exception:
+                pass
+
+    def _read_ld(self, obj):
+        if isinstance(obj, list):
+            for o in obj:
+                self._read_ld(o)
+        elif isinstance(obj, dict):
+            kind = obj.get("@type")
+            kinds = kind if isinstance(kind, list) else [kind]
+            if "Person" in kinds and isinstance(obj.get("name"), str):
+                self.ld_names.append(obj["name"].strip())
+            for key in ("@graph", "author", "creator", "founder"):
+                if key in obj:
+                    self._read_ld(obj[key])
 
     def handle_data(self, data):
+        if self._in_ld:
+            self._ld_buf.append(data)
         if self._in_title and data.strip() and not self.title:
             self.title = data.strip()
 
@@ -259,65 +288,145 @@ def parse_feed(xml_text, base):
 # Main collection logic
 # --------------------------------------------------------------------------
 
+GENERIC = {
+    "photography", "photographer", "photographers", "photos", "photo", "photographs", "portfolio",
+    "home", "homepage", "official", "website", "site", "studio", "prints", "print", "shop", "store",
+    "gallery", "galleries", "blog", "journal", "welcome", "index", "untitled", "about", "work",
+    "squarespace", "wordpress", "cargo", "format", "darkroom", "fine", "art", "film", "street",
+    "landscape", "travel", "page", "the", "by", "and", "&", "of", "online",
+}
+SEPARATORS = re.compile(r"\s+[|\-–—·•»:]\s+|\s*[|·•»]\s*")
+
+
+def clean_name(text):
+    """'Jane Doe Photography | Portfolio' -> ['Jane Doe', 'Portfolio']"""
+    out = []
+    for part in SEPARATORS.split(text or ""):
+        words = part.strip().strip(".,'\"").split()
+        # drop generic words from the ends ("Jane Doe Photography" -> "Jane Doe")
+        while words and words[-1].lower().strip(".,") in GENERIC:
+            words.pop()
+        while words and words[0].lower().strip(".,") in GENERIC:
+            words.pop(0)
+        if words:
+            out.append(" ".join(words))
+    return out
+
+
+def looks_like_person(name):
+    words = name.split()
+    return (1 < len(words) <= 4 and len(name) <= 40
+            and all(re.fullmatch(r"[A-ZÀ-ÝĐ][\w'’.\-]*", w) for w in words)
+            and not any(w.lower() in GENERIC for w in words))
+
+
+def guess_name(parser, url):
+    """Work out the photographer's name from their website."""
+    candidates = []  # (score, name)
+    for n in parser.ld_names:
+        candidates += [(6 + looks_like_person(c) * 3, c) for c in clean_name(n)]
+    for key, bonus in (("author", 3), ("og:site_name", 2), ("og:title", 1), ("twitter:title", 1)):
+        for c in clean_name(parser.meta.get(key, "")):
+            if "@" not in c and "http" not in c.lower():
+                candidates.append((bonus + looks_like_person(c) * 3, c))
+    for c in clean_name(parser.title or ""):
+        candidates.append((1 + looks_like_person(c) * 3, c))
+    candidates = [(s, c) for s, c in candidates if 1 < len(c) <= 50]
+    if candidates:
+        return max(candidates, key=lambda x: x[0])[1]
+    return host_of(url)
+
+
+def host_of(url):
+    return urllib.parse.urlsplit(url).hostname.lower().removeprefix("www.") if url else ""
+
+
+def site_list(person):
+    """All the websites for a photographer: 'site' first, then any 'pages'."""
+    out = []
+    for u in [person.get("site")] + list(person.get("pages") or []):
+        if u and u not in out:
+            out.append(u)
+    return out
+
+
+def collect_page(page, follow, log):
+    """Photos from one website. Returns (images, feeds_found)."""
+    found = []
+    final, html = get(page)
+    p = PageParser(final)
+    p.feed(html)
+    feeds = list(p.feeds)
+    if p.is_wordpress:
+        feeds.append(urllib.parse.urljoin(final, "/feed/"))
+
+    targets = []
+    if follow:
+        pattern = re.compile(follow)
+        for href in p.links:
+            if same_site(href, final) and pattern.search(href) and href not in targets:
+                targets.append(href)
+    if targets:
+        log(f"    following {len(targets[:MAX_FOLLOW])} linked pages on {page}")
+        for href in targets[:MAX_FOLLOW]:
+            try:
+                f2, h2 = get(href)
+            except Exception as e:
+                log(f"    ! {href}: {e}")
+                continue
+            p2 = PageParser(f2)
+            p2.feed(h2)
+            pick = p2.images[0][0] if p2.images else clean_image_url(p2.og_image, f2)
+            if pick:
+                found.append({"src": pick, "link": f2, "title": p2.title or ""})
+    else:
+        for url, alt in p.images:
+            found.append({"src": url, "link": final, "title": alt})
+    return found, feeds, p
+
+
 def collect(person, log):
-    """Return a list of {src, link, title} for one photographer."""
-    images = []
-    seen = set()
-
-    def add(src, link, title=""):
-        if src and src not in seen and len(images) < MAX_IMAGES:
-            seen.add(src)
-            images.append({"src": src, "link": link, "title": title})
-
-    site = person.get("site")
-    pages = person.get("pages") or ([site] if site else [])
+    """Return a list of {src, link, title} for one photographer, from all their websites."""
+    pages = site_list(person)
     feeds = list(person.get("feeds") or [])
     follow = person.get("follow")
-    discovered_feeds = []
+    limit = MAX_IMAGES if len(pages) <= 1 else MAX_IMAGES + 20
 
+    buckets, discovered = [], []
+    person["_guess"] = None
     for page in pages:
         try:
-            final, html = get(page)
+            imgs, f, parser = collect_page(page, follow, log)
+            if not person["_guess"] and not person.get("name"):
+                person["_guess"] = guess_name(parser, page)
+            buckets.append(imgs)
+            discovered += f
+            log(f"    {len(imgs)} photos on {page}")
         except Exception as e:
             log(f"    ! could not open {page}: {e}")
-            continue
-        p = PageParser(final)
-        p.feed(html)
-        discovered_feeds += p.feeds
-        if p.is_wordpress:
-            discovered_feeds.append(urllib.parse.urljoin(final, "/feed/"))
 
-        if follow:
-            pattern = re.compile(follow)
-            targets = []
-            for href in p.links:
-                if same_site(href, final) and pattern.search(href) and href not in targets:
-                    targets.append(href)
-            log(f"    following {len(targets[:MAX_FOLLOW])} linked pages")
-            for href in targets[:MAX_FOLLOW]:
-                try:
-                    f2, h2 = get(href)
-                except Exception as e:
-                    log(f"    ! {href}: {e}")
-                    continue
-                p2 = PageParser(f2)
-                p2.feed(h2)
-                pick = p2.images[0][0] if p2.images else clean_image_url(p2.og_image, f2)
-                add(pick, f2, p2.title or "")
-        else:
-            for url, alt in p.images:
-                add(url, final, alt)
-
-    # Use feeds when asked for, or when the page itself had too few photos
-    if feeds or len(images) < 6:
-        for feed in (feeds or discovered_feeds[:1]):
+    # Feeds: when asked for, or when the websites themselves gave too few photos
+    if feeds or sum(len(b) for b in buckets) < 6:
+        for feed in (feeds or discovered[:2]):
             try:
                 final, text = get(feed)
-                for img in parse_feed(text, final):
-                    add(img["src"], img["link"], img["title"])
+                buckets.append(parse_feed(text, final))
             except Exception as e:
                 log(f"    ! feed {feed}: {e}")
 
+    # Take turns between websites so every site gets a fair share of pages
+    images, seen = [], set()
+    while len(images) < limit and any(buckets):
+        for b in buckets:
+            while b:
+                img = b.pop(0)
+                if img["src"] not in seen:
+                    seen.add(img["src"])
+                    images.append(img)
+                    break
+            if len(images) >= limit:
+                break
+        buckets = [b for b in buckets if b]
     return images
 
 
@@ -325,14 +434,25 @@ def slug(name):
     return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
 
 
+def person_id(person):
+    """Named people go by their name; unnamed ones by their first website."""
+    if person.get("name"):
+        return slug(person["name"])
+    return slug(host_of(site_list(person)[0]))
+
+
 def load_people():
     data = yaml.safe_load(LIST_FILE.read_text(encoding="utf-8")) or {}
     people = []
     for status in ("following", "suggested"):
         for person in data.get(status) or []:
-            if not person or not person.get("name"):
+            if not person:
                 continue
             person = dict(person)
+            if person.get("name"):
+                person["name"] = str(person["name"]).strip()
+            if not person.get("name") and not site_list(person):
+                continue
             person["status"] = status
             lists = person.get("lists") or []
             person["lists"] = [lists] if isinstance(lists, str) else list(lists)
@@ -344,20 +464,23 @@ def main():
     def log(msg):
         print(msg, flush=True)
 
-    previous = {}
+    previous, previous_by_site = {}, {}
     if OUT_FILE.exists():
         try:
             for p in json.loads(OUT_FILE.read_text(encoding="utf-8")).get("photographers", []):
                 previous[p["id"]] = p
+                if p.get("site"):
+                    previous_by_site[p["site"]] = p
         except Exception:
             pass
 
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     result = []
     for person in load_people():
-        pid = slug(person["name"])
-        log(f"- {person['name']}")
-        old = previous.get(pid, {})
+        pid = person_id(person)
+        first_site = (site_list(person) or [""])[0]
+        log(f"- {person.get('name') or first_site}")
+        old = previous.get(pid) or previous_by_site.get(first_site) or {}
         first_seen = {img["src"]: img.get("first_seen", now) for img in old.get("images", [])}
         try:
             images = collect(person, log)
@@ -372,10 +495,15 @@ def main():
         for img in images:
             img["first_seen"] = first_seen.get(img["src"], img.get("first_seen", now))
         log(f"    {len(images)} photos" + (f"  ({error})" if error else ""))
+        name = person.get("name") or person.get("_guess") or (old.get("name") if old.get("auto_name") else None) or host_of(first_site)
+        if not person.get("name"):
+            log(f"    name found: {name}")
         result.append({
             "id": pid,
-            "name": person["name"],
-            "site": person.get("site") or (person.get("pages") or [""])[0],
+            "name": name,
+            "auto_name": not person.get("name"),
+            "site": (site_list(person) or [""])[0],
+            "sites": site_list(person),
             "lists": person["lists"],
             "status": person["status"],
             "note": person.get("note", ""),
