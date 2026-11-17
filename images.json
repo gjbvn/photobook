@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17T16:30:53Z",
+ "updated": "2026-11-17T22:49:33Z",
  "photographers": [
   {
    "id": "roman-fox",
@@ -72,70 +72,70 @@
    "robots_respected": false,
    "images": [
     {
-     "src": "https://s1.darkroom.com/qlc517ncializ8hmpdhu1gmy9ijr",
+     "src": "https://s3.darkroom.com/qlc517ncializ8hmpdhu1gmy9ijr",
+     "link": "https://graincheck.darkroom.com/",
+     "title": "",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://s0.darkroom.com/qqwjq0vk18mcuft1dpbcs9r3houw",
+     "link": "https://graincheck.darkroom.com/",
+     "title": "",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://s1.darkroom.com/4rml3qtya70m3jbh5n9zh8phoz5y",
+     "link": "https://graincheck.darkroom.com/",
+     "title": "",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://s3.darkroom.com/0xyqg55v1yij9nazqtgokmibs5sf",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
      "first_seen": "2026-11-17T16:30:53Z"
     },
     {
-     "src": "https://s2.darkroom.com/qqwjq0vk18mcuft1dpbcs9r3houw",
+     "src": "https://s1.darkroom.com/v73zpqmy3qaailwj3qhkdmz7itbd",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
      "first_seen": "2026-11-17T16:30:53Z"
     },
     {
-     "src": "https://s3.darkroom.com/4rml3qtya70m3jbh5n9zh8phoz5y",
+     "src": "https://s0.darkroom.com/1x2bsexudnv0ivpftux440rqc3lv",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
      "first_seen": "2026-11-17T16:30:53Z"
     },
     {
-     "src": "https://s1.darkroom.com/0xyqg55v1yij9nazqtgokmibs5sf",
+     "src": "https://s3.darkroom.com/4ymy3hy0rzsg0pijos4v5aknqdb2",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://s3.darkroom.com/v73zpqmy3qaailwj3qhkdmz7itbd",
+     "src": "https://s3.darkroom.com/e2aeehi0d1v3d4zp3n880c8skzb9",
+     "link": "https://graincheck.darkroom.com/",
+     "title": "",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://s0.darkroom.com/8r6hie0vtu7d5ybw9akmgom292s7",
+     "link": "https://graincheck.darkroom.com/",
+     "title": "",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://s0.darkroom.com/u4jvdm4bd5ziih42q45cwxpaxozc",
+     "link": "https://graincheck.darkroom.com/",
+     "title": "",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://s1.darkroom.com/kpt7y0iv10429094j2egbfqm3r5b",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
      "first_seen": "2026-11-17T15:57:38Z"
-    },
-    {
-     "src": "https://s2.darkroom.com/1x2bsexudnv0ivpftux440rqc3lv",
-     "link": "https://graincheck.darkroom.com/",
-     "title": "",
-     "first_seen": "2026-11-17T15:36:50Z"
-    },
-    {
-     "src": "https://s2.darkroom.com/4ymy3hy0rzsg0pijos4v5aknqdb2",
-     "link": "https://graincheck.darkroom.com/",
-     "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
-    },
-    {
-     "src": "https://s2.darkroom.com/e2aeehi0d1v3d4zp3n880c8skzb9",
-     "link": "https://graincheck.darkroom.com/",
-     "title": "",
-     "first_seen": "2026-11-17T15:57:38Z"
-    },
-    {
-     "src": "https://s2.darkroom.com/8r6hie0vtu7d5ybw9akmgom292s7",
-     "link": "https://graincheck.darkroom.com/",
-     "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
-    },
-    {
-     "src": "https://s1.darkroom.com/u4jvdm4bd5ziih42q45cwxpaxozc",
-     "link": "https://graincheck.darkroom.com/",
-     "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
-    },
-    {
-     "src": "https://s2.darkroom.com/kpt7y0iv10429094j2egbfqm3r5b",
-     "link": "https://graincheck.darkroom.com/",
-     "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
     },
     {
      "src": "https://s0.darkroom.com/ph1wfdfv3edp97ehleph7gph9j91",
@@ -144,16 +144,16 @@
      "first_seen": "2026-11-17T16:30:53Z"
     },
     {
-     "src": "https://s1.darkroom.com/mphim2lmu2f0t6rb9ll5d84i34di",
+     "src": "https://s2.darkroom.com/mphim2lmu2f0t6rb9ll5d84i34di",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://s3.darkroom.com/isjeedminshjr7vzsohyzjg2g88z",
+     "src": "https://s2.darkroom.com/isjeedminshjr7vzsohyzjg2g88z",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T15:57:38Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
      "src": "https://s0.darkroom.com/7l0zkcwtnaucr2c3c1b4i01ppja9",
@@ -168,16 +168,16 @@
      "first_seen": "2026-11-17T16:30:53Z"
     },
     {
-     "src": "https://s1.darkroom.com/n3n0wdwvqx8hw7shrj860m60eiz1",
+     "src": "https://s3.darkroom.com/n3n0wdwvqx8hw7shrj860m60eiz1",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://s0.darkroom.com/9f6935z459qi3yvhht8q9umth5sd",
+     "src": "https://s3.darkroom.com/9f6935z459qi3yvhht8q9umth5sd",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
      "src": "https://s2.darkroom.com/ih58fpeg6k4gmcmzywvtoinimjvg",
@@ -192,46 +192,46 @@
      "first_seen": "2026-11-17T16:30:53Z"
     },
     {
-     "src": "https://s3.darkroom.com/6dnpeypmmhukwhmz5wvfbnhy5zhq",
+     "src": "https://s0.darkroom.com/6dnpeypmmhukwhmz5wvfbnhy5zhq",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://s0.darkroom.com/5j7is1gs7qbdbde7sp7mrdfz20us",
+     "src": "https://s3.darkroom.com/5j7is1gs7qbdbde7sp7mrdfz20us",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://s3.darkroom.com/sbica810pm490i4t4hel5bi5gnqp",
+     "src": "https://s0.darkroom.com/sbica810pm490i4t4hel5bi5gnqp",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://s2.darkroom.com/z3ivbu1filgqeijpephxj1ck3pkx",
+     "src": "https://s0.darkroom.com/z3ivbu1filgqeijpephxj1ck3pkx",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://s3.darkroom.com/lndeo03q7gpdbtko5iab326fow41",
+     "src": "https://s0.darkroom.com/lndeo03q7gpdbtko5iab326fow41",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://s0.darkroom.com/mnb1dx23nw45daj0ehpgwichkh74",
+     "src": "https://s2.darkroom.com/mnb1dx23nw45daj0ehpgwichkh74",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://s0.darkroom.com/cvevtmgudmwug7pgh14a8y6xzwpv",
+     "src": "https://s3.darkroom.com/cvevtmgudmwug7pgh14a8y6xzwpv",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
      "src": "https://s3.darkroom.com/uwx35i3uykrec24ofcse593g10gm",
@@ -240,28 +240,28 @@
      "first_seen": "2026-11-17T16:30:53Z"
     },
     {
-     "src": "https://s1.darkroom.com/kjlszkttmmvr67io18snedyz99mu",
+     "src": "https://s3.darkroom.com/kjlszkttmmvr67io18snedyz99mu",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://s1.darkroom.com/v70xa4ftdxnnrumzu9hxpf6qhxps",
+     "src": "https://s2.darkroom.com/v70xa4ftdxnnrumzu9hxpf6qhxps",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://s3.darkroom.com/bvnwbioxdwe43pt22cccbq6ot62v",
+     "src": "https://s0.darkroom.com/bvnwbioxdwe43pt22cccbq6ot62v",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://s0.darkroom.com/dbnpxsgl7snrbvw3z2q4n5qow68c",
+     "src": "https://s3.darkroom.com/dbnpxsgl7snrbvw3z2q4n5qow68c",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
      "src": "https://s1.darkroom.com/gmm0epka6z9sphginruxqhmxp3ga",
@@ -276,10 +276,10 @@
      "first_seen": "2026-11-17T16:30:53Z"
     },
     {
-     "src": "https://s3.darkroom.com/sj1mkqjd7jd98uthdtv0ygjbzsgo",
+     "src": "https://s0.darkroom.com/sj1mkqjd7jd98uthdtv0ygjbzsgo",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
      "src": "https://s2.darkroom.com/vxgulljr8zndul12nhe31g893vvq",
@@ -294,10 +294,10 @@
      "first_seen": "2026-11-17T16:30:53Z"
     },
     {
-     "src": "https://s2.darkroom.com/b8hrw5rfemm1nnomdb1dh2ms0trf",
+     "src": "https://s3.darkroom.com/b8hrw5rfemm1nnomdb1dh2ms0trf",
      "link": "https://graincheck.darkroom.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
      "src": "https://s2.darkroom.com/qlc517ncializ8hmpdhu1gmy9ijr",
@@ -306,32 +306,32 @@
      "first_seen": "2026-11-17T16:30:53Z"
     },
     {
-     "src": "https://s3.darkroom.com/0xyqg55v1yij9nazqtgokmibs5sf",
+     "src": "https://s3.darkroom.com/qqwjq0vk18mcuft1dpbcs9r3houw",
+     "link": "https://graincheck.darkroom.com/products/1923166",
+     "title": "",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://s0.darkroom.com/4rml3qtya70m3jbh5n9zh8phoz5y",
+     "link": "https://graincheck.darkroom.com/products/1887158",
+     "title": "",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://s1.darkroom.com/0xyqg55v1yij9nazqtgokmibs5sf",
      "link": "https://graincheck.darkroom.com/products/1798192",
      "title": "",
      "first_seen": "2026-11-17T16:30:53Z"
     },
     {
-     "src": "https://s1.darkroom.com/v73zpqmy3qaailwj3qhkdmz7itbd",
+     "src": "https://s0.darkroom.com/v73zpqmy3qaailwj3qhkdmz7itbd",
      "link": "https://graincheck.darkroom.com/products/1771016",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://s0.darkroom.com/1x2bsexudnv0ivpftux440rqc3lv",
-     "link": "https://graincheck.darkroom.com/products/1739505",
-     "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
-    },
-    {
-     "src": "https://s1.darkroom.com/4ymy3hy0rzsg0pijos4v5aknqdb2",
+     "src": "https://s2.darkroom.com/4ymy3hy0rzsg0pijos4v5aknqdb2",
      "link": "https://graincheck.darkroom.com/products/1579918",
-     "title": "",
-     "first_seen": "2026-11-17T15:57:38Z"
-    },
-    {
-     "src": "https://s1.darkroom.com/e2aeehi0d1v3d4zp3n880c8skzb9",
-     "link": "https://graincheck.darkroom.com/products/1346666",
      "title": "",
      "first_seen": "2026-11-17T16:30:53Z"
     },
@@ -342,10 +342,10 @@
      "first_seen": "2026-11-17T16:30:53Z"
     },
     {
-     "src": "https://s1.darkroom.com/kpt7y0iv10429094j2egbfqm3r5b",
-     "link": "https://graincheck.darkroom.com/products/1113343",
+     "src": "https://s1.darkroom.com/ph1wfdfv3edp97ehleph7gph9j91",
+     "link": "https://graincheck.darkroom.com/products/340211",
      "title": "",
-     "first_seen": "2026-11-17T15:57:38Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
      "src": "https://s0.darkroom.com/mphim2lmu2f0t6rb9ll5d84i34di",
@@ -1700,6 +1700,90 @@
      "first_seen": "2026-11-17T16:30:53Z"
     },
     {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/12/VM1955W00012-02-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-4/",
+     "title": "VM1955W00012-02-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/12/VM1960W00217-04-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-4/",
+     "title": "VM1960W00217-04-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/12/VM19XXW04202-05-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-4/",
+     "title": "VM19XXW04202-05-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/12/VM19XXW03222-03-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-4/",
+     "title": "VM19XXW03222-03-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/12/1241.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-4/",
+     "title": "1241",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/12/VM1956W03427-06-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-4/",
+     "title": "VM1956W03427-06-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/12/VM1955W02714-03-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-4/",
+     "title": "VM1955W02714-03-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/11/VM1954W03413-05-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-5/",
+     "title": "VM1954W03413-05-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/11/VM19XXW00602-04-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-5/",
+     "title": "VM19XXW00602-04-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/11/VM1954W00050-11-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-5/",
+     "title": "VM1954W00050-11-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/11/VM19XXW00573-08-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-5/",
+     "title": "VM19XXW00573-08-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/11/VM1963W00684-04-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-5/",
+     "title": "VM1963W00684-04-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/11/VM1958W02607-11-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-5/",
+     "title": "VM1958W02607-11-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/11/VM1959W04094-06-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/street-5/",
+     "title": "VM1959W04094-06-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
      "src": "https://www.vivianmaier.com/wp-content/uploads/2013/11/VM19XXK05938-01-MC.jpg",
      "link": "https://www.vivianmaier.com/gallery/color-1/",
      "title": "VM19XXK05938-01-MC",
@@ -1740,6 +1824,114 @@
      "link": "https://www.vivianmaier.com/gallery/color-1/",
      "title": "VM1979K05824-11-MC",
      "first_seen": "2026-11-17T16:30:53Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM1954W02936-11-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits/",
+     "title": "VM1954W02936-11-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM1971W01703-09-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits/",
+     "title": "VM1971W01703-09-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM1961W00940-05-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits/",
+     "title": "VM1961W00940-05-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM1954W00130-07-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits/",
+     "title": "VM1954W00130-07-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM19XXW04208-09-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits/",
+     "title": "VM19XXW04208-09-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM19XXW04206-07-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits/",
+     "title": "VM19XXW04206-07-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM19XXW04202-11-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits/",
+     "title": "VM19XXW04202-11-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM195XZ06951-04-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits-color/",
+     "title": "VM195XZ06951-04-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM19XXK05934-07-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits-color/",
+     "title": "VM19XXK05934-07-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM19XX-66K05872-02-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits-color/",
+     "title": "VM19XX-66K05872-02-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM1978K05799-07-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits-color/",
+     "title": "VM1978K05799-07-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM1986K05625-23-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits-color/",
+     "title": "VM1986K05625-23-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM19XXZ06821-02_MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits-color/",
+     "title": "VM19XXZ06821-02-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/VM1958Z06868-12-MC.jpg",
+     "link": "https://www.vivianmaier.com/gallery/self-portraits-color/",
+     "title": "VM1958Z06868-12-MC",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2015/01/vivian-maier-a-photographer-found-book.jpg",
+     "link": "https://www.vivianmaier.com/vivian-maier-books/vivian-maier-photographer-found/",
+     "title": "vivian-maier-a-photographer-found-book",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/09/self-portrait-book-1.jpg",
+     "link": "https://www.vivianmaier.com/vivian-maier-books/vivian-maier-self-portraits/",
+     "title": "self-portrait-book-1",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2013/10/self-portrait-book-1.jpg",
+     "link": "https://www.vivianmaier.com/vivian-maier-books/vivian-maier-street-photographer/",
+     "title": "self-portrait-book-1",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://www.vivianmaier.com/wp-content/uploads/2018/12/vivianmaiercolorwork.jpg",
+     "link": "https://www.vivianmaier.com/vivian-maier-books/vivian-maier-the-color-work-book/",
+     "title": "",
+     "first_seen": "2026-11-17T22:49:33Z"
     }
    ]
   },
@@ -3715,16 +3907,16 @@
    "robots_respected": false,
    "images": [
     {
-     "src": "https://cdn.sanity.io/images/o985varc/production/90233b1abe3584f634ea23306830402cf099cc43-1080x716.jpg?w=1500&auto=format",
+     "src": "https://cdn.sanity.io/images/o985varc/production/47cba90c334b4da0dd144ae8ecf3d20626f1b855-1080x719.jpg?w=1500&auto=format",
      "link": "https://webbnorriswebb.co/",
-     "title": "Image Pair -  Alex - 03",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "title": "Image Pair - Alex - 05",
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://cdn.sanity.io/images/o985varc/production/8a7fe5ff3c0ce9b41968f3998560865a6a9011fc-1080x718.jpg?w=1500&auto=format",
+     "src": "https://cdn.sanity.io/images/o985varc/production/07a64521d05f09fb25cff198d491c4ee72f77a0a-1080x718.jpg?w=1500&auto=format",
      "link": "https://webbnorriswebb.co/",
-     "title": "Image Pair -  Rebecca - 03",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "title": "Image Pair - Rebecca - 05",
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
      "src": "https://cdn.sanity.io/images/o985varc/production/7fe16f376da7b592ab1e2bd4d3a98d4a85bfe7eb-3011x2000.jpg?w=1500&auto=format",
@@ -7097,10 +7289,10 @@
    "robots_respected": false,
    "images": [
     {
-     "src": "https://zenfolio-classic.creatorcdn.com/cdn2/pub/lruuuqpfja4a/0/null/m/4xhfcjfjo6-95ishk00e/s/v-10/p3720083777-5.jpg?ts=8U1&tk=Cn_8S8cP14UYSDMJAeYnfnQwfYeVESGQ58fWf6_8EJk=&v=2&visitor=ArVOOxa-TC0VLlEDxSQOAGgWZItK-Q--_eA5XtCUUe_8&auth=exp=1795046399~acl=%2Fcdn2%2Fpub%2Flruuuqpfja4a%2F%2A~hmac=9b74a6b28121404a41cf0ac2dd8ae067",
+     "src": "https://zenfolio-classic.creatorcdn.com/cdn2/pub/jcsqzeplj22c/0/null/m/ivaey1ldcfbb0yw2x9oz/s/v-10/p3254602554-5.jpg?ts=ASH&tk=SmJgtNnbBzSJSMvbHqsjXkC-ne8W7tBoCIaEkrZzW7s=&v=2&visitor=B00Xf8eHeo3LEMxDyydtgqxG1sAUqxQ_wS1PXNhWiU1a&auth=exp=1795046399~acl=%2Fcdn2%2Fpub%2Fjcsqzeplj22c%2F%2A~hmac=0c727ec1ce910ba313f8189aa3ae7afd",
      "link": "https://www.rinziruizphotography.com/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
      "src": "https://www.rinziruizphotography.com/img/s/v-10/p1621293801-3.jpg",
@@ -7812,34 +8004,28 @@
      "first_seen": "2026-11-17T15:57:38Z"
     },
     {
-     "src": "https://philipjonesgriffiths.org/wp-content/uploads/2015/12/PAR93952.jpg",
+     "src": "https://philipjonesgriffiths.org/wp-content/uploads/2015/12/NYC48155.jpg",
      "link": "https://philipjonesgriffiths.org/timeline/vietnam/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://philipjonesgriffiths.org/wp-content/uploads/2015/12/LON93562.jpg",
+     "src": "https://philipjonesgriffiths.org/wp-content/uploads/2015/12/NYC48060.jpg",
      "link": "https://philipjonesgriffiths.org/timeline/vietnam/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://philipjonesgriffiths.org/wp-content/uploads/2015/12/NYC47530.jpg",
+     "src": "https://philipjonesgriffiths.org/wp-content/uploads/2015/12/NYC48003.jpg",
      "link": "https://philipjonesgriffiths.org/timeline/vietnam/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://philipjonesgriffiths.org/wp-content/uploads/2015/12/NYC48140.jpg",
+     "src": "https://philipjonesgriffiths.org/wp-content/uploads/2015/12/LON66355.jpg",
      "link": "https://philipjonesgriffiths.org/timeline/vietnam/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
-    },
-    {
-     "src": "https://philipjonesgriffiths.org/wp-content/uploads/2015/12/LON93546.jpg",
-     "link": "https://philipjonesgriffiths.org/timeline/vietnam/",
-     "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
      "src": "https://philipjonesgriffiths.org/wp-content/uploads/2015/12/PJG_Vietnam-Inc_Cover.png",
@@ -11866,10 +12052,10 @@
    "robots_respected": false,
    "images": [
     {
-     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/ar_4:5,c_fill,g_auto,w_900,q_auto,f_auto/v1773553363/submissions/t9pknz2rgyjjwiqlnvqm.webp",
+     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/ar_4:5,c_fill,g_auto,w_900,q_auto,f_auto/v1779187607/submissions/fpe7ajprtc9kdkwa1quu.webp",
      "link": "https://vietnamstreets.org/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
      "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_1200,c_fill,g_auto,q_auto,f_auto/newsletter/streets-and-stories-017/gallery/06-a-chance-meeting-in-the-alley.jpg",
@@ -12058,76 +12244,70 @@
      "first_seen": "2026-11-17T15:57:38Z"
     },
     {
-     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/ar_3:2,c_fill,g_auto,w_2000,q_auto,f_auto/v1779668356/submissions/bffyvr4lleugfznvhqkg.webp",
+     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/ar_3:2,c_fill,g_auto,w_2000,q_auto,f_auto/v1773457967/submissions/hv1xut2k9ygjvuigcwsv.webp",
      "link": "https://vietnamstreets.org/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/ar_3:2,c_fill,g_auto,w_2000,q_auto,f_auto/v1773589670/submissions/oxtwpuhfmgvwoa0fh9cq.webp",
+     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/ar_3:2,c_fill,g_auto,w_2000,q_auto,f_auto/v1772510188/submissions/htnjgtwhzoekiirxcois.webp",
      "link": "https://vietnamstreets.org/",
      "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/ar_3:2,c_fill,g_auto,w_2000,q_auto,f_auto/v1773025016/submissions/gr5cwwuwgpithwczpyut.webp",
-     "link": "https://vietnamstreets.org/",
-     "title": "",
-     "first_seen": "2026-11-17T16:30:53Z"
-    },
-    {
-     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1779464374/submissions/mgw34dwtvud42qwct9gj.webp",
+     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1776344296/submissions/cqvycbs0ogtfl948txvh.webp",
      "link": "https://vietnamstreets.org/submit",
-     "title": "Street photography from Đà Lạt by Anton Filippov",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "title": "Street photography from Cần Thơ by James Machon",
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1773019306/submissions/vo9impgcgz8f6iqsn6j3.webp",
+     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1773814074/submissions/klicrfbtva6wupftumo2.webp",
      "link": "https://vietnamstreets.org/submit",
-     "title": "Street photography from Saigon (HCMC) by Trần Tầm Thường",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "title": "Street photography from Hội An by Ed",
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1781928599/submissions/wjyl0gsbhxxgdgpfroqi.webp",
-     "link": "https://vietnamstreets.org/submit",
-     "title": "Street photography from Sa Pa by Carleo Chua",
-     "first_seen": "2026-11-17T16:30:53Z"
-    },
-    {
-     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1777827767/submissions/y5ayxzczojjof0jfkyxb.webp",
+     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1777827767/submissions/i4pktrp4ulvgc5tlyb64.webp",
      "link": "https://vietnamstreets.org/submit",
      "title": "Street photography from Huế by Nguyễn Minh Hoàng",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1772084598/submissions/ya4tuwmklsamx61ivtn4.jpg",
+     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1777726972/submissions/g4qgcskr4kx0hnvexiai.webp",
      "link": "https://vietnamstreets.org/submit",
-     "title": "Couple playing cards framed through a window among silhouetted crowds at a Hoi An cafe in black and white",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "title": "Street photography from Other by Que Linh",
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1786513173/submissions/lizvr4tsonfhmckcfdjh.webp",
+     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1784790289/submissions/a5so9gqmj4fghf9mjzb8.webp",
      "link": "https://vietnamstreets.org/submit",
-     "title": "Street photography from Cần Thơ by Maud Peron",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "title": "Street photography from Saigon (HCMC) by LÂM ĐỖ GIA THÀNH",
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1787417323/submissions/g8vccstfnuoqsxwqqc3j.webp",
+     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1781928599/submissions/dthsvz4nsnn6mwfmrnwr.webp",
      "link": "https://vietnamstreets.org/submit",
-     "title": "Street photography from Da Nang by Nguyễn Trần Kim Long",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "title": "Street photography from Sa Pa by Carleo Chua",
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1777798015/submissions/c56ngavpfxjlqlxvlwnw.webp",
+     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1786513424/submissions/xrzjn0f0gdfq1ttsavrb.webp",
      "link": "https://vietnamstreets.org/submit",
-     "title": "Street photography from Hội An by Dylan Huveneers",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "title": "Street photography from Đà Lạt by Maud Peron",
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
-     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1773657193/submissions/ujwcnp1syrcjowcboslg.webp",
+     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1779811711/submissions/sheomgmdetup26dzraqk.webp",
      "link": "https://vietnamstreets.org/submit",
-     "title": "Street photography from Hanoi by Vũ Phong",
-     "first_seen": "2026-11-17T16:30:53Z"
+     "title": "Street photography from Da Nang by Timur Altynguzhin",
+     "first_seen": "2026-11-17T22:49:33Z"
+    },
+    {
+     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_600,q_auto,f_auto/v1773457967/submissions/hv1xut2k9ygjvuigcwsv.webp",
+     "link": "https://vietnamstreets.org/submit",
+     "title": "Street photography from Hanoi by Tùng Xuân Lâm",
+     "first_seen": "2026-11-17T22:49:33Z"
     },
     {
      "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_1000,h_760,c_fill,g_auto,q_auto,f_auto/newsletter/streets-and-stories-016/gallery/adrien-19",
@@ -12764,6 +12944,12 @@
      "link": "https://vietnamstreets.org/gear",
      "title": "Manfrotto PIXI Mini Tripod product image",
      "first_seen": "2026-11-17T16:30:53Z"
+    },
+    {
+     "src": "https://res.cloudinary.com/ddpal2fyi/image/upload/w_800,q_auto,f_auto/shop/cutouts/joby-gorillapod-3k.png",
+     "link": "https://vietnamstreets.org/gear",
+     "title": "Joby GorillaPod 3K Kit product image",
+     "first_seen": "2026-11-17T22:49:33Z"
     }
    ]
   }
