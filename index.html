@@ -99,6 +99,48 @@
   .progress { height: 2px; background: var(--rule); margin: 0 16px max(10px, env(safe-area-inset-bottom)); }
   .progress div { height: 100%; background: var(--ink); transition: width .3s ease; }
 
+  /* ───────── Editing ───────── */
+  .add-btn { margin-top: 18px; color: var(--accent); font-style: italic; font-size: 17px; border-bottom: 1px solid currentColor; }
+  .acts { margin-top: 8px; display: flex; gap: 16px; font-size: 15px; }
+  .acts button { color: var(--muted); font-style: italic; border-bottom: 1px solid var(--rule); }
+  .acts button:hover { color: var(--ink); border-color: var(--ink); }
+  .acts button.keep { color: var(--accent); border-color: currentColor; }
+  .opening .edit { display: inline-block; margin-top: 6px; font-size: 15px; color: var(--muted); font-style: italic; border-bottom: 1px solid var(--rule); }
+
+  #sheet { position: fixed; inset: 0; z-index: 20; background: rgba(36,33,28,.35); display: none; align-items: flex-end; justify-content: center; }
+  #sheet.open { display: flex; }
+  #sheet .panel { background: var(--leaf); width: 100%; max-width: 560px; max-height: 92vh; overflow: auto; padding: 26px 24px max(24px, env(safe-area-inset-bottom)); box-shadow: 0 -8px 40px rgba(36,33,28,.2); animation: rise .25s ease; }
+  @media (min-width: 640px) { #sheet { align-items: center; } #sheet .panel { border-radius: 2px; } }
+  @keyframes rise { from { transform: translateY(30px); opacity: 0; } to { transform: none; opacity: 1; } }
+  #sheet h2 { font-weight: 400; font-size: 30px; margin: 0 0 4px; }
+  #sheet .sub { color: var(--muted); margin: 0 0 18px; font-size: 16px; }
+  #sheet label { display: block; margin: 16px 0 4px; font-size: 15px; color: var(--muted); }
+  #sheet input[type=text], #sheet input[type=url], #sheet input[type=password], #sheet textarea {
+    width: 100%; font: inherit; font-size: 17px; color: var(--ink); background: transparent; border: 0; border-bottom: 1px solid var(--rule);
+    padding: 6px 0; outline: none; border-radius: 0; }
+  #sheet textarea { resize: vertical; min-height: 2.6em; }
+  #sheet input:focus, #sheet textarea:focus { border-color: var(--ink); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+  .chip { border: 1px solid var(--rule); padding: 3px 12px; border-radius: 99px; font-size: 15px; }
+  .chip.on { background: var(--ink); color: var(--leaf); border-color: var(--ink); }
+  .seg { display: flex; gap: 0; margin-top: 6px; border: 1px solid var(--rule); width: max-content; }
+  .seg button { padding: 4px 14px; font-size: 15px; }
+  .seg button.on { background: var(--ink); color: var(--leaf); }
+  .row { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 26px; }
+  .primary { background: var(--ink); color: var(--leaf); padding: 9px 22px; font-size: 17px; }
+  .primary[disabled] { opacity: .5; }
+  .ghost { color: var(--muted); font-style: italic; }
+  .danger { color: var(--accent); font-style: italic; }
+  .msg { margin-top: 14px; font-size: 15px; color: var(--accent); min-height: 1em; }
+  .steps { padding-left: 20px; margin: 8px 0 0; font-size: 16px; }
+  .steps li { margin: 6px 0; }
+  .steps a { color: var(--accent); }
+  .fine { font-size: 14px; color: var(--muted); margin-top: 14px; }
+
+  #toast { position: fixed; left: 50%; bottom: max(24px, env(safe-area-inset-bottom)); transform: translateX(-50%) translateY(20px); background: var(--ink); color: var(--leaf);
+    padding: 10px 18px; font-size: 16px; opacity: 0; transition: .25s ease; z-index: 30; max-width: calc(100% - 32px); text-align: center; pointer-events: none; }
+  #toast.show { opacity: 1; transform: translateX(-50%); }
+
   @media (max-width: 600px) {
     body { font-size: 17px; }
     .mast h1 { font-size: 44px; }
@@ -121,6 +163,9 @@
   <div class="stage" id="stage"></div>
   <div class="progress"><div id="prog"></div></div>
 </section>
+
+<div id="sheet" role="dialog" aria-modal="true"><div class="panel" id="panel"></div></div>
+<div id="toast" role="status"></div>
 
 <script>
 (() => {
@@ -150,13 +195,17 @@
     } catch {
       data = { photographers: [] };
     }
+    ingest();
+    renderContents();
+    route();
+  }
+
+  function ingest() {
     const people = data.photographers || [];
     following = people.filter(p => p.status !== "suggested");
     suggested = people.filter(p => p.status === "suggested");
     lists = [];
     following.forEach(p => (p.lists.length ? p.lists : ["Unsorted"]).forEach(l => { if (!lists.includes(l)) lists.push(l); }));
-    renderContents();
-    route();
   }
 
   // ───────── Contents page ─────────
@@ -166,7 +215,8 @@
     const latest = latestImages();
     const newCount = latest.filter(isNew).length;
 
-    let h = `<header class="mast"><h1>Photobook</h1><p class="sc">${following.length} photographers · ${lists.length} chapters</p></header>`;
+    let h = `<header class="mast"><h1>Photobook</h1><p class="sc">${following.length} photographers · ${lists.length} chapters</p>
+      <button class="add-btn" data-act="add">＋ Add a photographer</button></header>`;
 
     if (latest.length) {
       h += `<button class="latest" data-go="#/latest">
@@ -182,7 +232,7 @@
       people.forEach(p => {
         const fresh = p.images.filter(isNew).length;
         h += `<li data-go="#/p/${p.id}"><span class="name">${esc(p.name)}</span>${fresh ? `<span class="new">${fresh} new</span>` : ""}<span class="dots"></span>
-          <span class="pg">${p.images.length ? p.images.length + " pp." : "visit site ↗"}</span></li>`;
+          <span class="pg">${p.images.length ? p.images.length + " pp." : p.pending ? "<i>photos coming…</i>" : "visit site ↗"}</span></li>`;
       });
       h += `</ul></section>`;
     });
@@ -193,18 +243,21 @@
         const t = p.images[0];
         h += `<div class="card" data-go="#/p/${p.id}">
           ${t ? `<img class="thumb" src="${esc(t.src)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'">` : `<div class="thumb"></div>`}
-          <div><h3>${esc(p.name)}</h3><p>${esc(p.note || p.lists.join(", "))}</p></div></div>`;
+          <div><h3>${esc(p.name)}</h3><p>${esc(p.note || p.lists.join(", "))}</p>
+            <div class="acts"><button class="keep" data-act="keep" data-id="${p.id}">Keep</button><button data-act="dismiss" data-id="${p.id}">Dismiss</button></div></div></div>`;
       });
-      h += `<p class="hint">Like someone? Move them into “following” in your list.${edit ? ` <a href="${edit}" target="_blank" rel="noopener">Edit the list ↗</a>` : ""}</p></section>`;
+      h += `<p class="hint">Tap a name to look through their pages first.</p></section>`;
     }
 
     h += `<footer class="colophon">
-      ${edit ? `<p><a href="${edit}" target="_blank" rel="noopener">Add or edit photographers ↗</a></p>` : ""}
+      <p><button class="add-btn" data-act="add" style="margin:0">＋ Add a photographer</button></p>
+      ${edit ? `<p style="font-size:14px"><a href="${edit}" target="_blank" rel="noopener">Edit the list file on GitHub ↗</a></p>` : ""}
       ${updated ? `<p>Last updated ${esc(updated)}</p>` : ""}
       <p>Every photograph belongs to its photographer. Tap “view on site” to visit them.</p></footer>`;
 
     if (!following.length && !suggested.length) {
-      h = `<header class="mast"><h1>Photobook</h1><p>The book is empty for now. Once the first daily update has run, your photographers will appear here.</p></header>`;
+      h = `<header class="mast"><h1>Photobook</h1><p>The book is empty for now. Once the first daily update has run, your photographers will appear here.</p>
+        <button class="add-btn" data-act="add">＋ Add a photographer</button></header>`;
     }
     $("#contents").innerHTML = h;
   }
@@ -275,6 +328,7 @@
         <p>${p.images.length ? `${p.images.length} photographs` : ""}${p.lists.length ? ` · ${esc(p.lists.join(", "))}` : ""}</p>
         ${p.site ? `<p><a href="${esc(p.site)}" target="_blank" rel="noopener" data-stop>${esc(host(p.site))} ↗</a></p>` : ""}
         ${p.error ? `<p class="err muted">${esc(p.error)}</p>` : ""}
+        <button class="edit" data-stop data-act="edit" data-id="${p.id}">${p.status === "suggested" ? "Keep or dismiss" : "Edit"}</button>
       </div></div>`;
     }
     const { img, person } = pg;
@@ -310,6 +364,336 @@
     draw(step);
   }
 
+  // ───────── Editing from the website ─────────
+  // Saves changes straight into photographers.yml in your GitHub repository,
+  // using a key (fine-grained token) that is stored only in this browser.
+  const Editor = (() => {
+    const TOKEN = "photobook_token", REPO = "photobook_repo";
+    const YAML_LIB = "https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js";
+    const store = {
+      get: k => { try { return localStorage.getItem(k); } catch { return null; } },
+      set: (k, v) => { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch {} },
+    };
+    const slugify = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    const panel = () => $("#panel");
+    let busy = false, watchTimer = null;
+
+    function repo() {
+      const saved = store.get(REPO);
+      if (saved) return saved;
+      const m = location.hostname.match(/^([^.]+)\.github\.io$/i);
+      if (!m) return null;
+      const first = location.pathname.split("/").filter(Boolean)[0];
+      return `${m[1]}/${first && !first.includes(".") ? first : m[1] + ".github.io"}`;
+    }
+
+    function open(html) { panel().innerHTML = html; $("#sheet").classList.add("open"); }
+    function close() { $("#sheet").classList.remove("open"); panel().innerHTML = ""; }
+    $("#sheet").addEventListener("click", e => { if (e.target.id === "sheet") close(); });
+
+    function toast(text, ms = 3500) {
+      const t = $("#toast");
+      t.textContent = text;
+      t.classList.add("show");
+      clearTimeout(toast.t);
+      toast.t = setTimeout(() => t.classList.remove("show"), ms);
+    }
+
+    // ── GitHub ──
+    let yamlReady = null;
+    function loadYaml() {
+      if (window.jsyaml) return Promise.resolve();
+      return yamlReady ||= new Promise((res, rej) => {
+        const s = document.createElement("script");
+        s.src = YAML_LIB;
+        s.onload = res;
+        s.onerror = () => { yamlReady = null; rej(new Error("Couldn’t load the editor. Check your internet connection and try again.")); };
+        document.head.appendChild(s);
+      });
+    }
+
+    async function gh(path, opts = {}, token = store.get(TOKEN), repoName = repo()) {
+      const r = await fetch(`https://api.github.com/repos/${repoName}/contents/${path}`, {
+        ...opts,
+        cache: "no-store",
+        headers: {
+          Accept: "application/vnd.github+json",
+          Authorization: `Bearer ${token}`,
+          "X-GitHub-Api-Version": "2022-11-28",
+          ...(opts.body ? { "Content-Type": "application/json" } : {}),
+        },
+      });
+      if (!r.ok) {
+        const e = new Error(
+          r.status === 401 ? "GitHub didn’t accept the key. It may have expired. Please connect again." :
+          r.status === 403 || r.status === 404 ? "This key can’t edit your photobook. When making it, choose your photobook repository and “Contents: Read and write”." :
+          `GitHub said no (error ${r.status}). Please try again.`);
+        e.status = r.status;
+        throw e;
+      }
+      return r.json();
+    }
+
+    const decode = b64 => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\s/g, "")), c => c.charCodeAt(0)));
+    const encode = str => { let bin = ""; new TextEncoder().encode(str).forEach(b => bin += String.fromCharCode(b)); return btoa(bin); };
+
+    const ORDER = ["name", "site", "pages", "feeds", "follow", "lists", "note"];
+    function tidy(p) {
+      const o = {};
+      ORDER.forEach(k => {
+        const v = p[k];
+        if (v == null || v === "" || (Array.isArray(v) && !v.length && k !== "lists")) return;
+        o[k] = v;
+      });
+      Object.keys(p).forEach(k => { if (!ORDER.includes(k) && p[k] != null) o[k] = p[k]; });
+      return o;
+    }
+
+    function serialize(L, original) {
+      const header = [];
+      for (const line of original.split("\n")) {
+        if (line.startsWith("#") || !line.trim()) header.push(line); else break;
+      }
+      let body = jsyaml.dump({ following: L.following.map(tidy), suggested: L.suggested.map(tidy) },
+        { lineWidth: -1, flowLevel: 3, noRefs: true });
+      body = body.replace(/\n(\s*- name:)/g, "\n\n$1").replace(/\nsuggested:/, "\n\n\nsuggested:");
+      return (header.join("\n").trim() ? header.join("\n").trimEnd() + "\n\n" : "") + body;
+    }
+
+    async function editList(mutate, message) {
+      await loadYaml();
+      for (let attempt = 0; attempt < 2; attempt++) {
+        const file = await gh("photographers.yml");
+        const text = decode(file.content);
+        const doc = jsyaml.load(text) || {};
+        const L = { following: (doc.following || []).filter(Boolean), suggested: (doc.suggested || []).filter(Boolean) };
+        mutate(L);
+        try {
+          await gh("photographers.yml", { method: "PUT", body: JSON.stringify({ message, content: encode(serialize(L, text)), sha: file.sha }) });
+          return;
+        } catch (e) {
+          if ((e.status === 409 || e.status === 422) && attempt === 0) continue;
+          throw e;
+        }
+      }
+    }
+
+    function findIn(L, id) {
+      for (const sec of ["following", "suggested"]) {
+        const i = L[sec].findIndex(p => slugify(p.name) === id);
+        if (i >= 0) return { sec, i };
+      }
+      return null;
+    }
+
+    // After a save, keep checking for the new photos and show them when they arrive
+    function watch() {
+      clearInterval(watchTimer);
+      const since = data.updated, started = Date.now();
+      watchTimer = setInterval(async () => {
+        if (Date.now() - started > 15 * 60e3) return clearInterval(watchTimer);
+        try {
+          const fresh = await (await fetch("images.json?v=" + Date.now())).json();
+          if (fresh.updated && fresh.updated !== since) {
+            clearInterval(watchTimer);
+            data = fresh;
+            ingest();
+            renderContents();
+            if ($("#reader").classList.contains("open")) route();
+            toast("New photos have arrived.");
+          }
+        } catch {}
+      }, 30e3);
+    }
+
+    function refreshViews(newHash) {
+      ingest();
+      renderContents();
+      if (newHash !== undefined && location.hash !== newHash) location.hash = newHash;
+      else if ($("#reader").classList.contains("open")) route();
+    }
+
+    async function run(btn, work, done) {
+      if (busy) return;
+      busy = true;
+      const msg = $(".msg", panel());
+      const label = btn && btn.textContent;
+      if (btn) { btn.disabled = true; btn.textContent = "Saving…"; }
+      if (msg) msg.textContent = "";
+      try {
+        await work();
+        done();
+        watch();
+      } catch (e) {
+        if (e.status === 401) store.set(TOKEN, null);
+        if (msg) msg.textContent = e.message; else toast(e.message, 6000);
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+      } finally {
+        busy = false;
+      }
+    }
+
+    // ── Screens ──
+    function connect(then) {
+      const r = repo();
+      const owner = r ? r.split("/")[0] : "";
+      const link = "https://github.com/settings/personal-access-tokens/new?" + new URLSearchParams({
+        name: "Photobook", description: "Lets my photobook website save my photographer list",
+        expires_in: "366", contents: "write", ...(owner ? { target_name: owner } : {}),
+      });
+      open(`<h2>Connect your book</h2>
+        <p class="sub">To save changes, the book needs a key from GitHub that only works on your photobook. You do this once on each phone or computer.</p>
+        <ol class="steps">
+          <li><a href="${link}" target="_blank" rel="noopener">Open GitHub to make the key ↗</a> (most of it is filled in for you).</li>
+          <li>Under <b>Repository access</b>, choose <b>Only select repositories</b> and pick <b>${esc(r ? r.split("/")[1] : "photobook")}</b>.</li>
+          <li>Tap <b>Generate token</b> at the bottom, then copy the key. It starts with <i>github_pat_</i>.</li>
+          <li>Come back here and paste it below.</li>
+        </ol>
+        ${r ? "" : `<label>Your repository (username/photobook)</label><input type="text" id="f-repo" autocapitalize="off" autocorrect="off" placeholder="username/photobook">`}
+        <label>Key</label><input type="password" id="f-token" autocomplete="off" placeholder="github_pat_…">
+        <div class="msg"></div>
+        <div class="row"><button class="ghost" id="f-cancel">Cancel</button><button class="primary" id="f-go">Connect</button></div>
+        <p class="fine">The key is kept only in this browser on this device. It isn’t part of the website, so visitors can’t see it. You can delete it on GitHub at any time.</p>`);
+      $("#f-cancel").onclick = close;
+      $("#f-go").onclick = async () => {
+        const token = $("#f-token").value.trim();
+        const repoName = r || ($("#f-repo")?.value || "").trim().replace(/^https:\/\/github\.com\//, "").replace(/\/$/, "");
+        const msg = $(".msg", panel());
+        if (!token) return msg.textContent = "Paste the key first.";
+        if (!/^[^/\s]+\/[^/\s]+$/.test(repoName)) return msg.textContent = "Enter your repository as username/photobook.";
+        $("#f-go").disabled = true; $("#f-go").textContent = "Checking…";
+        try {
+          await gh("photographers.yml", {}, token, repoName);
+          store.set(TOKEN, token);
+          if (!r) store.set(REPO, repoName);
+          toast("Connected. You can now edit from the book.");
+          then ? then() : close();
+        } catch (e) {
+          msg.textContent = e.message;
+          $("#f-go").disabled = false; $("#f-go").textContent = "Connect";
+        }
+      };
+    }
+
+    function form(p) {
+      const isNew = !p;
+      const all = [...new Set([...following, ...suggested].flatMap(x => x.lists))];
+      const chosen = new Set(p ? p.lists : []);
+      let section = p ? p.status : "following";
+      open(`<h2>${isNew ? "Add a photographer" : esc(p.name)}</h2>
+        <p class="sub">${isNew ? "Their photos appear in your book a few minutes after you save." : "Change their details, or remove them from your book."}</p>
+        <label>Name</label><input type="text" id="f-name" value="${esc(p?.name || "")}" placeholder="e.g. Fan Ho">
+        <label>Website with their photos</label><input type="url" id="f-site" value="${esc(p?.site || "")}" autocapitalize="off" autocorrect="off" placeholder="https://…">
+        <label>Chapters</label><div class="chips" id="f-chips"></div>
+        <input type="text" id="f-newlist" placeholder="＋ New chapter (type and press Enter)" style="margin-top:8px">
+        <label>Your note (optional)</label><textarea id="f-note" rows="2">${esc(p?.note || "")}</textarea>
+        <label>Section</label><div class="seg" id="f-seg"><button data-s="following">Following</button><button data-s="suggested">Suggested</button></div>
+        <div class="msg"></div>
+        <div class="row">${isNew ? `<button class="ghost" id="f-cancel">Cancel</button>` : `<button class="danger" id="f-remove">Remove</button>`}
+          <button class="primary" id="f-save">${isNew ? "Add to book" : "Save"}</button></div>
+        <p class="fine">Tip: if the photos don’t show up, try the address of their gallery or portfolio page rather than their home page. <button class="ghost" id="f-disconnect" style="font-size:14px;text-decoration:underline">Disconnect this device</button></p>`);
+
+      const drawChips = () => {
+        const names = [...new Set([...all, ...chosen])];
+        $("#f-chips").innerHTML = names.map(l => `<button class="chip${chosen.has(l) ? " on" : ""}" data-l="${esc(l)}">${esc(l)}</button>`).join("");
+      };
+      const drawSeg = () => panel().querySelectorAll("#f-seg button").forEach(b => b.classList.toggle("on", b.dataset.s === section));
+      drawChips(); drawSeg();
+      $("#f-chips").onclick = e => { const c = e.target.closest(".chip"); if (!c) return; const l = c.dataset.l; chosen.has(l) ? chosen.delete(l) : chosen.add(l); drawChips(); };
+      $("#f-seg").onclick = e => { const b = e.target.closest("button"); if (b) { section = b.dataset.s; drawSeg(); } };
+      const addList = () => {
+        const v = $("#f-newlist").value.split(",").map(s => s.trim()).filter(Boolean);
+        v.forEach(l => chosen.add(l.replace(/(^|\s)\S/g, c => c.toUpperCase())));
+        $("#f-newlist").value = ""; drawChips();
+      };
+      $("#f-newlist").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === ",") { e.preventDefault(); addList(); } });
+      $("#f-newlist").addEventListener("blur", addList);
+      if ($("#f-cancel")) $("#f-cancel").onclick = close;
+      $("#f-disconnect").onclick = () => { store.set(TOKEN, null); store.set(REPO, null); close(); toast("This device is disconnected."); };
+
+      $("#f-save").onclick = () => {
+        addList();
+        const msg = $(".msg", panel());
+        const name = $("#f-name").value.trim();
+        let site = $("#f-site").value.trim();
+        const note = $("#f-note").value.trim();
+        if (!name) return msg.textContent = "Add their name.";
+        if (!site) return msg.textContent = "Add the address of their website.";
+        if (!/^https?:\/\//i.test(site)) site = "https://" + site;
+        try { new URL(site); } catch { return msg.textContent = "That website address doesn’t look right."; }
+        const id = slugify(name);
+        if (!id) return msg.textContent = "Use a name with letters or numbers.";
+        const clash = [...following, ...suggested].find(x => x.id === id && (!p || x.id !== p.id));
+        if (clash) return msg.textContent = `${clash.name} is already in your book.`;
+        const listsOut = [...chosen];
+
+        run($("#f-save"), () => editList(L => {
+          const at = p && findIn(L, p.id);
+          const entry = at ? L[at.sec][at.i] : {};
+          Object.assign(entry, { name, site, lists: listsOut, note });
+          if (at && at.sec === section) return;           // stays in the same place
+          if (at) L[at.sec].splice(at.i, 1);
+          L[section].push(entry);
+        }, `${isNew ? "Add" : "Update"} ${name}`), () => {
+          const local = p ? data.photographers.find(x => x.id === p.id) : null;
+          if (local) {
+            const siteChanged = local.site !== site;
+            Object.assign(local, { id, name, site, lists: listsOut, note, status: section });
+            if (siteChanged) { local.images = []; local.pending = true; local.error = "New photos are on their way. They usually appear within a few minutes."; }
+          } else {
+            data.photographers.push({ id, name, site, lists: listsOut, note, status: section, images: [], pending: true,
+              error: "Photos are on their way. They usually appear within a few minutes." });
+          }
+          close();
+          toast(isNew ? `${name} added. Photos arrive in a few minutes.` : "Saved.");
+          refreshViews(p && p.id !== id && location.hash.includes(p.id) ? `#/p/${id}` : undefined);
+        });
+      };
+
+      if ($("#f-remove")) {
+        $("#f-remove").onclick = () => {
+          const b = $("#f-remove");
+          if (!b.dataset.sure) { b.dataset.sure = "1"; b.textContent = "Tap again to remove"; return; }
+          run(b, () => editList(L => { const at = findIn(L, p.id); if (at) L[at.sec].splice(at.i, 1); }, `Remove ${p.name}`), () => {
+            data.photographers = data.photographers.filter(x => x.id !== p.id);
+            close();
+            toast(`${p.name} removed.`);
+            refreshViews(location.hash.includes(p.id) ? "" : undefined);
+          });
+        };
+      }
+      if (isNew) setTimeout(() => $("#f-name")?.focus(), 50);
+    }
+
+    function quick(kind, id) {
+      const p = data.photographers.find(x => x.id === id);
+      if (!p) return;
+      run(null, () => editList(L => {
+        const at = findIn(L, id);
+        if (!at) return;
+        const [entry] = L[at.sec].splice(at.i, 1);
+        if (kind === "keep") L.following.push(entry);
+      }, `${kind === "keep" ? "Keep" : "Dismiss"} ${p.name}`), () => {
+        if (kind === "keep") p.status = "following";
+        else data.photographers = data.photographers.filter(x => x.id !== id);
+        toast(kind === "keep" ? `${p.name} moved into your book.` : `${p.name} dismissed.`);
+        refreshViews(kind === "dismiss" && location.hash.includes(id) ? "" : undefined);
+      });
+    }
+
+    function action(kind, id) {
+      const go = () => {
+        if (kind === "add") form(null);
+        else if (kind === "edit") form(data.photographers.find(x => x.id === id));
+        else quick(kind, id);
+      };
+      if (!repo() || !store.get(TOKEN)) return connect(kind === "keep" || kind === "dismiss" ? () => { close(); go(); } : go);
+      go();
+    }
+
+    return { action, close };
+  })();
+
   // ───────── Routing ─────────
   function route() {
     const parts = location.hash.replace(/^#\/?/, "").split("/").map(decodeURIComponent);
@@ -328,6 +712,8 @@
   window.addEventListener("hashchange", route);
 
   document.addEventListener("click", e => {
+    const act = e.target.closest("[data-act]");
+    if (act) { e.preventDefault(); e.stopPropagation(); return Editor.action(act.dataset.act, act.dataset.id); }
     const t = e.target.closest("[data-go]");
     if (t) { e.preventDefault(); go(t.dataset.go); }
   });
@@ -355,6 +741,7 @@
   });
 
   document.addEventListener("keydown", e => {
+    if ($("#sheet").classList.contains("open")) { if (e.key === "Escape") Editor.close(); return; }
     if (!$("#reader").classList.contains("open")) return;
     if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); turn(1); }
     if (e.key === "ArrowLeft") turn(-1);
