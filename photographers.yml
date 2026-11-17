@@ -36,12 +36,10 @@ following:
     lists: [Film, Landscape]
     note: Grainydays. His print shop on Darkroom.
 
+  - name: Fan Ho
+    site: https://fanho-forgetmenot.com/
+    lists: [Street]
 
-# ─────────────────────────────────────────────────────────────
-#  SUGGESTED: people you might like. They show in their own
-#  section of the book. To keep someone, move their block up
-#  into "following". To drop them, delete their block.
-# ─────────────────────────────────────────────────────────────
 
 suggested:
 
