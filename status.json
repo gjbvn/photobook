@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18T04:26:32Z",
- "seconds": 522,
+ "updated": "2026-11-18T22:46:52Z",
+ "seconds": 525,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -68,7 +68,7 @@
   },
   {
    "name": "Jason Kummerfeldt",
-   "photos": 55,
+   "photos": 50,
    "status": "following",
    "sites": [
     "https://graincheck.darkroom.com"
@@ -130,14 +130,16 @@
   },
   {
    "name": "Vivian Maier",
-   "photos": 101,
+   "photos": 96,
    "status": "following",
    "sites": [
     "https://www.vivianmaier.com"
    ],
    "pages_opened": 24,
    "problem": null,
-   "details": []
+   "details": [
+    "https://www.vivianmaier.com/vivian-maier-books/ — Page.goto: Timeout 40000ms exceeded."
+   ]
   },
   {
    "name": "Daido Moriyama",
@@ -164,7 +166,7 @@
   },
   {
    "name": "Tran Tuan Viet",
-   "photos": 119,
+   "photos": 120,
    "status": "following",
    "sites": [
     "https://trantuanviet.com"
@@ -175,7 +177,7 @@
   },
   {
    "name": "Elliott Erwitt",
-   "photos": 135,
+   "photos": 134,
    "status": "following",
    "sites": [
     "https://www.elliotterwitt.com"
