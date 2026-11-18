@@ -28,7 +28,10 @@ following:
 
   - name: James Popsys
     site: https://www.jamespopsys.com
+    pages: [https://www.jamespopsys.com/store]
+    follow: /store/
     lists: [Landscape, Travel]
+    note: His work lives in his print store.
 
   - name: Jason Kummerfeldt
     site: https://graincheck.darkroom.com
@@ -36,17 +39,10 @@ following:
     lists: [Film, Landscape]
     note: Grainydays. His print shop on Darkroom.
 
-  - name: Fan Ho
-    site: https://fanho-forgetmenot.com/
-    lists: [Street]
-
-  - name: Willem Verbeek
-    site: https://www.willemverbeeck.com/work
-    lists: [Street, Travel]
-
   - name: Willem Verbeeck
     site: https://www.willemverbeeck.com
-    lists: [Film, Street]
+    pages: [https://www.willemverbeeck.com/work]
+    lists: [Film, Street, Travel]
     note: Film photographer of quiet American cities and towns. Fits alongside Grainydays.
 
   - name: Sean Tucker
