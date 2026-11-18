@@ -137,8 +137,10 @@ def upgrade_url(url):
 def image_key(url):
     """Two addresses for the same photo (different sizes) get the same key."""
     u = url.lower().split("#")[0]
-    if "squarespace-cdn.com" in u or "wixstatic.com" in u:
-        u = u.split("?")[0].split("/v1/")[0]
+    if "squarespace-cdn.com" in u:
+        u = u.split("?")[0]                      # same photo, different ?format= size
+    elif "wixstatic.com" in u:
+        u = u.split("?")[0].split("/v1/")[0]     # .../media/abc.jpg/v1/fill/... -> .../media/abc.jpg
     u = re.sub(r"/w/\d+/", "/", u)
     u = re.sub(r"-\d{2,4}x\d{2,4}(?=\.(?:jpe?g|png|webp))", "", u)
     u = re.sub(r"[?&](w|width|h|height|q|quality|format|fit|auto|dpr)=[^&]*", "", u)
@@ -482,7 +484,7 @@ SKIP_LINKS = re.compile(
     r"cookie|faq|imprint|impressum|legal|newsletter|subscribe|workshop|tour|booking|press|\bcv\b|"
     r"search|/tag/|/tags/|/category/|/author/|/feed|wp-admin|wp-login|\.pdf|\.zip|mailto:|tel:|"
     r"javascript:|instagram\.com|facebook\.com|twitter\.com|x\.com|youtube\.com|vimeo\.com|"
-    r"linkedin\.com|pinterest\.|tiktok\.com|/shop|/store|product", re.I)
+    r"linkedin\.com|pinterest\.|tiktok\.com|/shop|/store|product|wedding|engagement", re.I)
 
 
 def keep_image(rec):
@@ -761,7 +763,9 @@ async def run_all(people, previous, previous_by_site, now, hidden=frozenset()):
                     await context.close()
                 if not images and old.get("images") and problem != "robots":
                     images = old["images"]
-                    error = "Couldn’t reach the website this time; showing the photos found before."
+                    error = ("Couldn’t reach the website this time; showing the photos found before."
+                             if problem == "blocked" else
+                             "No photos were found this time; showing the photos found before.")
                 if hidden:
                     images = [i for i in images if image_key(i["src"]) not in hidden]
                 first_seen = {image_key(i["src"]): i.get("first_seen", now) for i in old.get("images", [])}

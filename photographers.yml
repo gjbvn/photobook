@@ -102,7 +102,8 @@ following:
     note: Grainy, high-contrast Tokyo.
 
   - name: Harry Gruyaert
-    site: https://www.magnumphotos.com/photographer/harry-gruyaert/
+    site: https://www.howardgreenberg.com/artists/harry-gruyaert
+    pages: [https://www.magnumphotos.com/photographer/harry-gruyaert/]
     lists: [Masters, Color]
     note: Bold colour from Belgium, Morocco and India.
 
@@ -120,6 +121,7 @@ following:
 
   - name: Tatsuo Suzuki
     site: https://tatsuosuzuki.com
+    pages: [https://www.lensculture.com/tatsuo-suzuki]
     lists: [Street]
     note: Gritty black-and-white Tokyo.
 
@@ -144,7 +146,8 @@ following:
     note: Graphic lines and shapes in Hamburg.
 
   - name: Trent Parke
-    site: https://www.magnumphotos.com/photographer/trent-parke/
+    site: https://australianphotographers.org/artists/trent-parke/photos.html
+    pages: [https://www.magnumphotos.com/photographer/trent-parke/]
     lists: [Street]
     note: Chasing harsh Australian light.
 
@@ -171,7 +174,8 @@ following:
     note: Based in Hoi An. Portraits and Hoi An's yellow streets.
 
   - name: Justin Mott
-    site: https://justinmott.com/street-photography-vietnam
+    site: https://justinmott.com/personal-projects/vietnam-retrospective/
+    pages: [https://justinmott.com/personal-projects/vietnam/]
     lists: [Vietnam, Street]
     note: Vietnam-based American. Hanoi and Saigon streets.
 
@@ -181,7 +185,7 @@ following:
     note: Vietnamese documentary photographer. World Press Photo winner.
 
   - name: Adrien Jean
-    site: https://www.adrienjeanphotography.com/saigonoi
+    site: https://www.adrienjeanphotography.com
     lists: [Vietnam, Street]
     note: French photographer in Saigon since 2014.
 
