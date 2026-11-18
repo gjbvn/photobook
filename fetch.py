@@ -35,6 +35,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent
 LIST_FILE = ROOT / "photographers.yml"
 OUT_FILE = ROOT / "images.json"
+HIDDEN_FILE = ROOT / "hidden.json"   # photos you removed in the book
 
 USER_AGENT = (
     "Mozilla/5.0 (compatible; PersonalPhotobook/1.0; "
@@ -710,7 +711,7 @@ def load_people():
     return people
 
 
-async def run_all(people, previous, previous_by_site, now):
+async def run_all(people, previous, previous_by_site, now, hidden=frozenset()):
     from playwright.async_api import async_playwright
 
     async with async_playwright() as pw:
@@ -741,6 +742,8 @@ async def run_all(people, previous, previous_by_site, now):
                 if not images and old.get("images") and problem != "robots":
                     images = old["images"]
                     error = "Couldn’t reach the website this time; showing the photos found before."
+                if hidden:
+                    images = [i for i in images if image_key(i["src"]) not in hidden]
                 first_seen = {image_key(i["src"]): i.get("first_seen", now) for i in old.get("images", [])}
                 for img in images:
                     img["first_seen"] = first_seen.get(image_key(img["src"]), img.get("first_seen", now))
@@ -770,6 +773,14 @@ async def run_all(people, previous, previous_by_site, now):
             await browser.close()
 
 
+def load_hidden():
+    """Photos removed in the book: their keys, so other sizes of the same photo match too."""
+    try:
+        return {image_key(h["src"]) for h in json.loads(HIDDEN_FILE.read_text(encoding="utf-8")) if h.get("src")}
+    except Exception:
+        return set()
+
+
 def main():
     previous, previous_by_site = {}, {}
     if OUT_FILE.exists():
@@ -784,7 +795,10 @@ def main():
     now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     people = load_people()
     started = time.time()
-    result = asyncio.run(run_all(people, previous, previous_by_site, now))
+    hidden = load_hidden()
+    if hidden:
+        print(f"Leaving out {len(hidden)} photos you removed.", flush=True)
+    result = asyncio.run(run_all(people, previous, previous_by_site, now, hidden))
     OUT_FILE.write_text(json.dumps({"updated": now, "photographers": result}, indent=1, ensure_ascii=False),
                         encoding="utf-8")
     total = sum(len(p["images"]) for p in result)
