@@ -1,1 +1,405 @@
-{"note": "Written by Claude to check access. The next photo run replaces this file."}
+{
+ "updated": "2026-11-18T03:25:45Z",
+ "seconds": 542,
+ "photographers": [
+  {
+   "name": "Harry Gruyaert",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://www.magnumphotos.com/photographer/harry-gruyaert/"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://www.magnumphotos.com/photographer/harry-gruyaert/ — the site answered 403"
+   ]
+  },
+  {
+   "name": "Tatsuo Suzuki",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://tatsuosuzuki.com"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://tatsuosuzuki.com — the site answered 401"
+   ]
+  },
+  {
+   "name": "Trent Parke",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://www.magnumphotos.com/photographer/trent-parke/"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://www.magnumphotos.com/photographer/trent-parke/ — the site answered 403"
+   ]
+  },
+  {
+   "name": "Gueorgui Pinkhassov",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/ — the site answered 403"
+   ]
+  },
+  {
+   "name": "Justin Mott",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://justinmott.com/street-photography-vietnam"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://justinmott.com/street-photography-vietnam — the site answered 404"
+   ]
+  },
+  {
+   "name": "Adrien Jean",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://www.adrienjeanphotography.com/saigonoi"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://www.adrienjeanphotography.com/saigonoi — the site answered 404"
+   ]
+  },
+  {
+   "name": "Roman Fox",
+   "photos": 1,
+   "status": "following",
+   "sites": [
+    "https://www.snapsbyfox.com"
+   ],
+   "pages_opened": 1,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "James Popsys",
+   "photos": 1,
+   "status": "following",
+   "sites": [
+    "https://www.jamespopsys.com",
+    "https://www.jamespopsys.com/store"
+   ],
+   "pages_opened": 21,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": []
+  },
+  {
+   "name": "Willem Verbeeck",
+   "photos": 1,
+   "status": "following",
+   "sites": [
+    "https://www.willemverbeeck.com",
+    "https://www.willemverbeeck.com/work"
+   ],
+   "pages_opened": 16,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": []
+  },
+  {
+   "name": "Siegfried Hansen",
+   "photos": 1,
+   "status": "following",
+   "sites": [
+    "https://siegfried-hansen.de"
+   ],
+   "pages_opened": 1,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": [
+    "https://siegfried-hansen.de — the site answered 503"
+   ]
+  },
+  {
+   "name": "Fan Ho",
+   "photos": 2,
+   "status": "following",
+   "sites": [
+    "https://fanho-forgetmenot.com"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": [
+    "https://fanho-forgetmenot.com/2020notable/6dsg0qjzdbsglkhkuuuqsubcdm5sbi — the site answered 404"
+   ]
+  },
+  {
+   "name": "Henri Cartier-Bresson",
+   "photos": 6,
+   "status": "following",
+   "sites": [
+    "https://www.henricartierbresson.org/en/"
+   ],
+   "pages_opened": 1,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Saul Leiter",
+   "photos": 8,
+   "status": "following",
+   "sites": [
+    "https://www.saulleiterfoundation.org"
+   ],
+   "pages_opened": 24,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": []
+  },
+  {
+   "name": "Sean Tucker",
+   "photos": 10,
+   "status": "following",
+   "sites": [
+    "https://www.seantucker.photography"
+   ],
+   "pages_opened": 24,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": []
+  },
+  {
+   "name": "Joel Meyerowitz",
+   "photos": 15,
+   "status": "following",
+   "sites": [
+    "https://joelmeyerowitz.com"
+   ],
+   "pages_opened": 24,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": []
+  },
+  {
+   "name": "Matt Stuart",
+   "photos": 18,
+   "status": "following",
+   "sites": [
+    "https://www.mattstuart.com"
+   ],
+   "pages_opened": 21,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": []
+  },
+  {
+   "name": "Jesse Marlow",
+   "photos": 40,
+   "status": "following",
+   "sites": [
+    "https://www.jessemarlow.com"
+   ],
+   "pages_opened": 24,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": []
+  },
+  {
+   "name": "Catherine Karnow",
+   "photos": 40,
+   "status": "following",
+   "sites": [
+    "https://catherinekarnow.com"
+   ],
+   "pages_opened": 18,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": []
+  },
+  {
+   "name": "Jason Kummerfeldt",
+   "photos": 56,
+   "status": "following",
+   "sites": [
+    "https://graincheck.darkroom.com"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Rinzi Ruiz",
+   "photos": 65,
+   "status": "following",
+   "sites": [
+    "https://www.rinziruizphotography.com"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": [
+    "https://www.rinziruizphotography.com/engagementandweddings/h5d13ed74 — the site answered 429",
+    "https://www.rinziruizphotography.com/engagementandweddings/h5d141316 — the site answered 429",
+    "https://www.rinziruizphotography.com/engagementandweddings/h5d141bb2 — the site answered 429",
+    "https://www.rinziruizphotography.com/engagementandweddings/h5d14113c — the site answered 429",
+    "https://www.rinziruizphotography.com/engagementandweddings/h5d1400a6 — the site answered 429"
+   ]
+  },
+  {
+   "name": "Vivian Maier",
+   "photos": 101,
+   "status": "following",
+   "sites": [
+    "https://www.vivianmaier.com"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Daido Moriyama",
+   "photos": 103,
+   "status": "following",
+   "sites": [
+    "https://www.moriyamadaido.com/en/"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Tran Tuan Viet",
+   "photos": 119,
+   "status": "following",
+   "sites": [
+    "https://trantuanviet.com"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Elliott Erwitt",
+   "photos": 135,
+   "status": "following",
+   "sites": [
+    "https://www.elliotterwitt.com"
+   ],
+   "pages_opened": 7,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Thomas Heaton",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.thomasheaton.co.uk"
+   ],
+   "pages_opened": 20,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Ernst Haas",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://ernst-haas.com"
+   ],
+   "pages_opened": 13,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Fred Herzog",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.equinoxgallery.com/artists/fred-herzog"
+   ],
+   "pages_opened": 4,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Alex Webb",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.webbnorriswebb.co"
+   ],
+   "pages_opened": 11,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Shin Noguchi",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://shinnoguchiphotography.com"
+   ],
+   "pages_opened": 7,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Philip Jones Griffiths",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://philipjonesgriffiths.org/timeline/vietnam/"
+   ],
+   "pages_opened": 18,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Réhahn",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.rehahnphotographer.com"
+   ],
+   "pages_opened": 8,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Maika Elan",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://maikaelan.com"
+   ],
+   "pages_opened": 9,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Nguyen The Son",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://nguyenartfoundation.com/artist/nguyen-the-son/",
+    "https://artvietnamgallery.com/product-category/artist/vietnamese-artists/nguyen-the-son/"
+   ],
+   "pages_opened": 9,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Vietnam Streets",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://vietnamstreets.org"
+   ],
+   "pages_opened": 7,
+   "problem": null,
+   "details": []
+  }
+ ]
+}
