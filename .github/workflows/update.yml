@@ -34,6 +34,6 @@ jobs:
         run: |
           git config user.name "photobook-bot"
           git config user.email "photobook-bot@users.noreply.github.com"
-          git add images.json
+          git add images.json status.json
           git diff --cached --quiet || (git commit -m "Update photos" && git pull --rebase && git push)
 
