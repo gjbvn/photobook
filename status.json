@@ -1,44 +1,20 @@
 {
- "updated": "2026-11-18T03:25:45Z",
- "seconds": 542,
+ "updated": "2026-11-18T04:26:32Z",
+ "seconds": 522,
  "photographers": [
-  {
-   "name": "Harry Gruyaert",
-   "photos": 0,
-   "status": "following",
-   "sites": [
-    "https://www.magnumphotos.com/photographer/harry-gruyaert/"
-   ],
-   "pages_opened": 1,
-   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
-   "details": [
-    "https://www.magnumphotos.com/photographer/harry-gruyaert/ — the site answered 403"
-   ]
-  },
   {
    "name": "Tatsuo Suzuki",
    "photos": 0,
    "status": "following",
    "sites": [
-    "https://tatsuosuzuki.com"
+    "https://tatsuosuzuki.com",
+    "https://www.lensculture.com/tatsuo-suzuki"
    ],
-   "pages_opened": 1,
+   "pages_opened": 2,
    "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
    "details": [
-    "https://tatsuosuzuki.com — the site answered 401"
-   ]
-  },
-  {
-   "name": "Trent Parke",
-   "photos": 0,
-   "status": "following",
-   "sites": [
-    "https://www.magnumphotos.com/photographer/trent-parke/"
-   ],
-   "pages_opened": 1,
-   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
-   "details": [
-    "https://www.magnumphotos.com/photographer/trent-parke/ — the site answered 403"
+    "https://tatsuosuzuki.com — the site answered 401",
+    "https://www.lensculture.com/tatsuo-suzuki — the site answered 403"
    ]
   },
   {
@@ -55,67 +31,6 @@
    ]
   },
   {
-   "name": "Justin Mott",
-   "photos": 0,
-   "status": "following",
-   "sites": [
-    "https://justinmott.com/street-photography-vietnam"
-   ],
-   "pages_opened": 1,
-   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
-   "details": [
-    "https://justinmott.com/street-photography-vietnam — the site answered 404"
-   ]
-  },
-  {
-   "name": "Adrien Jean",
-   "photos": 0,
-   "status": "following",
-   "sites": [
-    "https://www.adrienjeanphotography.com/saigonoi"
-   ],
-   "pages_opened": 1,
-   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
-   "details": [
-    "https://www.adrienjeanphotography.com/saigonoi — the site answered 404"
-   ]
-  },
-  {
-   "name": "Roman Fox",
-   "photos": 1,
-   "status": "following",
-   "sites": [
-    "https://www.snapsbyfox.com"
-   ],
-   "pages_opened": 1,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "James Popsys",
-   "photos": 1,
-   "status": "following",
-   "sites": [
-    "https://www.jamespopsys.com",
-    "https://www.jamespopsys.com/store"
-   ],
-   "pages_opened": 21,
-   "problem": "Couldn’t reach the website this time; showing the photos found before.",
-   "details": []
-  },
-  {
-   "name": "Willem Verbeeck",
-   "photos": 1,
-   "status": "following",
-   "sites": [
-    "https://www.willemverbeeck.com",
-    "https://www.willemverbeeck.com/work"
-   ],
-   "pages_opened": 16,
-   "problem": "Couldn’t reach the website this time; showing the photos found before.",
-   "details": []
-  },
-  {
    "name": "Siegfried Hansen",
    "photos": 1,
    "status": "following",
@@ -126,19 +41,6 @@
    "problem": "Couldn’t reach the website this time; showing the photos found before.",
    "details": [
     "https://siegfried-hansen.de — the site answered 503"
-   ]
-  },
-  {
-   "name": "Fan Ho",
-   "photos": 2,
-   "status": "following",
-   "sites": [
-    "https://fanho-forgetmenot.com"
-   ],
-   "pages_opened": 24,
-   "problem": null,
-   "details": [
-    "https://fanho-forgetmenot.com/2020notable/6dsg0qjzdbsglkhkuuuqsubcdm5sbi — the site answered 404"
    ]
   },
   {
@@ -153,74 +55,20 @@
    "details": []
   },
   {
-   "name": "Saul Leiter",
-   "photos": 8,
+   "name": "Trent Parke",
+   "photos": 7,
    "status": "following",
    "sites": [
-    "https://www.saulleiterfoundation.org"
+    "https://australianphotographers.org/artists/trent-parke/photos.html",
+    "https://www.magnumphotos.com/photographer/trent-parke/"
    ],
-   "pages_opened": 24,
-   "problem": "Couldn’t reach the website this time; showing the photos found before.",
-   "details": []
-  },
-  {
-   "name": "Sean Tucker",
-   "photos": 10,
-   "status": "following",
-   "sites": [
-    "https://www.seantucker.photography"
-   ],
-   "pages_opened": 24,
-   "problem": "Couldn’t reach the website this time; showing the photos found before.",
-   "details": []
-  },
-  {
-   "name": "Joel Meyerowitz",
-   "photos": 15,
-   "status": "following",
-   "sites": [
-    "https://joelmeyerowitz.com"
-   ],
-   "pages_opened": 24,
-   "problem": "Couldn’t reach the website this time; showing the photos found before.",
-   "details": []
-  },
-  {
-   "name": "Matt Stuart",
-   "photos": 18,
-   "status": "following",
-   "sites": [
-    "https://www.mattstuart.com"
-   ],
-   "pages_opened": 21,
-   "problem": "Couldn’t reach the website this time; showing the photos found before.",
-   "details": []
-  },
-  {
-   "name": "Jesse Marlow",
-   "photos": 40,
-   "status": "following",
-   "sites": [
-    "https://www.jessemarlow.com"
-   ],
-   "pages_opened": 24,
-   "problem": "Couldn’t reach the website this time; showing the photos found before.",
-   "details": []
-  },
-  {
-   "name": "Catherine Karnow",
-   "photos": 40,
-   "status": "following",
-   "sites": [
-    "https://catherinekarnow.com"
-   ],
-   "pages_opened": 18,
-   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "pages_opened": 28,
+   "problem": null,
    "details": []
   },
   {
    "name": "Jason Kummerfeldt",
-   "photos": 56,
+   "photos": 55,
    "status": "following",
    "sites": [
     "https://graincheck.darkroom.com"
@@ -239,12 +87,46 @@
    "pages_opened": 24,
    "problem": null,
    "details": [
-    "https://www.rinziruizphotography.com/engagementandweddings/h5d13ed74 — the site answered 429",
-    "https://www.rinziruizphotography.com/engagementandweddings/h5d141316 — the site answered 429",
-    "https://www.rinziruizphotography.com/engagementandweddings/h5d141bb2 — the site answered 429",
-    "https://www.rinziruizphotography.com/engagementandweddings/h5d14113c — the site answered 429",
-    "https://www.rinziruizphotography.com/engagementandweddings/h5d1400a6 — the site answered 429"
+    "https://www.rinziruizphotography.com/childrencelebrations/h52552909 — the site answered 429",
+    "https://www.rinziruizphotography.com/childrencelebrations/h52552908 — the site answered 429",
+    "https://www.rinziruizphotography.com/childrencelebrations/h52552900 — the site answered 429",
+    "https://www.rinziruizphotography.com/childrencelebrations/h52552913 — the site answered 429",
+    "https://www.rinziruizphotography.com/childrencelebrations/h525528c3 — the site answered 429"
    ]
+  },
+  {
+   "name": "Sean Tucker",
+   "photos": 73,
+   "status": "following",
+   "sites": [
+    "https://www.seantucker.photography"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Harry Gruyaert",
+   "photos": 77,
+   "status": "following",
+   "sites": [
+    "https://www.howardgreenberg.com/artists/harry-gruyaert",
+    "https://www.magnumphotos.com/photographer/harry-gruyaert/"
+   ],
+   "pages_opened": 28,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Roman Fox",
+   "photos": 87,
+   "status": "following",
+   "sites": [
+    "https://www.snapsbyfox.com"
+   ],
+   "pages_opened": 1,
+   "problem": null,
+   "details": []
   },
   {
    "name": "Vivian Maier",
@@ -265,6 +147,18 @@
     "https://www.moriyamadaido.com/en/"
    ],
    "pages_opened": 24,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Willem Verbeeck",
+   "photos": 115,
+   "status": "following",
+   "sites": [
+    "https://www.willemverbeeck.com",
+    "https://www.willemverbeeck.com/work"
+   ],
+   "pages_opened": 16,
    "problem": null,
    "details": []
   },
@@ -291,6 +185,29 @@
    "details": []
   },
   {
+   "name": "Philip Jones Griffiths",
+   "photos": 137,
+   "status": "following",
+   "sites": [
+    "https://philipjonesgriffiths.org/timeline/vietnam/"
+   ],
+   "pages_opened": 19,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "James Popsys",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.jamespopsys.com",
+    "https://www.jamespopsys.com/store"
+   ],
+   "pages_opened": 19,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Thomas Heaton",
    "photos": 150,
    "status": "following",
@@ -298,6 +215,39 @@
     "https://www.thomasheaton.co.uk"
    ],
    "pages_opened": 20,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Saul Leiter",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.saulleiterfoundation.org"
+   ],
+   "pages_opened": 12,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Fan Ho",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://fanho-forgetmenot.com"
+   ],
+   "pages_opened": 2,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Joel Meyerowitz",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://joelmeyerowitz.com"
+   ],
+   "pages_opened": 8,
    "problem": null,
    "details": []
   },
@@ -335,6 +285,17 @@
    "details": []
   },
   {
+   "name": "Matt Stuart",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.mattstuart.com"
+   ],
+   "pages_opened": 14,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Shin Noguchi",
    "photos": 150,
    "status": "following",
@@ -346,13 +307,24 @@
    "details": []
   },
   {
-   "name": "Philip Jones Griffiths",
+   "name": "Jesse Marlow",
    "photos": 150,
    "status": "following",
    "sites": [
-    "https://philipjonesgriffiths.org/timeline/vietnam/"
+    "https://www.jessemarlow.com"
    ],
-   "pages_opened": 18,
+   "pages_opened": 8,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Catherine Karnow",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://catherinekarnow.com"
+   ],
+   "pages_opened": 3,
    "problem": null,
    "details": []
   },
@@ -368,6 +340,18 @@
    "details": []
   },
   {
+   "name": "Justin Mott",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://justinmott.com/personal-projects/vietnam-retrospective/",
+    "https://justinmott.com/personal-projects/vietnam/"
+   ],
+   "pages_opened": 11,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Maika Elan",
    "photos": 150,
    "status": "following",
@@ -375,6 +359,17 @@
     "https://maikaelan.com"
    ],
    "pages_opened": 9,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Adrien Jean",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.adrienjeanphotography.com"
+   ],
+   "pages_opened": 13,
    "problem": null,
    "details": []
   },
