@@ -5,6 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="referrer" content="no-referrer">
 <meta name="theme-color" content="#f3efe6">
+<script>
+  // Pick light or dark before the page draws, so it never flashes the wrong colours
+  (() => { let t = null; try { t = localStorage.getItem("photobook_theme"); } catch {}
+    if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    document.documentElement.dataset.theme = t; })();
+</script>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="Photobook">
 <title>Photobook</title>
@@ -20,7 +26,26 @@
     --rule: #d9d2c4;
     --accent: #8c2f1e;
     --serif: "EB Garamond", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --shade: rgba(60,50,30,.08);
+    --shade2: rgba(60,50,30,.25);
+    color-scheme: light;
   }
+  html[data-theme="dark"] {
+    --paper: #151412;
+    --leaf: #1d1b18;
+    --ink: #ebe5d8;
+    --muted: #8f887b;
+    --rule: #37332d;
+    --accent: #d98b6c;
+    --shade: rgba(0,0,0,.35);
+    --shade2: rgba(0,0,0,.6);
+    color-scheme: dark;
+  }
+  html[data-theme="dark"] .leaf figure img { box-shadow: 0 0 0 1px rgba(255,255,255,.03); }
+  .theme { color: var(--muted); font-size: 15px; font-style: italic; white-space: nowrap; }
+  .theme:hover { color: var(--ink); }
+  .mast-top { display: flex; justify-content: flex-end; margin-bottom: -8px; }
+  .bar-r { display: flex; gap: 16px; align-items: center; }
   * { box-sizing: border-box; }
   html, body { margin: 0; background: var(--paper); color: var(--ink); }
   body { font-family: var(--serif); font-size: 18px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
@@ -74,9 +99,9 @@
   .bar .title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-style: italic; text-align: center; flex: 1; }
   .bar button:hover { color: var(--ink); }
   .stage { flex: 1; position: relative; display: flex; justify-content: center; align-items: stretch; padding: 4px 16px 8px; gap: 0; min-height: 0; }
-  .leaf { flex: 1; max-width: 760px; background: var(--leaf); box-shadow: 0 1px 2px rgba(60,50,30,.08), 0 8px 30px rgba(60,50,30,.07); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 28px 22px 18px; min-width: 0; animation: turn .35s ease; }
-  .spread .leaf:first-child { box-shadow: inset -14px 0 24px -18px rgba(60,50,30,.25), 0 8px 30px rgba(60,50,30,.07); }
-  .spread .leaf:last-child { box-shadow: inset 14px 0 24px -18px rgba(60,50,30,.25), 0 8px 30px rgba(60,50,30,.07); }
+  .leaf { flex: 1; max-width: 760px; background: var(--leaf); box-shadow: 0 1px 2px var(--shade), 0 8px 30px var(--shade); display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 28px 22px 18px; min-width: 0; animation: turn .35s ease; }
+  .spread .leaf:first-child { box-shadow: inset -14px 0 24px -18px var(--shade2), 0 8px 30px var(--shade); }
+  .spread .leaf:last-child { box-shadow: inset 14px 0 24px -18px var(--shade2), 0 8px 30px var(--shade); }
   @keyframes turn { from { opacity: 0; transform: translateX(var(--dir, 12px)); } to { opacity: 1; transform: none; } }
   .leaf figure { margin: 0; flex: 1; min-height: 0; width: 100%; display: flex; align-items: center; justify-content: center; }
   .leaf figure img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
@@ -99,6 +124,18 @@
   .progress { height: 2px; background: var(--rule); margin: 0 16px max(10px, env(safe-area-inset-bottom)); }
   .progress div { height: 100%; background: var(--ink); transition: width .3s ease; }
 
+  /* ───────── Favourites ───────── */
+  .fav { color: var(--muted); font-size: 15px; white-space: nowrap; padding: 2px 4px; }
+  .fav.on { color: var(--accent); }
+  .fav:hover { color: var(--ink); }
+  .fav.on:hover { color: var(--accent); }
+  .leaf .cap .tools { display: flex; gap: 14px; align-items: baseline; }
+  .rm { color: var(--muted); font-size: 15px; white-space: nowrap; padding: 2px 4px; }
+  .rm:hover { color: var(--ink); }
+  .rm.sure { color: var(--accent); font-style: italic; }
+  @media (max-width: 600px) { .leaf .cap .tools { gap: 10px; } .leaf .cap { font-size: 14px; } }
+  .fav-hint { margin: 14px 0 0; font-size: 15px; color: var(--muted); font-style: italic; }
+
   /* ───────── Editing ───────── */
   .add-btn { margin-top: 18px; color: var(--accent); font-style: italic; font-size: 17px; border-bottom: 1px solid currentColor; }
   .acts { margin-top: 8px; display: flex; gap: 16px; font-size: 15px; }
@@ -120,6 +157,7 @@
     padding: 6px 0; outline: none; border-radius: 0; }
   #sheet textarea { resize: vertical; min-height: 2.6em; }
   #sheet input:focus, #sheet textarea:focus { border-color: var(--ink); }
+  .opening .sites a { margin: 0 6px; white-space: nowrap; }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
   .chip { border: 1px solid var(--rule); padding: 3px 12px; border-radius: 99px; font-size: 15px; }
   .chip.on { background: var(--ink); color: var(--leaf); border-color: var(--ink); }
@@ -140,6 +178,7 @@
   #toast { position: fixed; left: 50%; bottom: max(24px, env(safe-area-inset-bottom)); transform: translateX(-50%) translateY(20px); background: var(--ink); color: var(--leaf);
     padding: 10px 18px; font-size: 16px; opacity: 0; transition: .25s ease; z-index: 30; max-width: calc(100% - 32px); text-align: center; pointer-events: none; }
   #toast.show { opacity: 1; transform: translateX(-50%); }
+  #reader.open ~ #toast { bottom: auto; top: max(64px, calc(env(safe-area-inset-top) + 52px)); }
 
   @media (max-width: 600px) {
     body { font-size: 17px; }
@@ -158,7 +197,7 @@
   <div class="bar">
     <button id="close">← Contents</button>
     <div class="title" id="rtitle"></div>
-    <div id="rpage"></div>
+    <div class="bar-r"><span id="rpage"></span><button class="theme" data-theme-toggle></button></div>
   </div>
   <div class="stage" id="stage"></div>
   <div class="progress"><div id="prog"></div></div>
@@ -198,10 +237,19 @@
     ingest();
     renderContents();
     route();
+    Promise.all([Favs.load(), Hidden.load()]).then(() => {
+      ingest();
+      renderContents();
+      if ($("#reader").classList.contains("open")) route();
+    }).catch(() => {});
   }
 
   function ingest() {
     const people = data.photographers || [];
+    people.forEach(p => {
+      p.allImages = p.allImages || p.images || [];
+      p.images = p.allImages.filter(i => !Hidden.has(i.src));
+    });
     following = people.filter(p => p.status !== "suggested");
     suggested = people.filter(p => p.status === "suggested");
     lists = [];
@@ -215,7 +263,7 @@
     const latest = latestImages();
     const newCount = latest.filter(isNew).length;
 
-    let h = `<header class="mast"><h1>Photobook</h1><p class="sc">${following.length} photographers · ${lists.length} chapters</p>
+    let h = `<div class="mast-top"><button class="theme" data-theme-toggle></button></div><header class="mast"><h1>Photobook</h1><p class="sc">${following.length} photographers · ${lists.length} chapters</p>
       <button class="add-btn" data-act="add">＋ Add a photographer</button></header>`;
 
     if (latest.length) {
@@ -223,6 +271,16 @@
         <div class="strip">${latest.slice(0, 8).map(i => `<img src="${esc(i.src)}" alt="" loading="lazy" onerror="this.remove()">`).join("")}</div>
         <div class="label"><b>Latest pages</b><span class="muted">${newCount ? `<i>${newCount} new this week</i>` : "newest work from everyone"} →</span></div>
       </button>`;
+    }
+
+    const favs = Favs.all();
+    if (favs.length) {
+      h += `<button class="latest" data-go="#/favs">
+        <div class="strip">${favs.slice(0, 8).map(f => `<img src="${esc(f.src)}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.remove()">`).join("")}</div>
+        <div class="label"><b>Favourites</b><span class="muted">${favs.length} saved →</span></div>
+      </button>`;
+    } else if (latest.length) {
+      h += `<p class="fav-hint">Tap ♡ on any photo to keep it in your Favourites.</p>`;
     }
 
     lists.forEach((l, n) => {
@@ -260,6 +318,7 @@
         <button class="add-btn" data-act="add">＋ Add a photographer</button></header>`;
     }
     $("#contents").innerHTML = h;
+    Theme.paint();
   }
 
   function latestImages() {
@@ -294,6 +353,14 @@
       pages.push({ type: "part", title: key, num: ROMAN[n] || "" });
       following.filter(p => (p.lists.length ? p.lists : ["Unsorted"]).includes(key))
         .forEach(p => pages.push(...chapterPages(p, key)));
+    } else if (kind === "favs") {
+      bookTitle = "Favourites";
+      const all = [...following, ...suggested];
+      pages = Favs.all().map((f, i, a) => ({
+        type: "photo", n: i + 1, of: a.length, showName: true,
+        img: { src: f.src, link: f.link, title: f.title },
+        person: all.find(p => p.id === f.pid) || { id: f.pid, name: f.name, site: f.link, images: [] },
+      }));
     } else if (kind === "latest") {
       bookTitle = "Latest pages";
       pages = latestImages().map((img, i, a) => ({ type: "photo", person: img.person, img, n: i + 1, of: a.length, showName: true }));
@@ -325,9 +392,10 @@
         <h2>${esc(p.name)}</h2>
         ${p.note ? `<p>${esc(p.note)}</p>` : ""}
         <div class="rule"></div>
-        <p>${p.images.length ? `${p.images.length} photographs` : ""}${p.lists.length ? ` · ${esc(p.lists.join(", "))}` : ""}</p>
-        ${p.site ? `<p><a href="${esc(p.site)}" target="_blank" rel="noopener" data-stop>${esc(host(p.site))} ↗</a></p>` : ""}
+        <p>${[p.images.length ? `${p.images.length} photographs` : "", esc(p.lists.join(", "))].filter(Boolean).join(" · ")}</p>
+        ${(p.sites || [p.site]).filter(Boolean).length ? `<p class="sites">${(p.sites || [p.site]).filter(Boolean).map(u => `<a href="${esc(u)}" target="_blank" rel="noopener" data-stop>${esc(host(u))} ↗</a>`).join(" ")}</p>` : ""}
         ${p.error ? `<p class="err muted">${esc(p.error)}</p>` : ""}
+        ${p.robots_blocked ? `<p><button class="add-btn" style="margin:0 0 10px" data-stop data-act="robots" data-id="${p.id}">Collect anyway</button></p>` : ""}
         <button class="edit" data-stop data-act="edit" data-id="${p.id}">${p.status === "suggested" ? "Keep or dismiss" : "Edit"}</button>
       </div></div>`;
     }
@@ -336,7 +404,9 @@
       <figure><img src="${esc(img.src)}" alt="${esc(img.title || person.name)}" referrerpolicy="no-referrer"
         onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'broken',textContent:'This photo couldn’t load here. Open it on their site.'}))"></figure>
       <div class="cap"><span class="who">${pg.showName ? esc(person.name) : esc(img.title || "")}${pg.showName && isNew(img) ? ` <span style="color:var(--accent)">· new</span>` : ""}</span>
-        <a href="${esc(img.link || person.site)}" target="_blank" rel="noopener" data-stop>view on site ↗</a></div>
+        <span class="tools"><button class="fav${Favs.has(img.src) ? " on" : ""}" data-stop data-fav="${pages.indexOf(pg)}" aria-label="Save to favourites">${Favs.has(img.src) ? "♥ Saved" : "♡ Save"}</button>
+        <button class="rm" data-stop data-rm="${pages.indexOf(pg)}" aria-label="Remove this photo from the book">Remove</button>
+        <a href="${esc(img.link || person.site)}" target="_blank" rel="noopener" data-stop>view on site ↗</a></span></div>
       <div class="folio">${pg.showName ? "" : `${pg.n} / ${pg.of}`}</div>
     </div>`;
   }
@@ -364,6 +434,83 @@
     draw(step);
   }
 
+  // ───────── Favourites ─────────
+  const Favs = (() => {
+    const KEY = "photobook_favs";
+    let list = [];
+    try { list = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch {}
+    const k = src => String(src).split("?")[0];
+    const has = src => list.some(f => k(f.src) === k(src));
+    const saveLocal = () => { try { localStorage.setItem(KEY, JSON.stringify(list)); } catch {} };
+    let timer = null;
+    const flush = () => { if (timer) { clearTimeout(timer); timer = null; Editor.syncFavs(list).catch(() => {}); } };
+    document.addEventListener("visibilitychange", () => { if (document.hidden) flush(); });
+    function toggle(img, person) {
+      if (has(img.src)) list = list.filter(f => k(f.src) !== k(img.src));
+      else list.unshift({ src: img.src, link: img.link || person.site || "", title: img.title || "",
+                          pid: person.id, name: person.name, added: new Date().toISOString() });
+      saveLocal();
+      clearTimeout(timer);
+      timer = setTimeout(flush, 1500);   // a few taps in a row are saved together
+      return has(img.src);
+    }
+    async function load() {
+      const remote = await Editor.loadFavs(list);
+      if (Array.isArray(remote)) { list = remote; saveLocal(); }
+    }
+    return { all: () => list, has, toggle, load };
+  })();
+
+  // ───────── Removed photos ─────────
+  // Kept in hidden.json in your repository. The book hides them at once,
+  // and the daily update leaves them out from then on.
+  const Hidden = (() => {
+    const KEY = "photobook_hidden";
+    let list = [];
+    try { list = JSON.parse(localStorage.getItem(KEY) || "[]"); } catch {}
+    const k = src => String(src).split("?")[0];
+    const saveLocal = () => { try { localStorage.setItem(KEY, JSON.stringify(list)); } catch {} };
+    return {
+      has: src => list.some(h => k(h.src) === k(src)),
+      countFor: pid => list.filter(h => h.pid === pid).length,
+      add(img, person) {
+        list.push({ src: img.src, pid: person.id, name: person.name, added: new Date().toISOString() });
+        saveLocal();
+        Editor.saveJSON("hidden.json", list, `Remove a photo by ${person.name}`)
+          .catch(e => Editor.toast("Couldn’t save the removal: " + e.message, 6000));
+      },
+      restore(pid, name) {
+        list = list.filter(h => h.pid !== pid);
+        saveLocal();
+        return Editor.saveJSON("hidden.json", list, `Bring back photos by ${name}`);
+      },
+      async load() {
+        const remote = await Editor.loadJSON("hidden.json", list);
+        if (Array.isArray(remote)) { list = remote; saveLocal(); }
+      },
+    };
+  })();
+
+  // ───────── Light / dark ─────────
+  const Theme = {
+    get: () => document.documentElement.dataset.theme || "light",
+    paint() {
+      const dark = Theme.get() === "dark";
+      document.querySelectorAll("[data-theme-toggle]").forEach(b => {
+        b.textContent = dark ? "☀ Light" : "☾ Dark";
+        b.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode");
+      });
+      document.querySelector('meta[name="theme-color"]').content = dark ? "#151412" : "#f3efe6";
+    },
+    toggle() {
+      const t = Theme.get() === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = t;
+      try { localStorage.setItem("photobook_theme", t); } catch {}
+      Theme.paint();
+    },
+  };
+  Theme.paint();
+
   // ───────── Editing from the website ─────────
   // Saves changes straight into photographers.yml in your GitHub repository,
   // using a key (fine-grained token) that is stored only in this browser.
@@ -375,6 +522,10 @@
       set: (k, v) => { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch {} },
     };
     const slugify = s => String(s).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    const hostOf = u => { try { return new URL(u).hostname.toLowerCase().replace(/^www\./, ""); } catch { return ""; } };
+    // Same rule as fetch.py: named people go by their name, unnamed ones by their first website
+    const entryId = e => e.name ? slugify(e.name) : slugify(hostOf(e.site || (e.pages || [])[0] || ""));
+    const sameSite = u => String(u).toLowerCase().replace(/^https?:\/\/(www\.)?/, "").replace(/\/+$/, "");
     const panel = () => $("#panel");
     let busy = false, watchTimer = null;
 
@@ -437,7 +588,7 @@
     const decode = b64 => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\s/g, "")), c => c.charCodeAt(0)));
     const encode = str => { let bin = ""; new TextEncoder().encode(str).forEach(b => bin += String.fromCharCode(b)); return btoa(bin); };
 
-    const ORDER = ["name", "site", "pages", "feeds", "follow", "lists", "note"];
+    const ORDER = ["name", "site", "pages", "feeds", "follow", "robots", "lists", "note"];
     function tidy(p) {
       const o = {};
       ORDER.forEach(k => {
@@ -456,7 +607,7 @@
       }
       let body = jsyaml.dump({ following: L.following.map(tidy), suggested: L.suggested.map(tidy) },
         { lineWidth: -1, flowLevel: 3, noRefs: true });
-      body = body.replace(/\n(\s*- name:)/g, "\n\n$1").replace(/\nsuggested:/, "\n\n\nsuggested:");
+      body = body.replace(/\n(  - )/g, "\n\n$1").replace(/\nsuggested:/, "\n\n\nsuggested:");
       return (header.join("\n").trim() ? header.join("\n").trimEnd() + "\n\n" : "") + body;
     }
 
@@ -480,7 +631,7 @@
 
     function findIn(L, id) {
       for (const sec of ["following", "suggested"]) {
-        const i = L[sec].findIndex(p => slugify(p.name) === id);
+        const i = L[sec].findIndex(p => entryId(p) === id);
         if (i >= 0) return { sec, i };
       }
       return null;
@@ -577,21 +728,29 @@
 
     function form(p) {
       const isNew = !p;
+      const oldId = p && p.id;     // p gets updated after saving, so remember who this was
       const all = [...new Set([...following, ...suggested].flatMap(x => x.lists))];
       const chosen = new Set(p ? p.lists : []);
       let section = p ? p.status : "following";
       open(`<h2>${isNew ? "Add a photographer" : esc(p.name)}</h2>
         <p class="sub">${isNew ? "Their photos appear in your book a few minutes after you save." : "Change their details, or remove them from your book."}</p>
-        <label>Name</label><input type="text" id="f-name" value="${esc(p?.name || "")}" placeholder="e.g. Fan Ho">
-        <label>Website with their photos</label><input type="url" id="f-site" value="${esc(p?.site || "")}" autocapitalize="off" autocorrect="off" placeholder="https://…">
+        <label>Websites with their photos</label>
+        <textarea id="f-sites" rows="3" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="Paste one or more websites, one per line">${esc(p ? (p.sites && p.sites.length ? p.sites : [p.site]).filter(Boolean).join("\n") : "")}</textarea>
+        <label>Name <span style="font-style:italic">(optional)</span></label><input type="text" id="f-name" value="${esc(p && !p.auto_name ? p.name : "")}" placeholder="${p && p.auto_name ? esc(p.name) + " (found automatically)" : "Leave blank to find it automatically"}">
         <label>Chapters</label><div class="chips" id="f-chips"></div>
         <input type="text" id="f-newlist" placeholder="＋ New chapter (type and press Enter)" style="margin-top:8px">
         <label>Your note (optional)</label><textarea id="f-note" rows="2">${esc(p?.note || "")}</textarea>
+        <label style="display:flex;gap:10px;align-items:center;color:var(--ink);margin-top:18px"><input type="checkbox" id="f-robots" ${p && p.robots_respected ? "checked" : ""} style="width:18px;height:18px;accent-color:var(--ink)"> Skip this site if it asks not to be collected</label>
         <label>Section</label><div class="seg" id="f-seg"><button data-s="following">Following</button><button data-s="suggested">Suggested</button></div>
+        ${p && Hidden.countFor(p.id) ? `<p style="margin:18px 0 0"><button class="ghost" id="f-restore" style="text-decoration:underline">Bring back ${Hidden.countFor(p.id)} removed photo${Hidden.countFor(p.id) > 1 ? "s" : ""}</button></p>` : ""}
         <div class="msg"></div>
         <div class="row">${isNew ? `<button class="ghost" id="f-cancel">Cancel</button>` : `<button class="danger" id="f-remove">Remove</button>`}
           <button class="primary" id="f-save">${isNew ? "Add to book" : "Save"}</button></div>
         <p class="fine">Tip: if the photos don’t show up, try the address of their gallery or portfolio page rather than their home page. <button class="ghost" id="f-disconnect" style="font-size:14px;text-decoration:underline">Disconnect this device</button></p>`);
+
+      const grow = () => { const t = $("#f-sites"); t.style.height = "auto"; t.style.height = Math.max(t.scrollHeight, 70) + "px"; };
+      $("#f-sites").addEventListener("input", grow);
+      setTimeout(grow, 0);
 
       const drawChips = () => {
         const names = [...new Set([...all, ...chosen])];
@@ -609,44 +768,75 @@
       $("#f-newlist").addEventListener("keydown", e => { if (e.key === "Enter" || e.key === ",") { e.preventDefault(); addList(); } });
       $("#f-newlist").addEventListener("blur", addList);
       if ($("#f-cancel")) $("#f-cancel").onclick = close;
+      if ($("#f-restore")) $("#f-restore").onclick = () => {
+        Hidden.restore(p.id, p.name).catch(e => toast(e.message, 6000));
+        ingest();
+        renderContents();
+        close();
+        toast("Photos brought back. Any the update has already dropped return after the next one.", 4000);
+        if ($("#reader").classList.contains("open")) route();
+      };
       $("#f-disconnect").onclick = () => { store.set(TOKEN, null); store.set(REPO, null); close(); toast("This device is disconnected."); };
 
       $("#f-save").onclick = () => {
         addList();
         const msg = $(".msg", panel());
         const name = $("#f-name").value.trim();
-        let site = $("#f-site").value.trim();
         const note = $("#f-note").value.trim();
-        if (!name) return msg.textContent = "Add their name.";
-        if (!site) return msg.textContent = "Add the address of their website.";
-        if (!/^https?:\/\//i.test(site)) site = "https://" + site;
-        try { new URL(site); } catch { return msg.textContent = "That website address doesn’t look right."; }
-        const id = slugify(name);
+
+        // Websites: any mix of new lines, spaces or commas between them
+        const sites = [];
+        for (const raw of $("#f-sites").value.split(/[\s,]+/).filter(Boolean)) {
+          let u = raw.replace(/[)\].;]+$/, "");
+          if (!/^https?:\/\//i.test(u)) u = "https://" + u;
+          let ok = true;
+          try { const h = new URL(u).hostname; ok = h.includes(".") && !h.includes("%"); } catch { ok = false; }
+          if (!ok) { $("#f-sites").focus(); return msg.textContent = `“${raw}” doesn’t look like a website address.`; }
+          if (!sites.some(x => sameSite(x) === sameSite(u))) sites.push(u);
+        }
+        if (!sites.length) return msg.textContent = "Add at least one website.";
+        const site = sites[0], pages = sites.slice(1);
+
+        const id = name ? slugify(name) : slugify(hostOf(site));
         if (!id) return msg.textContent = "Use a name with letters or numbers.";
-        const clash = [...following, ...suggested].find(x => x.id === id && (!p || x.id !== p.id));
+        const others = [...following, ...suggested].filter(x => !p || x.id !== p.id);
+        const clash = others.find(x => x.id === id);
         if (clash) return msg.textContent = `${clash.name} is already in your book.`;
+        for (const x of others) {
+          const dup = (x.sites || [x.site]).find(u => sites.some(v => sameSite(u) === sameSite(v)));
+          if (dup) return msg.textContent = `${hostOf(dup)} is already in your book, under ${x.name}.`;
+        }
         const listsOut = [...chosen];
+        const respectRobots = $("#f-robots").checked;
+        const label = name || (p && p.auto_name ? p.name : hostOf(site));
 
         run($("#f-save"), () => editList(L => {
           const at = p && findIn(L, p.id);
           const entry = at ? L[at.sec][at.i] : {};
-          Object.assign(entry, { name, site, lists: listsOut, note });
+          if (name) entry.name = name; else delete entry.name;
+          Object.assign(entry, { site, pages, lists: listsOut, note });
+          if (respectRobots) entry.robots = "respect"; else delete entry.robots;
           if (at && at.sec === section) return;           // stays in the same place
           if (at) L[at.sec].splice(at.i, 1);
           L[section].push(entry);
-        }, `${isNew ? "Add" : "Update"} ${name}`), () => {
-          const local = p ? data.photographers.find(x => x.id === p.id) : null;
+        }, `${isNew ? "Add" : "Update"} ${label}`), () => {
+          const local = p ? data.photographers.find(x => x.id === oldId) : null;
           if (local) {
-            const siteChanged = local.site !== site;
-            Object.assign(local, { id, name, site, lists: listsOut, note, status: section });
-            if (siteChanged) { local.images = []; local.pending = true; local.error = "New photos are on their way. They usually appear within a few minutes."; }
+            const before = (local.sites || [local.site]).join(" ");
+            Object.assign(local, { id, name: label, auto_name: !name, site, sites, lists: listsOut, note, status: section, robots_respected: respectRobots });
+            if (before !== sites.join(" ")) {
+              local.pending = true;
+              if (!local.images.length) local.error = "Photos are on their way. They usually appear within a few minutes.";
+            }
           } else {
-            data.photographers.push({ id, name, site, lists: listsOut, note, status: section, images: [], pending: true,
-              error: "Photos are on their way. They usually appear within a few minutes." });
+            data.photographers.push({ id, name: label, auto_name: !name, site, sites, lists: listsOut, note, status: section, images: [], pending: true,
+              error: name ? "Photos are on their way. They usually appear within a few minutes."
+                          : "Their name and photos are on their way. They usually appear within a few minutes." });
           }
           close();
-          toast(isNew ? `${name} added. Photos arrive in a few minutes.` : "Saved.");
-          refreshViews(p && p.id !== id && location.hash.includes(p.id) ? `#/p/${id}` : undefined);
+          toast(isNew ? (name ? `${name} added. Photos arrive in a few minutes.` : "Added. Their name and photos arrive in a few minutes.")
+                      : sites.length > 1 ? "Saved. Photos from every website arrive in a few minutes." : "Saved.");
+          refreshViews(oldId && oldId !== id && location.hash.includes(oldId) ? `#/p/${id}` : undefined);
         });
       };
 
@@ -662,12 +852,25 @@
           });
         };
       }
-      if (isNew) setTimeout(() => $("#f-name")?.focus(), 50);
+      if (isNew) setTimeout(() => $("#f-sites")?.focus(), 50);
     }
 
     function quick(kind, id) {
       const p = data.photographers.find(x => x.id === id);
       if (!p) return;
+      if (kind === "robots") {
+        return run(null, () => editList(L => {
+          const at = findIn(L, id);
+          if (at) delete L[at.sec][at.i].robots;
+        }, `Collect ${p.name} anyway`), () => {
+          p.robots_respected = false;
+          p.robots_blocked = false;
+          p.pending = true;
+          p.error = "Collecting now. Photos usually appear within half an hour.";
+          toast(`Collecting ${p.name}. Photos arrive after the next update.`);
+          refreshViews();
+        });
+      }
       run(null, () => editList(L => {
         const at = findIn(L, id);
         if (!at) return;
@@ -681,17 +884,66 @@
       });
     }
 
+    // Small lists kept as JSON files in your repository, so every device sees the same thing
+    const connected = () => !!(repo() && store.get(TOKEN));
+
+    async function loadJSON(path, localList) {
+      if (connected()) {
+        try {
+          return JSON.parse(decode((await gh(path)).content));
+        } catch (e) {
+          if (e.status === 404 && localList.length) saveJSON(path, localList).catch(() => {});
+          return null;
+        }
+      }
+      if (localList.length) return null;   // not connected: this device's list
+      try {
+        const r = await fetch(path + "?v=" + Date.now());
+        return r.ok ? await r.json() : null;
+      } catch { return null; }
+    }
+
+    let writes = Promise.resolve();        // save one file at a time, in order
+    function saveJSON(path, list, message = "Update " + path) {
+      if (!connected()) return Promise.resolve();
+      const job = async () => {
+        const body = JSON.stringify(list, null, 1) + "\n";
+        for (let attempt = 0; attempt < 2; attempt++) {
+          let sha;
+          try { sha = (await gh(path)).sha; } catch (e) { if (e.status !== 404) throw e; }
+          try {
+            await gh(path, { method: "PUT", body: JSON.stringify({ message, content: encode(body), ...(sha ? { sha } : {}) }) });
+            return;
+          } catch (e) {
+            if ((e.status === 409 || e.status === 422) && attempt === 0) continue;
+            throw e;
+          }
+        }
+      };
+      writes = writes.then(job, job);
+      return writes;
+    }
+
+    const loadFavs = list => loadJSON("favourites.json", list);
+    const syncFavs = list => saveJSON("favourites.json", list, "Update favourites");
+
+    // Run something that needs the book connected to GitHub (asks to connect first if needed)
+    function needConnection(fn) {
+      if (connected()) return fn();
+      connect(() => { close(); fn(); });
+    }
+
     function action(kind, id) {
       const go = () => {
         if (kind === "add") form(null);
         else if (kind === "edit") form(data.photographers.find(x => x.id === id));
         else quick(kind, id);
       };
-      if (!repo() || !store.get(TOKEN)) return connect(kind === "keep" || kind === "dismiss" ? () => { close(); go(); } : go);
+      if (!repo() || !store.get(TOKEN)) return connect(kind === "keep" || kind === "dismiss" || kind === "robots" ? () => { close(); go(); } : go);
       go();
     }
 
-    return { action, close };
+    return { action, close, toast, loadFavs, syncFavs, loadJSON, saveJSON, needConnection };
   })();
 
   // ───────── Routing ─────────
@@ -701,6 +953,7 @@
     if (kind === "p") openBook("p", a, +b || 0);
     else if (kind === "list") openBook("list", a, +b || 0);
     else if (kind === "latest") openBook("latest", null, +a || 0);
+    else if (kind === "favs") openBook("favs", null, +a || 0);
     else closeBook();
   }
 
@@ -712,6 +965,7 @@
   window.addEventListener("hashchange", route);
 
   document.addEventListener("click", e => {
+    if (e.target.closest("[data-theme-toggle]")) { e.stopPropagation(); return Theme.toggle(); }
     const act = e.target.closest("[data-act]");
     if (act) { e.preventDefault(); e.stopPropagation(); return Editor.action(act.dataset.act, act.dataset.id); }
     const t = e.target.closest("[data-go]");
@@ -725,7 +979,47 @@
   });
 
   // Tap the left third to go back, anywhere else to go forward
+  function toggleFav(i, btn) {
+    const pg = pages[i];
+    if (!pg || pg.type !== "photo") return;
+    const on = Favs.toggle(pg.img, pg.person);
+    if (!btn) btn = document.querySelector(`[data-fav="${i}"]`);
+    if (btn) { btn.classList.toggle("on", on); btn.textContent = on ? "♥ Saved" : "♡ Save"; }
+    Editor.toast(on ? "Saved to Favourites." : "Removed from Favourites.", 1600);
+    renderContents();
+  }
+
+  // Remove a photo: first tap asks, second tap removes
+  function removePhoto(i, btn) {
+    const pg = pages[i];
+    if (!pg || pg.type !== "photo") return;
+    if (btn && !btn.classList.contains("sure")) {
+      btn.classList.add("sure");
+      btn.textContent = "Tap again to remove";
+      setTimeout(() => { if (btn.isConnected) { btn.classList.remove("sure"); btn.textContent = "Remove"; } }, 3500);
+      return;
+    }
+    Editor.needConnection(() => {
+      Hidden.add(pg.img, pg.person);
+      if (Favs.has(pg.img.src)) Favs.toggle(pg.img, pg.person);
+      pages.splice(i, 1);
+      // renumber the pages of that photographer
+      const same = pages.filter(x => x.type === "photo" && x.person.id === pg.person.id && !x.showName);
+      same.forEach((x, n) => { x.n = n + 1; x.of = same.length; });
+      ingest();
+      renderContents();
+      Editor.toast("Photo removed from your book.", 2200);
+      if (!pages.length) { location.hash = ""; return; }
+      if (idx >= pages.length) idx = pages.length - 1;
+      draw(1);
+    });
+  }
+
   $("#stage").addEventListener("click", e => {
+    const fav = e.target.closest("[data-fav]");
+    if (fav) return toggleFav(+fav.dataset.fav, fav);
+    const rm = e.target.closest("[data-rm]");
+    if (rm) return removePhoto(+rm.dataset.rm, rm);
     if (e.target.closest("[data-stop]")) return;
     const x = e.clientX / innerWidth;
     turn(x < 0.33 ? -1 : 1);
@@ -745,6 +1039,7 @@
     if (!$("#reader").classList.contains("open")) return;
     if (e.key === "ArrowRight" || e.key === " ") { e.preventDefault(); turn(1); }
     if (e.key === "ArrowLeft") turn(-1);
+    if (e.key === "f" || e.key === "s") toggleFav(idx);
     if (e.key === "Escape") $("#close").click();
   });
 

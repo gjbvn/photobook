@@ -47,7 +47,7 @@ BROWSER_UA = (
 )
 TIMEOUT = 25
 MAX_IMAGES = 150         # photos kept per photographer
-MAX_PAGES = 14           # pages opened per photographer
+MAX_PAGES = 24           # pages opened per photographer
 MAX_DEPTH = 2            # how many clicks away from the start page to explore
 MAX_SECONDS = 300        # time budget per photographer
 PARALLEL = 4             # photographers checked at the same time
@@ -500,6 +500,16 @@ def keep_image(rec):
     return False
 
 
+PAGINATION_TEXT = re.compile(r"\d{1,3}|next|next page|older|older posts|more|load more|›|»|→|>", re.I)
+PAGINATION_HREF = re.compile(r"[?&](page|offset|p)=\d+|/page/\d+", re.I)
+
+
+def is_pagination(link):
+    """Links to the next part of the same list ("2", "Next", ?page=3)."""
+    return bool(PAGINATION_TEXT.fullmatch((link.get("text") or "").strip())
+                or PAGINATION_HREF.search(link["href"]))
+
+
 def rank_link(link, start, follow_re):
     """Higher score = more likely to lead to more photos."""
     href = link["href"].split("#")[0]
@@ -513,6 +523,8 @@ def rank_link(link, start, follow_re):
     if SKIP_LINKS.search(href) or SKIP_LINKS.search(text):
         return None
     score = 1
+    if is_pagination(link):
+        score += 2.5
     if link.get("nav"):
         score += 3
     if GALLERY_WORDS.search(href) or GALLERY_WORDS.search(text):
@@ -526,11 +538,12 @@ async def open_page(page, url, log):
     try:
         resp = await page.goto(url, wait_until="domcontentloaded", timeout=40000)
     except Exception as e:
-        log(f"    ! could not open {url}: {str(e).splitlines()[0][:120]}")
-        return None, "load"
+        msg = str(e).splitlines()[0][:120]
+        log(f"    ! could not open {url}: {msg}")
+        return None, "load: " + msg
     if resp is not None and resp.status >= 400:
         log(f"    ! {url} answered {resp.status}")
-        return None, "status"
+        return None, f"status: the site answered {resp.status}"
     try:
         await page.wait_for_load_state("networkidle", timeout=8000)
     except Exception:
@@ -540,8 +553,9 @@ async def open_page(page, url, log):
         await page.wait_for_timeout(800)
         return await page.evaluate(EXTRACT_JS), None
     except Exception as e:
-        log(f"    ! could not read {url}: {str(e).splitlines()[0][:120]}")
-        return None, "read"
+        msg = str(e).splitlines()[0][:120]
+        log(f"    ! could not read {url}: {msg}")
+        return None, "read: " + msg
 
 
 async def crawl_site(context, start, follow, log, budget, ignore_robots=False):
@@ -566,12 +580,14 @@ async def crawl_site(context, start, follow, log, budget, ignore_robots=False):
             if not ignore_robots and not await asyncio.to_thread(allowed_by_robots, url):
                 log(f"    - {url}: the site asks not to be collected (robots.txt)")
                 problems.append("robots")
+                budget.setdefault("details", []).append(f"{url} — skipped: robots.txt (set to respect)")
                 continue
             data, problem = await open_page(page, url, log)
             opened += 1
             budget["pages"] -= 1
             if problem:
-                problems.append(problem)
+                problems.append(problem.split(":")[0])
+                budget.setdefault("details", []).append(f"{url} — {problem.split(': ', 1)[-1]}")
                 continue
             seen_urls.add(data["url"].split("#")[0].rstrip("/"))
             if first_html is None:
@@ -604,7 +620,8 @@ async def crawl_site(context, start, follow, log, budget, ignore_robots=False):
                         continue
                     href = link["href"].split("#")[0]
                     if href.rstrip("/") not in seen_urls:
-                        queue.append((r, depth + 1, href))
+                        # the next part of the same list doesn't count as going deeper
+                        queue.append((r, depth if is_pagination(link) else depth + 1, href))
     finally:
         await page.close()
 
@@ -629,6 +646,7 @@ async def collect(person, context, log):
     # Personal reader: collect every site unless you set "robots: respect" for it
     ignore_robots = str(person.get("robots", "")).lower() != "respect"
     budget = {"pages": MAX_PAGES + 4 * (len(sites) - 1), "images": MAX_IMAGES}
+    start_pages = budget["pages"]
     buckets, feeds, problems = [], list(person.get("feeds") or []), []
     person["_guess"] = None
     for start in sites:
@@ -668,6 +686,8 @@ async def collect(person, context, log):
                 break
         buckets = [b for b in buckets if b]
 
+    person["_details"] = budget.get("details", [])[:5]
+    person["_pages_opened"] = start_pages - budget["pages"]
     problem = None
     if not images and problems:
         problem = "robots" if all(p == "robots" for p in problems) else "blocked"
@@ -763,6 +783,8 @@ async def run_all(people, previous, previous_by_site, now, hidden=frozenset()):
                     "note": person.get("note", ""),
                     "error": error,
                     "robots_blocked": problem == "robots",
+                    "_details": person.get("_details", []),
+                    "_pages": person.get("_pages_opened", 0),
                     "robots_respected": str(person.get("robots", "")).lower() == "respect",
                     "images": images,
                 }
@@ -799,8 +821,19 @@ def main():
     if hidden:
         print(f"Leaving out {len(hidden)} photos you removed.", flush=True)
     result = asyncio.run(run_all(people, previous, previous_by_site, now, hidden))
+    # A small summary of this run (easy to read without opening the big images.json)
+    summary = [
+        {"name": p["name"], "photos": len(p["images"]), "status": p["status"],
+         "sites": p["sites"], "pages_opened": p.pop("_pages", 0),
+         "problem": p["error"], "details": p.pop("_details", [])}
+        for p in result
+    ]
+    summary.sort(key=lambda s: s["photos"])
     OUT_FILE.write_text(json.dumps({"updated": now, "photographers": result}, indent=1, ensure_ascii=False),
                         encoding="utf-8")
+    (ROOT / "status.json").write_text(json.dumps(
+        {"updated": now, "seconds": int(time.time() - started), "photographers": summary},
+        indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
     total = sum(len(p["images"]) for p in result)
     empty = [p["name"] for p in result if not p["images"]]
     print(f"\nWrote {OUT_FILE.name}: {len(result)} photographers, {total} photos, "
