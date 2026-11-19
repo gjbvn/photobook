@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18T22:46:52Z",
- "seconds": 525,
+ "updated": "2026-11-19T22:43:55Z",
+ "seconds": 522,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -18,6 +18,19 @@
    ]
   },
   {
+   "name": "Siegfried Hansen",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://siegfried-hansen.de"
+   ],
+   "pages_opened": 1,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": [
+    "https://siegfried-hansen.de — the site answered 503"
+   ]
+  },
+  {
    "name": "Gueorgui Pinkhassov",
    "photos": 0,
    "status": "following",
@@ -28,19 +41,6 @@
    "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
    "details": [
     "https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/ — the site answered 403"
-   ]
-  },
-  {
-   "name": "Siegfried Hansen",
-   "photos": 1,
-   "status": "following",
-   "sites": [
-    "https://siegfried-hansen.de"
-   ],
-   "pages_opened": 1,
-   "problem": "Couldn’t reach the website this time; showing the photos found before.",
-   "details": [
-    "https://siegfried-hansen.de — the site answered 503"
    ]
   },
   {
@@ -68,7 +68,7 @@
   },
   {
    "name": "Jason Kummerfeldt",
-   "photos": 50,
+   "photos": 56,
    "status": "following",
    "sites": [
     "https://graincheck.darkroom.com"
@@ -96,7 +96,7 @@
   },
   {
    "name": "Sean Tucker",
-   "photos": 73,
+   "photos": 72,
    "status": "following",
    "sites": [
     "https://www.seantucker.photography"
@@ -107,7 +107,7 @@
   },
   {
    "name": "Harry Gruyaert",
-   "photos": 77,
+   "photos": 76,
    "status": "following",
    "sites": [
     "https://www.howardgreenberg.com/artists/harry-gruyaert",
@@ -130,16 +130,14 @@
   },
   {
    "name": "Vivian Maier",
-   "photos": 96,
+   "photos": 99,
    "status": "following",
    "sites": [
     "https://www.vivianmaier.com"
    ],
    "pages_opened": 24,
    "problem": null,
-   "details": [
-    "https://www.vivianmaier.com/vivian-maier-books/ — Page.goto: Timeout 40000ms exceeded."
-   ]
+   "details": []
   },
   {
    "name": "Daido Moriyama",
@@ -177,7 +175,7 @@
   },
   {
    "name": "Elliott Erwitt",
-   "photos": 134,
+   "photos": 133,
    "status": "following",
    "sites": [
     "https://www.elliotterwitt.com"
@@ -198,8 +196,41 @@
    "details": []
   },
   {
+   "name": "Thomas Heaton",
+   "photos": 148,
+   "status": "following",
+   "sites": [
+    "https://www.thomasheaton.co.uk"
+   ],
+   "pages_opened": 20,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Fred Herzog",
+   "photos": 148,
+   "status": "following",
+   "sites": [
+    "https://www.equinoxgallery.com/artists/fred-herzog"
+   ],
+   "pages_opened": 4,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Shin Noguchi",
+   "photos": 148,
+   "status": "following",
+   "sites": [
+    "https://shinnoguchiphotography.com"
+   ],
+   "pages_opened": 7,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "James Popsys",
-   "photos": 150,
+   "photos": 149,
    "status": "following",
    "sites": [
     "https://www.jamespopsys.com",
@@ -210,24 +241,57 @@
    "details": []
   },
   {
-   "name": "Thomas Heaton",
-   "photos": 150,
-   "status": "following",
-   "sites": [
-    "https://www.thomasheaton.co.uk"
-   ],
-   "pages_opened": 20,
-   "problem": null,
-   "details": []
-  },
-  {
    "name": "Saul Leiter",
-   "photos": 150,
+   "photos": 149,
    "status": "following",
    "sites": [
     "https://www.saulleiterfoundation.org"
    ],
    "pages_opened": 12,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Ernst Haas",
+   "photos": 149,
+   "status": "following",
+   "sites": [
+    "https://ernst-haas.com"
+   ],
+   "pages_opened": 13,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Matt Stuart",
+   "photos": 149,
+   "status": "following",
+   "sites": [
+    "https://www.mattstuart.com"
+   ],
+   "pages_opened": 14,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Jesse Marlow",
+   "photos": 149,
+   "status": "following",
+   "sites": [
+    "https://www.jessemarlow.com"
+   ],
+   "pages_opened": 8,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Réhahn",
+   "photos": 149,
+   "status": "following",
+   "sites": [
+    "https://www.rehahnphotographer.com"
+   ],
+   "pages_opened": 8,
    "problem": null,
    "details": []
   },
@@ -254,28 +318,6 @@
    "details": []
   },
   {
-   "name": "Ernst Haas",
-   "photos": 150,
-   "status": "following",
-   "sites": [
-    "https://ernst-haas.com"
-   ],
-   "pages_opened": 13,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Fred Herzog",
-   "photos": 150,
-   "status": "following",
-   "sites": [
-    "https://www.equinoxgallery.com/artists/fred-herzog"
-   ],
-   "pages_opened": 4,
-   "problem": null,
-   "details": []
-  },
-  {
    "name": "Alex Webb",
    "photos": 150,
    "status": "following",
@@ -287,39 +329,6 @@
    "details": []
   },
   {
-   "name": "Matt Stuart",
-   "photos": 150,
-   "status": "following",
-   "sites": [
-    "https://www.mattstuart.com"
-   ],
-   "pages_opened": 14,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Shin Noguchi",
-   "photos": 150,
-   "status": "following",
-   "sites": [
-    "https://shinnoguchiphotography.com"
-   ],
-   "pages_opened": 7,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Jesse Marlow",
-   "photos": 150,
-   "status": "following",
-   "sites": [
-    "https://www.jessemarlow.com"
-   ],
-   "pages_opened": 8,
-   "problem": null,
-   "details": []
-  },
-  {
    "name": "Catherine Karnow",
    "photos": 150,
    "status": "following",
@@ -327,17 +336,6 @@
     "https://catherinekarnow.com"
    ],
    "pages_opened": 3,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Réhahn",
-   "photos": 150,
-   "status": "following",
-   "sites": [
-    "https://www.rehahnphotographer.com"
-   ],
-   "pages_opened": 8,
    "problem": null,
    "details": []
   },
