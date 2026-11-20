@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19T22:43:55Z",
- "seconds": 522,
+ "updated": "2026-11-20T22:42:12Z",
+ "seconds": 548,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -25,7 +25,7 @@
     "https://siegfried-hansen.de"
    ],
    "pages_opened": 1,
-   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
    "details": [
     "https://siegfried-hansen.de — the site answered 503"
    ]
@@ -68,7 +68,7 @@
   },
   {
    "name": "Jason Kummerfeldt",
-   "photos": 56,
+   "photos": 55,
    "status": "following",
    "sites": [
     "https://graincheck.darkroom.com"
@@ -164,7 +164,7 @@
   },
   {
    "name": "Tran Tuan Viet",
-   "photos": 120,
+   "photos": 119,
    "status": "following",
    "sites": [
     "https://trantuanviet.com"
@@ -186,12 +186,12 @@
   },
   {
    "name": "Philip Jones Griffiths",
-   "photos": 137,
+   "photos": 136,
    "status": "following",
    "sites": [
     "https://philipjonesgriffiths.org/timeline/vietnam/"
    ],
-   "pages_opened": 19,
+   "pages_opened": 18,
    "problem": null,
    "details": []
   },
