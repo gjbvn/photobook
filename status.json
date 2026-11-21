@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T09:14:13Z",
- "seconds": 837,
+ "updated": "2026-11-21T22:34:27Z",
+ "seconds": 1132,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -70,6 +70,56 @@
    ]
   },
   {
+   "name": "Ian Berry",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://www.magnumphotos.com/photographer/ian-berry/"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://www.magnumphotos.com/photographer/ian-berry/ — the site answered 403"
+   ]
+  },
+  {
+   "name": "Cody Ellingham",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://www.codyellingham.com"
+   ],
+   "pages_opened": 1,
+   "problem": "No photos could be found on this website. Try adding the address of a gallery page.",
+   "details": []
+  },
+  {
+   "name": "Romain Jacquet-Lagrèze",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://rjl-art.com"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://rjl-art.com — the site answered 403"
+   ]
+  },
+  {
+   "name": "Marcus Wendt",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://mymodernmet.com/nightscape-marcus-wendt"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://mymodernmet.com/nightscape-marcus-wendt — the site answered 404"
+   ]
+  },
+  {
    "name": "Peter Bialobrzeski",
    "photos": 0,
    "status": "following",
@@ -80,6 +130,19 @@
    "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
    "details": [
     "https://www.bialobrzeski.de — the site answered 404"
+   ]
+  },
+  {
+   "name": "Christopher Herwig",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://www.christopherherwig.com"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://www.christopherherwig.com — Page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.christopherherwig.com/"
    ]
   },
   {
@@ -140,7 +203,7 @@
   },
   {
    "name": "Jason Kummerfeldt",
-   "photos": 55,
+   "photos": 57,
    "status": "following",
    "sites": [
     "https://graincheck.darkroom.com"
@@ -185,9 +248,12 @@
     "https://www.howardgreenberg.com/artists/harry-gruyaert",
     "https://www.magnumphotos.com/photographer/harry-gruyaert/"
    ],
-   "pages_opened": 28,
-   "problem": null,
-   "details": []
+   "pages_opened": 2,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": [
+    "https://www.howardgreenberg.com/artists/harry-gruyaert — Page.goto: Timeout 40000ms exceeded.",
+    "https://www.magnumphotos.com/photographer/harry-gruyaert/ — the site answered 403"
+   ]
   },
   {
    "name": "Wouter Vanhees",
@@ -267,6 +333,17 @@
    "details": []
   },
   {
+   "name": "Napping in Saigon (Legal Nomads)",
+   "photos": 104,
+   "status": "following",
+   "sites": [
+    "https://www.legalnomads.com/adventures-in-sleeping-an-instagram-series"
+   ],
+   "pages_opened": 1,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Chris Killip",
    "photos": 109,
    "status": "following",
@@ -293,19 +370,30 @@
    "details": []
   },
   {
-   "name": "Tran Tuan Viet",
-   "photos": 118,
+   "name": "Aurélien Aumond",
+   "photos": 122,
    "status": "following",
    "sites": [
-    "https://trantuanviet.com"
+    "https://www.designboom.com/architecture/aurelien-aumond-serene-glow-tokyo-buildings-after-dark-iphone-lens-09-12-2024/"
    ],
-   "pages_opened": 24,
+   "pages_opened": 5,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Manuel Alvarez Diestro",
+   "photos": 132,
+   "status": "following",
+   "sites": [
+    "https://www.designboom.com/art/manuel-alvarez-diestro-photo-series-urban-expansion-fabric-landscapes-seas-construction-06-12-2025/"
+   ],
+   "pages_opened": 5,
    "problem": null,
    "details": []
   },
   {
    "name": "Elliott Erwitt",
-   "photos": 132,
+   "photos": 133,
    "status": "following",
    "sites": [
     "https://www.elliotterwitt.com"
@@ -341,14 +429,49 @@
   },
   {
    "name": "Philip Jones Griffiths",
-   "photos": 136,
+   "photos": 137,
    "status": "following",
    "sites": [
     "https://philipjonesgriffiths.org/timeline/vietnam/"
    ],
-   "pages_opened": 18,
+   "pages_opened": 19,
    "problem": null,
    "details": []
+  },
+  {
+   "name": "Daniel Soares",
+   "photos": 138,
+   "status": "following",
+   "sites": [
+    "https://www.saveur.com/neon-nights-nyc"
+   ],
+   "pages_opened": 13,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Tran Tuan Viet",
+   "photos": 139,
+   "status": "following",
+   "sites": [
+    "https://trantuanviet.com"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Florian W. Mueller",
+   "photos": 142,
+   "status": "following",
+   "sites": [
+    "https://www.thisiscolossal.com/2018/11/nightshift-by-florian-mueller/"
+   ],
+   "pages_opened": 18,
+   "problem": null,
+   "details": [
+    "https://www.thisiscolossal.com/?memberful_endpoint=auth — the site answered 403"
+   ]
   },
   {
    "name": "Nicole Tung",
@@ -358,6 +481,17 @@
     "https://www.nicoletung.com"
    ],
    "pages_opened": 5,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Hanoi non-intentional design (Core77)",
+   "photos": 144,
+   "status": "following",
+   "sites": [
+    "https://www.core77.com/posts/15539/postcards-from-asia-hanoi-non-intentional-design-15539"
+   ],
+   "pages_opened": 6,
    "problem": null,
    "details": []
   },
@@ -560,7 +694,7 @@
     "https://nguyenartfoundation.com/artist/nguyen-the-son/",
     "https://artvietnamgallery.com/product-category/artist/vietnamese-artists/nguyen-the-son/"
    ],
-   "pages_opened": 9,
+   "pages_opened": 11,
    "problem": null,
    "details": []
   },
@@ -621,10 +755,14 @@
     "https://spruethmagers.com/artists/bernd-hilla-becher/",
     "https://www.moma.org/artists/436"
    ],
-   "pages_opened": 4,
+   "pages_opened": 28,
    "problem": null,
    "details": [
-    "https://www.moma.org/artists/436 — the site answered 403"
+    "https://www.moma.org/collection/ — the site answered 403",
+    "https://www.moma.org/calendar/film — the site answered 403",
+    "https://www.moma.org/calendar/exhibitions/history — the site answered 403",
+    "https://www.moma.org/collection/works/2106?artist_id=436&page=1&sov_referrer=artist — the site answered 403",
+    "https://www.moma.org/ — the site answered 403"
    ]
   },
   {
@@ -650,6 +788,62 @@
    "details": []
   },
   {
+   "name": "Liam Wong",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.liamwong.com"
+   ],
+   "pages_opened": 23,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "QT Luong",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://terragalleria.com/pictures-subjects/rain/",
+    "https://terragalleria.com/pictures-subjects/people-sleeping"
+   ],
+   "pages_opened": 28,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Hans Gindlesberger",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://lenscratch.com/2014/07/hans-gindlesberger-weighing-rain/"
+   ],
+   "pages_opened": 22,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Abir Abdullah",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.tbsnews.net/node/1216191"
+   ],
+   "pages_opened": 4,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Hanoi rain nightscapes (Saigoneer)",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.saigoneer.com/vietnam-travel/23588-photos-from-rain-soaked-nightscapes-to-a-serene-hanoian-dawn"
+   ],
+   "pages_opened": 9,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Greg Girard",
    "photos": 150,
    "status": "following",
@@ -661,6 +855,34 @@
    "details": []
   },
   {
+   "name": "Franck Bohbot",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.franckbohbot.com"
+   ],
+   "pages_opened": 1,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Xavier Portela",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://mymodernmet.com/neon-photography-xavier-portela/"
+   ],
+   "pages_opened": 19,
+   "problem": null,
+   "details": [
+    "https://mymodernmet.com/?p=373856&preview=true&preview_id=373856 — the site answered 404",
+    "https://mymodernmet.com/?p=97467&preview=true&preview_id=97467 — the site answered 404",
+    "https://mymodernmet.com/xavier-portela-photography-tokyos-glow-pink/ — the site answered 404",
+    "https://mymodernmet.com/mary-mugot-night-photography-hong-kong/ — the site answered 404",
+    "https://mymodernmet.com/sharon-blance-hong-kong-neon/ — the site answered 404"
+   ]
+  },
+  {
    "name": "Hammock cafés (Vietnam Coracle)",
    "photos": 150,
    "status": "following",
@@ -668,6 +890,28 @@
     "https://vietnamcoracle.com/ca-phe-vong-ode-to-hammock-cafes"
    ],
    "pages_opened": 4,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Chris Hilton",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://adventure.com/plastic-chairs-southeast-asia-photos/"
+   ],
+   "pages_opened": 2,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "The Vietnamese plastic stool (Vietcetera)",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://vietcetera.com/en/a-brief-history-of-the-vietnamese-plastic-stool"
+   ],
+   "pages_opened": 11,
    "problem": null,
    "details": []
   }
