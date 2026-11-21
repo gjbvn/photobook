@@ -204,5 +204,50 @@ following:
     site: https://www.etienneperrone.com/
     lists: [Street, Landscape]
 
+  # ── Fishing villages and long-term projects (for the Nam O project) ──
+
+  - name: Chris Killip
+    site: https://www.magnumphotos.com/photographer/chris-killip/
+    pages: [https://www.chriskillip.com]
+    lists: [Fishing Villages, Masters, Documentary]
+    note: Skinningrove (1982-84). Years earning a closed fishing village's trust, then posted the book through every letterbox.
+
+  - name: Jean Gaumy
+    site: https://www.magnumphotos.com/photographer/jean-gaumy/
+    lists: [Fishing Villages, Masters, Documentary]
+    note: Men at Sea. Fourteen years of winter trips aboard trawlers that were disappearing.
+
+  - name: Rob Hornstra
+    site: https://www.thesochiproject.org
+    pages: [https://www.robhornstra.com]
+    lists: [Documentary]
+    note: The Sochi Project, with Arnold van Bruggen. Five years of "slow journalism" on a place being remade by a mega-project.
+
+  - name: Frank Meadow Sutcliffe
+    site: https://whitbymuseum.org.uk/collection/photography/
+    pages: [https://shop.whitbymuseum.org.uk/]
+    lists: [Fishing Villages, Masters]
+    note: Whitby fisherfolk, harbour and net-menders, 1875-1910. The original fishing-village photographer.
+
+  - name: Alec Gill
+    site: https://www.alecgillhessleroadphotoarchivebook.com
+    lists: [Fishing Villages, Documentary]
+    note: Hull's Hessle Road fishing community, and its breakup when the area was cleared from 1976.
+
+  - name: Joe Pansa
+    site: https://joepansa.com/portfolio
+    lists: [Fishing Villages, Documentary]
+    note: The Last Fishermen. Ongoing since 2022 in his hometown, Mola di Bari, Italy. Earned his way onto the boats.
+
+  - name: Dat Vu
+    site: https://datvu.format.com/
+    lists: [Fishing Villages, Vietnam, Documentary]
+    note: A Vietnamese Prospect. Half of it is Dong Yen fishing village (Ha Tinh) and the Formosa complex that displaced it. Closest parallel to Nam O.
+
+  - name: Nicole Tung
+    site: https://www.nicoletung.com
+    lists: [Fishing Villages, Documentary]
+    note: Nine months on Southeast Asia's fishing industry, overfishing and the people on the boats.
+
 
 suggested: []
