@@ -57,7 +57,7 @@ following:
 
   - name: Saul Leiter
     site: https://www.saulleiterfoundation.org
-    lists: [Masters, Color]
+    lists: [Masters, Color, Rain]
     note: Rain, reflections and soft colour in 1950s New York.
 
   - name: Fan Ho
@@ -267,8 +267,70 @@ following:
 
   - name: Michael Wolf
     site: https://photomichaelwolf.com
-    lists: [Typologies, Documentary, Color]
-    note: Architecture of Density and Back Door of Hong Kong. Documenting what urban renewal is erasing, one repeated subject at a time.
+    lists: [Typologies, Documentary, Color, Makeshift]
+    note: Architecture of Density, Back Door of Hong Kong and Bastard Chairs (improvised seating). Model for the makeshift collections.
+
+  # ── Rainy season ──
+
+  - name: Christophe Jacrot
+    site: https://christophejacrot.com
+    lists: [Rain, Color]
+    note: Paris, Hong Kong and Tokyo in torrential rain. Started by accident when a sunny guidebook shoot got rained out.
+
+  - name: K. M. Asad
+    site: https://phmuseum.com/projects/life-in-rain
+    lists: [Rain, Documentary]
+    note: Life in Rain (2011-14). Dhaka's monsoon and the people who work through it, plastic bags as raincoats.
+
+  - name: Yash Sheth
+    site: https://wepresent.wetransfer.com/stories/yash-sheth-photography-mumbai
+    lists: [Rain, Street]
+    note: Varsha Ritu, Mumbai's monsoon season. Walked hundreds of kilometres through the rain to make it.
+
+  # ── Night (altar lights, vendors, shophouses) ──
+
+  - name: Tristan Olphe
+    site: https://tristanolphe.com
+    pages: [https://www.lensculture.com/projects/2040189-public-interiors]
+    lists: [Night, Vietnam]
+    note: Public Interiors. Vietnamese shopfronts and improvised stalls at night, shot discreetly from the street. The closest match to your night project.
+
+  - name: Wouter Vanhees
+    site: https://www.woutervanheesphotography.com/
+    lists: [Night, Vietnam]
+    note: Hanoi Skin. Hanoi's nightscapes, old neighbourhoods against new ones, shot on weekly night rides.
+
+  - name: Greg Girard
+    site: https://greggirard.com
+    lists: [Night, Masters, Color]
+    note: Four decades of Asian cities at night. Phantom Shanghai, Hong Kong nightlife and Hanoi Calling.
+
+  - name: Todd Hido
+    site: https://www.toddhido.com
+    lists: [Night, Color]
+    note: House Hunting. Houses at night where a lit window is the only sign of life.
+
+  # ── Makeshift (shade, shelter, motorbikes, hammocks) ──
+
+  - name: Peter Bialobrzeski
+    site: https://www.bialobrzeski.de
+    lists: [Makeshift, Color]
+    note: Case Study Homes. Self-built shelters of tarps, corrugated iron and old banners in Manila, shot like a typology.
+
+  - name: Jon Enoch
+    site: https://www.jonenoch.com
+    lists: [Makeshift, Vietnam]
+    note: Bikes of Hanoi. Delivery riders and their impossible loads, lit at night.
+
+  - name: Hans Kemp
+    site: https://hanskemp.photoshelter.com
+    lists: [Makeshift, Vietnam]
+    note: Bikes of Burden. The original book on Vietnam's load-carrying motorbikes.
+
+  - name: Hammock cafés (Vietnam Coracle)
+    site: https://vietnamcoracle.com/ca-phe-vong-ode-to-hammock-cafes
+    lists: [Makeshift, Vietnam]
+    note: Photo essay by Luke Digweed on cà phê võng, the roadside hammock cafés.
 
 
 suggested: []
