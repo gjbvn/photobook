@@ -249,5 +249,26 @@ following:
     lists: [Fishing Villages, Documentary]
     note: Nine months on Southeast Asia's fishing industry, overfishing and the people on the boats.
 
+  # ── Following a line (project 3) ──
+
+  - name: Alec Soth
+    site: https://www.magnumphotos.com/photographer/alec-soth/
+    pages: [https://alecsoth.com/photography/]
+    lists: [Documentary, Masters, Color]
+    note: Sleeping by the Mississippi. Road trips down one river with an 8x10, asking people about their dreams. Model for a Cu De River or Hai Van road series.
+
+  # ── Typologies (project 4) ──
+
+  - name: Bernd & Hilla Becher
+    site: https://spruethmagers.com/artists/bernd-hilla-becher/
+    pages: [https://www.moma.org/artists/436]
+    lists: [Typologies, Masters]
+    note: Water towers, furnaces, silos shot straight-on and shown in grids. Model for basket boats, altars, fish sauce jars.
+
+  - name: Michael Wolf
+    site: https://photomichaelwolf.com
+    lists: [Typologies, Documentary, Color]
+    note: Architecture of Density and Back Door of Hong Kong. Documenting what urban renewal is erasing, one repeated subject at a time.
+
 
 suggested: []
