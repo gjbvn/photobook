@@ -287,6 +287,37 @@ following:
     lists: [Rain, Street]
     note: Varsha Ritu, Mumbai's monsoon season. Walked hundreds of kilometres through the rain to make it.
 
+  - name: Liam Wong
+    site: https://www.liamwong.com
+    lists: [Rain, Night, Color]
+    note: TO:KY:OO. Rain-soaked Tokyo after midnight in neon. "One night it rained and the city came to life."
+
+  - name: Ian Berry
+    site: https://www.magnumphotos.com/photographer/ian-berry/
+    lists: [Rain, Masters, Vietnam]
+    note: Magnum. Includes Saigon riders in plastic capes massed at the lights in a monsoon downpour (2007).
+
+  - name: QT Luong
+    site: https://terragalleria.com/pictures-subjects/rain/
+    pages: [https://terragalleria.com/pictures-subjects/people-sleeping]
+    lists: [Rain, Makeshift, Vietnam]
+    note: Big subject archive. Saigon riders on rainy nights, and cyclo drivers and vendors napping on the street.
+
+  - name: Hans Gindlesberger
+    site: https://lenscratch.com/2014/07/hans-gindlesberger-weighing-rain/
+    lists: [Rain]
+    note: Weighing the Rain. Street portraits made through Korea's monsoon season.
+
+  - name: Abir Abdullah
+    site: https://www.tbsnews.net/node/1216191
+    lists: [Rain, Documentary]
+    note: Troubling Rain. Bangladesh's monsoon, its beauty and the struggles it brings.
+
+  - name: Hanoi rain nightscapes (Saigoneer)
+    site: https://www.saigoneer.com/vietnam-travel/23588-photos-from-rain-soaked-nightscapes-to-a-serene-hanoian-dawn
+    lists: [Rain, Night, Vietnam]
+    note: Neon and headlamps on rain-soaked Hanoi streets at night, then dawn exercise groups.
+
   # ── Night (altar lights, vendors, shophouses) ──
 
   - name: Tristan Olphe
@@ -310,6 +341,46 @@ following:
     lists: [Night, Color]
     note: House Hunting. Houses at night where a lit window is the only sign of life.
 
+  - name: Florian W. Mueller
+    site: https://www.thisiscolossal.com/2018/11/nightshift-by-florian-mueller/
+    lists: [Night]
+    note: Nightshift. Shanghai's late-night shops and stalls glowing in the humid dark. Very close to your vendors idea.
+
+  - name: Franck Bohbot
+    site: https://www.franckbohbot.com
+    lists: [Night, Color]
+    note: Light On and Tokyo Murmurings. Storefronts and backstreets at night, shot straight-on.
+
+  - name: Cody Ellingham
+    site: https://www.codyellingham.com
+    lists: [Night]
+    note: Bangkok Phosphors, DERIVE (Tokyo) and Shanghai Streets. Five weeks walking Bangkok every night, night markets included.
+
+  - name: Romain Jacquet-Lagrèze
+    site: https://rjl-art.com
+    lists: [Night, Makeshift, Color]
+    note: Hong Kong. The Blue Moment at dusk, plus rooftops, bamboo scaffolding and trees growing out of buildings.
+
+  - name: Xavier Portela
+    site: https://mymodernmet.com/neon-photography-xavier-portela/
+    lists: [Night]
+    note: BangkokGlow. Neon-soaked Bangkok streets full of evening vendors.
+
+  - name: Marcus Wendt
+    site: https://mymodernmet.com/nightscape-marcus-wendt
+    lists: [Night]
+    note: Ultraviolet Break of Day. Insomniac night walks through Hong Kong, Shenzhen and Seoul.
+
+  - name: Aurélien Aumond
+    site: https://www.designboom.com/architecture/aurelien-aumond-serene-glow-tokyo-buildings-after-dark-iphone-lens-09-12-2024/
+    lists: [Night]
+    note: Tokyo After Dark. Quiet lit facades on empty streets, shot on an iPhone.
+
+  - name: Daniel Soares
+    site: https://www.saveur.com/neon-nights-nyc
+    lists: [Night]
+    note: Neon Nights. New York food vendors and shops after dark.
+
   # ── Makeshift (shade, shelter, motorbikes, hammocks) ──
 
   - name: Peter Bialobrzeski
@@ -331,6 +402,36 @@ following:
     site: https://vietnamcoracle.com/ca-phe-vong-ode-to-hammock-cafes
     lists: [Makeshift, Vietnam]
     note: Photo essay by Luke Digweed on cà phê võng, the roadside hammock cafés.
+
+  - name: Christopher Herwig
+    site: https://www.christopherherwig.com
+    lists: [Makeshift, Color]
+    note: Soviet Bus Stops, and Trucks and Tuks (decorated vehicles across South Asia, 10,000 km). Everyday vernacular design as a collection.
+
+  - name: Chris Hilton
+    site: https://adventure.com/plastic-chairs-southeast-asia-photos/
+    lists: [Makeshift]
+    note: Plastic chairs of Southeast Asia. Noticed they were in almost every shot and made them the subject.
+
+  - name: Manuel Alvarez Diestro
+    site: https://www.designboom.com/art/manuel-alvarez-diestro-photo-series-urban-expansion-fabric-landscapes-seas-construction-06-12-2025/
+    lists: [Makeshift]
+    note: Seas of Construction. Green and blue tarps draped over construction sites in China and Korea.
+
+  - name: Napping in Saigon (Legal Nomads)
+    site: https://www.legalnomads.com/adventures-in-sleeping-an-instagram-series
+    lists: [Makeshift, Vietnam]
+    note: Adventures in Sleeping. Saigon drivers napping on their motorbikes, feet on the handlebars.
+
+  - name: Hanoi non-intentional design (Core77)
+    site: https://www.core77.com/posts/15539/postcards-from-asia-hanoi-non-intentional-design-15539
+    lists: [Makeshift, Vietnam]
+    note: Street improvisations in Hanoi, like plastic stools stored in the holes of concrete utility poles.
+
+  - name: The Vietnamese plastic stool (Vietcetera)
+    site: https://vietcetera.com/en/a-brief-history-of-the-vietnamese-plastic-stool
+    lists: [Makeshift, Vietnam]
+    note: Photo-led history of the low plastic stool and how it turns sidewalks into cafés.
 
 
 suggested: []
