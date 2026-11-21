@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T03:03:25Z",
- "seconds": 544,
+ "updated": "2026-11-21T07:58:44Z",
+ "seconds": 659,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -31,6 +31,45 @@
    ]
   },
   {
+   "name": "Jean Gaumy",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://www.magnumphotos.com/photographer/jean-gaumy/"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://www.magnumphotos.com/photographer/jean-gaumy/ — the site answered 403"
+   ]
+  },
+  {
+   "name": "Joe Pansa",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://joepansa.com/portfolio"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://joepansa.com/portfolio — the site answered 403"
+   ]
+  },
+  {
+   "name": "Dat Vu",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://datvu.format.com/"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://datvu.format.com/ — the site answered 404"
+   ]
+  },
+  {
    "name": "Henri Cartier-Bresson",
    "photos": 6,
    "status": "following",
@@ -54,8 +93,19 @@
    "details": []
   },
   {
+   "name": "Alec Gill",
+   "photos": 11,
+   "status": "following",
+   "sites": [
+    "https://www.alecgillhessleroadphotoarchivebook.com"
+   ],
+   "pages_opened": 2,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Jason Kummerfeldt",
-   "photos": 56,
+   "photos": 53,
    "status": "following",
    "sites": [
     "https://graincheck.darkroom.com"
@@ -133,11 +183,9 @@
    "sites": [
     "https://www.vivianmaier.com"
    ],
-   "pages_opened": 1,
-   "problem": "Couldn’t reach the website this time; showing the photos found before.",
-   "details": [
-    "https://www.vivianmaier.com — Page.goto: Timeout 40000ms exceeded."
-   ]
+   "pages_opened": 24,
+   "problem": null,
+   "details": []
   },
   {
    "name": "Daido Moriyama",
@@ -149,6 +197,20 @@
    "pages_opened": 24,
    "problem": null,
    "details": []
+  },
+  {
+   "name": "Chris Killip",
+   "photos": 109,
+   "status": "following",
+   "sites": [
+    "https://www.magnumphotos.com/photographer/chris-killip/",
+    "https://www.chriskillip.com"
+   ],
+   "pages_opened": 28,
+   "problem": null,
+   "details": [
+    "https://www.magnumphotos.com/photographer/chris-killip/ — the site answered 403"
+   ]
   },
   {
    "name": "Willem Verbeeck",
@@ -191,7 +253,18 @@
    "sites": [
     "https://philipjonesgriffiths.org/timeline/vietnam/"
    ],
-   "pages_opened": 18,
+   "pages_opened": 19,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Nicole Tung",
+   "photos": 144,
+   "status": "following",
+   "sites": [
+    "https://www.nicoletung.com"
+   ],
+   "pages_opened": 5,
    "problem": null,
    "details": []
   },
@@ -335,9 +408,11 @@
    "sites": [
     "https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/"
    ],
-   "pages_opened": 9,
-   "problem": null,
-   "details": []
+   "pages_opened": 1,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": [
+    "https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/ — the site answered 403"
+   ]
   },
   {
    "name": "Catherine Karnow",
@@ -404,6 +479,30 @@
     "https://vietnamstreets.org"
    ],
    "pages_opened": 7,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Rob Hornstra",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.thesochiproject.org",
+    "https://www.robhornstra.com"
+   ],
+   "pages_opened": 12,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Frank Meadow Sutcliffe",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://whitbymuseum.org.uk/collection/photography/",
+    "https://shop.whitbymuseum.org.uk/"
+   ],
+   "pages_opened": 19,
    "problem": null,
    "details": []
   }
