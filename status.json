@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T07:58:44Z",
- "seconds": 659,
+ "updated": "2026-11-21T09:14:13Z",
+ "seconds": 837,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -70,6 +70,19 @@
    ]
   },
   {
+   "name": "Peter Bialobrzeski",
+   "photos": 0,
+   "status": "following",
+   "sites": [
+    "https://www.bialobrzeski.de"
+   ],
+   "pages_opened": 1,
+   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
+   "details": [
+    "https://www.bialobrzeski.de — the site answered 404"
+   ]
+  },
+  {
    "name": "Henri Cartier-Bresson",
    "photos": 6,
    "status": "following",
@@ -77,6 +90,17 @@
     "https://www.henricartierbresson.org/en/"
    ],
    "pages_opened": 1,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Hans Kemp",
+   "photos": 6,
+   "status": "following",
+   "sites": [
+    "https://hanskemp.photoshelter.com"
+   ],
+   "pages_opened": 6,
    "problem": null,
    "details": []
   },
@@ -104,8 +128,19 @@
    "details": []
   },
   {
+   "name": "Michael Wolf",
+   "photos": 17,
+   "status": "following",
+   "sites": [
+    "https://photomichaelwolf.com"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Jason Kummerfeldt",
-   "photos": 53,
+   "photos": 55,
    "status": "following",
    "sites": [
     "https://graincheck.darkroom.com"
@@ -155,11 +190,33 @@
    "details": []
   },
   {
+   "name": "Wouter Vanhees",
+   "photos": 84,
+   "status": "following",
+   "sites": [
+    "https://www.woutervanheesphotography.com/"
+   ],
+   "pages_opened": 7,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Etienne Perrone",
    "photos": 85,
    "status": "following",
    "sites": [
     "https://www.etienneperrone.com/"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Todd Hido",
+   "photos": 85,
+   "status": "following",
+   "sites": [
+    "https://www.toddhido.com"
    ],
    "pages_opened": 24,
    "problem": null,
@@ -193,6 +250,17 @@
    "status": "following",
    "sites": [
     "https://www.moriyamadaido.com/en/"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Jon Enoch",
+   "photos": 103,
+   "status": "following",
+   "sites": [
+    "https://www.jonenoch.com"
    ],
    "pages_opened": 24,
    "problem": null,
@@ -237,7 +305,7 @@
   },
   {
    "name": "Elliott Erwitt",
-   "photos": 133,
+   "photos": 132,
    "status": "following",
    "sites": [
     "https://www.elliotterwitt.com"
@@ -247,13 +315,38 @@
    "details": []
   },
   {
+   "name": "Tristan Olphe",
+   "photos": 133,
+   "status": "following",
+   "sites": [
+    "https://tristanolphe.com",
+    "https://www.lensculture.com/projects/2040189-public-interiors"
+   ],
+   "pages_opened": 16,
+   "problem": null,
+   "details": [
+    "https://www.lensculture.com/projects/2040189-public-interiors — the site answered 403"
+   ]
+  },
+  {
+   "name": "Yash Sheth",
+   "photos": 135,
+   "status": "following",
+   "sites": [
+    "https://wepresent.wetransfer.com/stories/yash-sheth-photography-mumbai"
+   ],
+   "pages_opened": 9,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Philip Jones Griffiths",
-   "photos": 137,
+   "photos": 136,
    "status": "following",
    "sites": [
     "https://philipjonesgriffiths.org/timeline/vietnam/"
    ],
-   "pages_opened": 19,
+   "pages_opened": 18,
    "problem": null,
    "details": []
   },
@@ -503,6 +596,78 @@
     "https://shop.whitbymuseum.org.uk/"
    ],
    "pages_opened": 19,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Alec Soth",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.magnumphotos.com/photographer/alec-soth/",
+    "https://alecsoth.com/photography/"
+   ],
+   "pages_opened": 7,
+   "problem": null,
+   "details": [
+    "https://www.magnumphotos.com/photographer/alec-soth/ — the site answered 403"
+   ]
+  },
+  {
+   "name": "Bernd & Hilla Becher",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://spruethmagers.com/artists/bernd-hilla-becher/",
+    "https://www.moma.org/artists/436"
+   ],
+   "pages_opened": 4,
+   "problem": null,
+   "details": [
+    "https://www.moma.org/artists/436 — the site answered 403"
+   ]
+  },
+  {
+   "name": "Christophe Jacrot",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://christophejacrot.com"
+   ],
+   "pages_opened": 6,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "K. M. Asad",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://phmuseum.com/projects/life-in-rain"
+   ],
+   "pages_opened": 6,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Greg Girard",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://greggirard.com"
+   ],
+   "pages_opened": 2,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Hammock cafés (Vietnam Coracle)",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://vietnamcoracle.com/ca-phe-vong-ode-to-hammock-cafes"
+   ],
+   "pages_opened": 4,
    "problem": null,
    "details": []
   }
