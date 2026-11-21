@@ -54,7 +54,6 @@ following:
     site: https://www.thomasheaton.co.uk
     lists: [Landscape]
     note: UK landscape photographer, in the same outdoor and travel world as James Popsys.
-  # ── Masters ─────────────────────────────────────────────
 
   - name: Saul Leiter
     site: https://www.saulleiterfoundation.org
@@ -112,8 +111,6 @@ following:
     lists: [Masters, Street]
     note: The decisive moment.
 
-  # ── Contemporary street ─────────────────────────────────
-
   - name: Matt Stuart
     site: https://www.mattstuart.com
     lists: [Street]
@@ -155,8 +152,6 @@ following:
     site: https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/
     lists: [Street, Color]
     note: Reflections, details and rich colour.
-
-  # ── Vietnam ─────────────────────────────────────────────
 
   - name: Philip Jones Griffiths
     site: https://philipjonesgriffiths.org/timeline/vietnam/
@@ -204,6 +199,10 @@ following:
     site: https://vietnamstreets.org
     lists: [Vietnam, Street]
     note: A collective of photographers shooting Vietnamese street life.
+
+  - name: Etienne Perrone
+    site: https://www.etienneperrone.com/
+    lists: [Street, Landscape]
 
 
 suggested: []
