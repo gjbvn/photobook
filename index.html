@@ -237,7 +237,7 @@
     ingest();
     renderContents();
     route();
-    Promise.all([Favs.load(), Hidden.load()]).then(() => {
+    Promise.all([Favs.load(), Hidden.load(), Editor.addPending()]).then(() => {
       ingest();
       renderContents();
       if ($("#reader").classList.contains("open")) route();
@@ -943,7 +943,32 @@
       go();
     }
 
-    return { action, close, toast, loadFavs, syncFavs, loadJSON, saveJSON, needConnection };
+    // Photographers already in your list whose photos haven't been collected yet
+    // (the update takes ~10 minutes): show them as "photos coming…" instead of hiding them.
+    async function addPending() {
+      try {
+        const r = await fetch("photographers.yml?v=" + Date.now(), { cache: "no-store" });
+        if (!r.ok) return;
+        const text = await r.text();
+        await loadYaml();
+        const doc = jsyaml.load(text) || {};
+        const have = new Set((data.photographers || []).map(p => p.id));
+        for (const sec of ["following", "suggested"]) {
+          for (const e of (doc[sec] || []).filter(Boolean)) {
+            const id = entryId(e);
+            if (!id || have.has(id)) continue;
+            const site = e.site || (e.pages || [])[0] || "";
+            const lists = Array.isArray(e.lists) ? e.lists : e.lists ? [e.lists] : [];
+            data.photographers.push({ id, name: e.name || hostOf(site), auto_name: !e.name, site,
+              sites: [e.site, ...(e.pages || [])].filter(Boolean), lists, note: e.note || "", status: sec,
+              images: [], pending: true, error: "Photos are on their way. They usually appear within 15 minutes." });
+            have.add(id);
+          }
+        }
+      } catch {}
+    }
+
+    return { action, close, toast, loadFavs, syncFavs, loadJSON, saveJSON, needConnection, addPending };
   })();
 
   // ───────── Routing ─────────
