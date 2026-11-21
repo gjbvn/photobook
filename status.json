@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-20T22:42:12Z",
- "seconds": 548,
+ "updated": "2026-11-21T03:03:25Z",
+ "seconds": 544,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -31,19 +31,6 @@
    ]
   },
   {
-   "name": "Gueorgui Pinkhassov",
-   "photos": 0,
-   "status": "following",
-   "sites": [
-    "https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/"
-   ],
-   "pages_opened": 1,
-   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
-   "details": [
-    "https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/ — the site answered 403"
-   ]
-  },
-  {
    "name": "Henri Cartier-Bresson",
    "photos": 6,
    "status": "following",
@@ -68,7 +55,7 @@
   },
   {
    "name": "Jason Kummerfeldt",
-   "photos": 55,
+   "photos": 56,
    "status": "following",
    "sites": [
     "https://graincheck.darkroom.com"
@@ -118,6 +105,17 @@
    "details": []
   },
   {
+   "name": "Etienne Perrone",
+   "photos": 85,
+   "status": "following",
+   "sites": [
+    "https://www.etienneperrone.com/"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Roman Fox",
    "photos": 87,
    "status": "following",
@@ -135,9 +133,11 @@
    "sites": [
     "https://www.vivianmaier.com"
    ],
-   "pages_opened": 24,
-   "problem": null,
-   "details": []
+   "pages_opened": 1,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": [
+    "https://www.vivianmaier.com — Page.goto: Timeout 40000ms exceeded."
+   ]
   },
   {
    "name": "Daido Moriyama",
@@ -164,7 +164,7 @@
   },
   {
    "name": "Tran Tuan Viet",
-   "photos": 119,
+   "photos": 118,
    "status": "following",
    "sites": [
     "https://trantuanviet.com"
@@ -186,7 +186,7 @@
   },
   {
    "name": "Philip Jones Griffiths",
-   "photos": 136,
+   "photos": 137,
    "status": "following",
    "sites": [
     "https://philipjonesgriffiths.org/timeline/vietnam/"
@@ -325,6 +325,17 @@
     "https://www.webbnorriswebb.co"
    ],
    "pages_opened": 11,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Gueorgui Pinkhassov",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/"
+   ],
+   "pages_opened": 9,
    "problem": null,
    "details": []
   },
