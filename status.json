@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-21T22:34:27Z",
- "seconds": 1132,
+ "updated": "2026-11-22T22:39:21Z",
+ "seconds": 1151,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -203,7 +203,7 @@
   },
   {
    "name": "Jason Kummerfeldt",
-   "photos": 57,
+   "photos": 56,
    "status": "following",
    "sites": [
     "https://graincheck.darkroom.com"
@@ -230,17 +230,6 @@
    ]
   },
   {
-   "name": "Sean Tucker",
-   "photos": 72,
-   "status": "following",
-   "sites": [
-    "https://www.seantucker.photography"
-   ],
-   "pages_opened": 24,
-   "problem": null,
-   "details": []
-  },
-  {
    "name": "Harry Gruyaert",
    "photos": 76,
    "status": "following",
@@ -248,12 +237,9 @@
     "https://www.howardgreenberg.com/artists/harry-gruyaert",
     "https://www.magnumphotos.com/photographer/harry-gruyaert/"
    ],
-   "pages_opened": 2,
-   "problem": "Couldn’t reach the website this time; showing the photos found before.",
-   "details": [
-    "https://www.howardgreenberg.com/artists/harry-gruyaert — Page.goto: Timeout 40000ms exceeded.",
-    "https://www.magnumphotos.com/photographer/harry-gruyaert/ — the site answered 403"
-   ]
+   "pages_opened": 28,
+   "problem": null,
+   "details": []
   },
   {
    "name": "Wouter Vanhees",
@@ -296,6 +282,17 @@
     "https://www.snapsbyfox.com"
    ],
    "pages_opened": 1,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Sean Tucker",
+   "photos": 90,
+   "status": "following",
+   "sites": [
+    "https://www.seantucker.photography"
+   ],
+   "pages_opened": 24,
    "problem": null,
    "details": []
   },
@@ -371,7 +368,7 @@
   },
   {
    "name": "Aurélien Aumond",
-   "photos": 122,
+   "photos": 125,
    "status": "following",
    "sites": [
     "https://www.designboom.com/architecture/aurelien-aumond-serene-glow-tokyo-buildings-after-dark-iphone-lens-09-12-2024/"
@@ -382,7 +379,7 @@
   },
   {
    "name": "Manuel Alvarez Diestro",
-   "photos": 132,
+   "photos": 130,
    "status": "following",
    "sites": [
     "https://www.designboom.com/art/manuel-alvarez-diestro-photo-series-urban-expansion-fabric-landscapes-seas-construction-06-12-2025/"
@@ -393,7 +390,7 @@
   },
   {
    "name": "Elliott Erwitt",
-   "photos": 133,
+   "photos": 132,
    "status": "following",
    "sites": [
     "https://www.elliotterwitt.com"
@@ -440,18 +437,18 @@
   },
   {
    "name": "Daniel Soares",
-   "photos": 138,
+   "photos": 137,
    "status": "following",
    "sites": [
     "https://www.saveur.com/neon-nights-nyc"
    ],
-   "pages_opened": 13,
+   "pages_opened": 12,
    "problem": null,
    "details": []
   },
   {
    "name": "Tran Tuan Viet",
-   "photos": 139,
+   "photos": 141,
    "status": "following",
    "sites": [
     "https://trantuanviet.com"
@@ -459,19 +456,6 @@
    "pages_opened": 24,
    "problem": null,
    "details": []
-  },
-  {
-   "name": "Florian W. Mueller",
-   "photos": 142,
-   "status": "following",
-   "sites": [
-    "https://www.thisiscolossal.com/2018/11/nightshift-by-florian-mueller/"
-   ],
-   "pages_opened": 18,
-   "problem": null,
-   "details": [
-    "https://www.thisiscolossal.com/?memberful_endpoint=auth — the site answered 403"
-   ]
   },
   {
    "name": "Nicole Tung",
@@ -525,6 +509,17 @@
     "https://shinnoguchiphotography.com"
    ],
    "pages_opened": 7,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Florian W. Mueller",
+   "photos": 148,
+   "status": "following",
+   "sites": [
+    "https://www.thisiscolossal.com/2018/11/nightshift-by-florian-mueller/"
+   ],
+   "pages_opened": 18,
    "problem": null,
    "details": []
   },
@@ -694,7 +689,7 @@
     "https://nguyenartfoundation.com/artist/nguyen-the-son/",
     "https://artvietnamgallery.com/product-category/artist/vietnamese-artists/nguyen-the-son/"
    ],
-   "pages_opened": 11,
+   "pages_opened": 9,
    "problem": null,
    "details": []
   },
@@ -772,7 +767,7 @@
    "sites": [
     "https://christophejacrot.com"
    ],
-   "pages_opened": 6,
+   "pages_opened": 7,
    "problem": null,
    "details": []
   },
@@ -839,7 +834,7 @@
    "sites": [
     "https://www.saigoneer.com/vietnam-travel/23588-photos-from-rain-soaked-nightscapes-to-a-serene-hanoian-dawn"
    ],
-   "pages_opened": 9,
+   "pages_opened": 8,
    "problem": null,
    "details": []
   },
@@ -872,7 +867,7 @@
    "sites": [
     "https://mymodernmet.com/neon-photography-xavier-portela/"
    ],
-   "pages_opened": 19,
+   "pages_opened": 18,
    "problem": null,
    "details": [
     "https://mymodernmet.com/?p=373856&preview=true&preview_id=373856 — the site answered 404",
