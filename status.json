@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-22T22:39:21Z",
- "seconds": 1151,
+ "updated": "2026-11-23T22:47:49Z",
+ "seconds": 1191,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -203,7 +203,7 @@
   },
   {
    "name": "Jason Kummerfeldt",
-   "photos": 56,
+   "photos": 55,
    "status": "following",
    "sites": [
     "https://graincheck.darkroom.com"
@@ -237,9 +237,12 @@
     "https://www.howardgreenberg.com/artists/harry-gruyaert",
     "https://www.magnumphotos.com/photographer/harry-gruyaert/"
    ],
-   "pages_opened": 28,
-   "problem": null,
-   "details": []
+   "pages_opened": 2,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": [
+    "https://www.howardgreenberg.com/artists/harry-gruyaert — Page.goto: Timeout 40000ms exceeded.",
+    "https://www.magnumphotos.com/photographer/harry-gruyaert/ — the site answered 403"
+   ]
   },
   {
    "name": "Wouter Vanhees",
@@ -253,22 +256,22 @@
    "details": []
   },
   {
-   "name": "Etienne Perrone",
-   "photos": 85,
+   "name": "Todd Hido",
+   "photos": 84,
    "status": "following",
    "sites": [
-    "https://www.etienneperrone.com/"
+    "https://www.toddhido.com"
    ],
    "pages_opened": 24,
    "problem": null,
    "details": []
   },
   {
-   "name": "Todd Hido",
+   "name": "Etienne Perrone",
    "photos": 85,
    "status": "following",
    "sites": [
-    "https://www.toddhido.com"
+    "https://www.etienneperrone.com/"
    ],
    "pages_opened": 24,
    "problem": null,
@@ -337,8 +340,10 @@
     "https://www.legalnomads.com/adventures-in-sleeping-an-instagram-series"
    ],
    "pages_opened": 1,
-   "problem": null,
-   "details": []
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": [
+    "https://www.legalnomads.com/adventures-in-sleeping-an-instagram-series — Page.evaluate: Execution context was destroyed, most likely because of a navigation."
+   ]
   },
   {
    "name": "Chris Killip",
@@ -355,6 +360,17 @@
    ]
   },
   {
+   "name": "Aurélien Aumond",
+   "photos": 114,
+   "status": "following",
+   "sites": [
+    "https://www.designboom.com/architecture/aurelien-aumond-serene-glow-tokyo-buildings-after-dark-iphone-lens-09-12-2024/"
+   ],
+   "pages_opened": 4,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Willem Verbeeck",
    "photos": 115,
    "status": "following",
@@ -367,24 +383,13 @@
    "details": []
   },
   {
-   "name": "Aurélien Aumond",
-   "photos": 125,
-   "status": "following",
-   "sites": [
-    "https://www.designboom.com/architecture/aurelien-aumond-serene-glow-tokyo-buildings-after-dark-iphone-lens-09-12-2024/"
-   ],
-   "pages_opened": 5,
-   "problem": null,
-   "details": []
-  },
-  {
    "name": "Manuel Alvarez Diestro",
-   "photos": 130,
+   "photos": 120,
    "status": "following",
    "sites": [
     "https://www.designboom.com/art/manuel-alvarez-diestro-photo-series-urban-expansion-fabric-landscapes-seas-construction-06-12-2025/"
    ],
-   "pages_opened": 5,
+   "pages_opened": 4,
    "problem": null,
    "details": []
   },
@@ -425,24 +430,24 @@
    "details": []
   },
   {
+   "name": "Daniel Soares",
+   "photos": 135,
+   "status": "following",
+   "sites": [
+    "https://www.saveur.com/neon-nights-nyc"
+   ],
+   "pages_opened": 12,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Philip Jones Griffiths",
    "photos": 137,
    "status": "following",
    "sites": [
     "https://philipjonesgriffiths.org/timeline/vietnam/"
    ],
-   "pages_opened": 19,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Daniel Soares",
-   "photos": 137,
-   "status": "following",
-   "sites": [
-    "https://www.saveur.com/neon-nights-nyc"
-   ],
-   "pages_opened": 12,
+   "pages_opened": 18,
    "problem": null,
    "details": []
   },
@@ -458,6 +463,17 @@
    "details": []
   },
   {
+   "name": "Hanoi non-intentional design (Core77)",
+   "photos": 142,
+   "status": "following",
+   "sites": [
+    "https://www.core77.com/posts/15539/postcards-from-asia-hanoi-non-intentional-design-15539"
+   ],
+   "pages_opened": 6,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Nicole Tung",
    "photos": 144,
    "status": "following",
@@ -465,17 +481,6 @@
     "https://www.nicoletung.com"
    ],
    "pages_opened": 5,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Hanoi non-intentional design (Core77)",
-   "photos": 144,
-   "status": "following",
-   "sites": [
-    "https://www.core77.com/posts/15539/postcards-from-asia-hanoi-non-intentional-design-15539"
-   ],
-   "pages_opened": 6,
    "problem": null,
    "details": []
   },
@@ -509,17 +514,6 @@
     "https://shinnoguchiphotography.com"
    ],
    "pages_opened": 7,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Florian W. Mueller",
-   "photos": 148,
-   "status": "following",
-   "sites": [
-    "https://www.thisiscolossal.com/2018/11/nightshift-by-florian-mueller/"
-   ],
-   "pages_opened": 18,
    "problem": null,
    "details": []
   },
@@ -689,7 +683,7 @@
     "https://nguyenartfoundation.com/artist/nguyen-the-son/",
     "https://artvietnamgallery.com/product-category/artist/vietnamese-artists/nguyen-the-son/"
    ],
-   "pages_opened": 9,
+   "pages_opened": 11,
    "problem": null,
    "details": []
   },
@@ -750,14 +744,10 @@
     "https://spruethmagers.com/artists/bernd-hilla-becher/",
     "https://www.moma.org/artists/436"
    ],
-   "pages_opened": 28,
+   "pages_opened": 4,
    "problem": null,
    "details": [
-    "https://www.moma.org/collection/ — the site answered 403",
-    "https://www.moma.org/calendar/film — the site answered 403",
-    "https://www.moma.org/calendar/exhibitions/history — the site answered 403",
-    "https://www.moma.org/collection/works/2106?artist_id=436&page=1&sov_referrer=artist — the site answered 403",
-    "https://www.moma.org/ — the site answered 403"
+    "https://www.moma.org/artists/436 — the site answered 403"
    ]
   },
   {
@@ -767,7 +757,7 @@
    "sites": [
     "https://christophejacrot.com"
    ],
-   "pages_opened": 7,
+   "pages_opened": 6,
    "problem": null,
    "details": []
   },
@@ -802,8 +792,14 @@
     "https://terragalleria.com/pictures-subjects/people-sleeping"
    ],
    "pages_opened": 28,
-   "problem": null,
-   "details": []
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": [
+    "https://terragalleria.com/pictures-subjects/rain/ — Page.goto: Timeout 40000ms exceeded.",
+    "https://terragalleria.com/pictures-subjects/people-buying-and-selling/people-buying-and-selling.9.html — Page.goto: net::ERR_TIMED_OUT at https://terragalleria.com/pictures-subjects/people-buying-and-selling/people-buying-and",
+    "https://terragalleria.com/pictures-subjects/people-buying-and-selling/people-buying-and-selling.10.html — Page.goto: net::ERR_TIMED_OUT at https://terragalleria.com/pictures-subjects/people-buying-and-selling/people-buying-and",
+    "https://terragalleria.com/pictures-subjects/people-buying-and-selling/index.html — Page.goto: net::ERR_DNS_NO_MATCHING_SUPPORTED_ALPN at https://terragalleria.com/pictures-subjects/people-buying-and-sell",
+    "https://terragalleria.com/pictures-subjects/people-carrying-things/ — Page.goto: net::ERR_TIMED_OUT at https://terragalleria.com/pictures-subjects/people-carrying-things/"
+   ]
   },
   {
    "name": "Hans Gindlesberger",
@@ -846,6 +842,17 @@
     "https://greggirard.com"
    ],
    "pages_opened": 2,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Florian W. Mueller",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.thisiscolossal.com/2018/11/nightshift-by-florian-mueller/"
+   ],
+   "pages_opened": 19,
    "problem": null,
    "details": []
   },
