@@ -16,6 +16,13 @@
 #  follow: open the links on the page that contain this text
 #          and take the main photo from each (good for shops/galleries)
 #
+#  For big collection sites (many photographers in one entry):
+#  shuffle: true      open a different random set of "follow" links each day
+#  per_page: 6        take at most this many photos from each followed page
+#  max_pages: 40      how many pages to open (default 24)
+#  max_photos: 300    how many photos to keep (default 150)
+#  keep_old: true     keep earlier finds too, so the selection builds up
+#
 #  After you save ("Commit changes"), the book updates itself
 #  within half an hour.
 # ─────────────────────────────────────────────────────────────
@@ -434,10 +441,15 @@ following:
     note: Photo-led history of the low plastic stool and how it turns sidewalks into cafés.
 
   - name: Stills
-    site: https://www.stills.com
-    pages: [https://www.stills.com/categories, https://www.stills.com/artists]
+    site: https://www.stills.com/artists
+    follow: /artists/[^/]+/\d+
+    shuffle: true
+    per_page: 6
+    max_pages: 40
+    max_photos: 300
+    keep_old: true
     lists: [Stills]
-    note: Curated photography from the Stills licensing library, many photographers in one place.
+    note: Curated photography from the Stills library. A different set of their artists each day, about 6 photos each.
 
 
 suggested: []

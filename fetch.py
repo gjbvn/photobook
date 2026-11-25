@@ -19,6 +19,7 @@ Needs: PyYAML and Playwright (installed by the workflow).
 import asyncio
 import json
 import os
+import random
 import re
 import sys
 import time
@@ -570,7 +571,7 @@ async def crawl_site(context, start, follow, log, budget, ignore_robots=False):
     started = time.time()
     try:
         while queue and budget["pages"] > 0 and len(found) < budget["images"]:
-            if time.time() - started > MAX_SECONDS:
+            if time.time() - started > budget.get("seconds", MAX_SECONDS):
                 log("    (time limit for this photographer reached)")
                 break
             queue.sort(key=lambda x: -x[0])
@@ -610,6 +611,9 @@ async def crawl_site(context, start, follow, log, budget, ignore_robots=False):
                 if k not in found:
                     found[k] = {"src": src, "link": data["url"], "title": rec.get("alt", "")[:120]}
                     new_here += 1
+                    # a few photos from each followed page (e.g. each artist), so many get a turn
+                    if depth > 0 and budget.get("per_page") and new_here >= budget["per_page"]:
+                        break
             log(f"    {new_here:3d} new photos on {data['url']}")
 
             # From a "follow" page we only want its main photo, not more links
@@ -620,6 +624,8 @@ async def crawl_site(context, start, follow, log, budget, ignore_robots=False):
                     r = rank_link(link, start, follow_re)
                     if r is None:
                         continue
+                    if r == 20 and budget.get("shuffle"):
+                        r += random.random()     # a different selection on each run
                     href = link["href"].split("#")[0]
                     if href.rstrip("/") not in seen_urls:
                         # the next part of the same list doesn't count as going deeper
@@ -647,12 +653,16 @@ async def collect(person, context, log):
     sites = site_list(person)
     # Personal reader: collect every site unless you set "robots: respect" for it
     ignore_robots = str(person.get("robots", "")).lower() != "respect"
-    budget = {"pages": MAX_PAGES + 4 * (len(sites) - 1), "images": MAX_IMAGES}
+    cap = int(person.get("max_photos") or MAX_IMAGES)
+    pages = int(person.get("max_pages") or MAX_PAGES)
+    budget = {"pages": pages + 4 * (len(sites) - 1), "images": cap,
+              "per_page": int(person.get("per_page") or 0), "shuffle": bool(person.get("shuffle")),
+              "seconds": max(MAX_SECONDS, pages * 15)}
     start_pages = budget["pages"]
     buckets, feeds, problems = [], list(person.get("feeds") or []), []
     person["_guess"] = None
     for start in sites:
-        budget["images"] = MAX_IMAGES   # each site may fill the book; we interleave below
+        budget["images"] = cap          # each site may fill the book; we interleave below
         imgs, html, found_feeds, problem = await crawl_site(
             context, start, person.get("follow"), log, budget, ignore_robots)
         if html and not person["_guess"] and not person.get("name"):
@@ -675,7 +685,7 @@ async def collect(person, context, log):
 
     # Take turns between websites so every site gets a fair share of pages
     images, seen = [], set()
-    while len(images) < MAX_IMAGES and any(buckets):
+    while len(images) < cap and any(buckets):
         for b in buckets:
             while b:
                 img = b.pop(0)
@@ -684,7 +694,7 @@ async def collect(person, context, log):
                     seen.add(k)
                     images.append(img)
                     break
-            if len(images) >= MAX_IMAGES:
+            if len(images) >= cap:
                 break
         buckets = [b for b in buckets if b]
 
@@ -766,6 +776,11 @@ async def run_all(people, previous, previous_by_site, now, hidden=frozenset()):
                     error = ("Couldn’t reach the website this time; showing the photos found before."
                              if problem == "blocked" else
                              "No photos were found this time; showing the photos found before.")
+                if person.get("keep_old") and images and old.get("images"):
+                    # keep earlier finds too (newest first), so a rotating selection builds up
+                    have = {image_key(i["src"]) for i in images}
+                    images = images + [i for i in old["images"] if image_key(i["src"]) not in have]
+                    images = images[:int(person.get("max_photos") or MAX_IMAGES)]
                 if hidden:
                     images = [i for i in images if image_key(i["src"]) not in hidden]
                 first_seen = {image_key(i["src"]): i.get("first_seen", now) for i in old.get("images", [])}
