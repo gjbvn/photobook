@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-25T08:36:34Z",
- "seconds": 1502,
+ "updated": "2026-11-25T22:50:28Z",
+ "seconds": 1583,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -31,19 +31,6 @@
    ]
   },
   {
-   "name": "Jean Gaumy",
-   "photos": 0,
-   "status": "following",
-   "sites": [
-    "https://www.magnumphotos.com/photographer/jean-gaumy/"
-   ],
-   "pages_opened": 1,
-   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
-   "details": [
-    "https://www.magnumphotos.com/photographer/jean-gaumy/ — the site answered 403"
-   ]
-  },
-  {
    "name": "Joe Pansa",
    "photos": 0,
    "status": "following",
@@ -53,7 +40,7 @@
    "pages_opened": 1,
    "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
    "details": [
-    "https://joepansa.com/portfolio — the site answered 403"
+    "https://joepansa.com/portfolio — the site answered 404"
    ]
   },
   {
@@ -67,19 +54,6 @@
    "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
    "details": [
     "https://datvu.format.com/ — the site answered 404"
-   ]
-  },
-  {
-   "name": "Ian Berry",
-   "photos": 0,
-   "status": "following",
-   "sites": [
-    "https://www.magnumphotos.com/photographer/ian-berry/"
-   ],
-   "pages_opened": 1,
-   "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
-   "details": [
-    "https://www.magnumphotos.com/photographer/ian-berry/ — the site answered 403"
    ]
   },
   {
@@ -146,24 +120,24 @@
    ]
   },
   {
-   "name": "Henri Cartier-Bresson",
-   "photos": 1,
-   "status": "following",
-   "sites": [
-    "https://www.henricartierbresson.org/en/"
-   ],
-   "pages_opened": 1,
-   "problem": null,
-   "details": []
-  },
-  {
    "name": "Elliott Erwitt",
-   "photos": 3,
+   "photos": 4,
    "status": "following",
    "sites": [
     "https://www.elliotterwitt.com"
    ],
    "pages_opened": 7,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Henri Cartier-Bresson",
+   "photos": 6,
+   "status": "following",
+   "sites": [
+    "https://www.henricartierbresson.org/en/"
+   ],
+   "pages_opened": 1,
    "problem": null,
    "details": []
   },
@@ -203,7 +177,7 @@
   },
   {
    "name": "Michael Wolf",
-   "photos": 14,
+   "photos": 17,
    "status": "following",
    "sites": [
     "https://photomichaelwolf.com"
@@ -214,7 +188,7 @@
   },
   {
    "name": "Jason Kummerfeldt",
-   "photos": 55,
+   "photos": 54,
    "status": "following",
    "sites": [
     "https://graincheck.darkroom.com"
@@ -242,7 +216,7 @@
   },
   {
    "name": "Tristan Olphe",
-   "photos": 74,
+   "photos": 75,
    "status": "following",
    "sites": [
     "https://tristanolphe.com",
@@ -278,22 +252,22 @@
    "details": []
   },
   {
-   "name": "Etienne Perrone",
-   "photos": 85,
+   "name": "Todd Hido",
+   "photos": 84,
    "status": "following",
    "sites": [
-    "https://www.etienneperrone.com/"
+    "https://www.toddhido.com"
    ],
    "pages_opened": 24,
    "problem": null,
    "details": []
   },
   {
-   "name": "Todd Hido",
+   "name": "Etienne Perrone",
    "photos": 85,
    "status": "following",
    "sites": [
-    "https://www.toddhido.com"
+    "https://www.etienneperrone.com/"
    ],
    "pages_opened": 24,
    "problem": null,
@@ -356,7 +330,7 @@
   },
   {
    "name": "Napping in Saigon (Legal Nomads)",
-   "photos": 104,
+   "photos": 105,
    "status": "following",
    "sites": [
     "https://www.legalnomads.com/adventures-in-sleeping-an-instagram-series"
@@ -376,19 +350,8 @@
    "pages_opened": 28,
    "problem": null,
    "details": [
-    "https://www.magnumphotos.com/photographer/chris-killip/ — the site answered 403"
+    "https://www.magnumphotos.com/photographer/chris-killip/ — the site answered 404"
    ]
-  },
-  {
-   "name": "Aurélien Aumond",
-   "photos": 113,
-   "status": "following",
-   "sites": [
-    "https://www.designboom.com/architecture/aurelien-aumond-serene-glow-tokyo-buildings-after-dark-iphone-lens-09-12-2024/"
-   ],
-   "pages_opened": 4,
-   "problem": null,
-   "details": []
   },
   {
    "name": "Willem Verbeeck",
@@ -403,8 +366,19 @@
    "details": []
   },
   {
+   "name": "Aurélien Aumond",
+   "photos": 118,
+   "status": "following",
+   "sites": [
+    "https://www.designboom.com/architecture/aurelien-aumond-serene-glow-tokyo-buildings-after-dark-iphone-lens-09-12-2024/"
+   ],
+   "pages_opened": 4,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Manuel Alvarez Diestro",
-   "photos": 128,
+   "photos": 129,
    "status": "following",
    "sites": [
     "https://www.designboom.com/art/manuel-alvarez-diestro-photo-series-urban-expansion-fabric-landscapes-seas-construction-06-12-2025/"
@@ -415,12 +389,12 @@
   },
   {
    "name": "Daniel Soares",
-   "photos": 131,
+   "photos": 130,
    "status": "following",
    "sites": [
     "https://www.saveur.com/neon-nights-nyc"
    ],
-   "pages_opened": 13,
+   "pages_opened": 12,
    "problem": null,
    "details": []
   },
@@ -437,7 +411,7 @@
   },
   {
    "name": "Philip Jones Griffiths",
-   "photos": 137,
+   "photos": 136,
    "status": "following",
    "sites": [
     "https://philipjonesgriffiths.org/timeline/vietnam/"
@@ -458,19 +432,8 @@
    "details": []
   },
   {
-   "name": "Nicole Tung",
-   "photos": 144,
-   "status": "following",
-   "sites": [
-    "https://www.nicoletung.com"
-   ],
-   "pages_opened": 5,
-   "problem": null,
-   "details": []
-  },
-  {
    "name": "Hanoi non-intentional design (Core77)",
-   "photos": 146,
+   "photos": 143,
    "status": "following",
    "sites": [
     "https://www.core77.com/posts/15539/postcards-from-asia-hanoi-non-intentional-design-15539"
@@ -480,13 +443,13 @@
    "details": []
   },
   {
-   "name": "Florian W. Mueller",
-   "photos": 147,
+   "name": "Nicole Tung",
+   "photos": 144,
    "status": "following",
    "sites": [
-    "https://www.thisiscolossal.com/2018/11/nightshift-by-florian-mueller/"
+    "https://www.nicoletung.com"
    ],
-   "pages_opened": 18,
+   "pages_opened": 5,
    "problem": null,
    "details": []
   },
@@ -591,18 +554,6 @@
    "details": []
   },
   {
-   "name": "Nguyen The Son",
-   "photos": 149,
-   "status": "following",
-   "sites": [
-    "https://nguyenartfoundation.com/artist/nguyen-the-son/",
-    "https://artvietnamgallery.com/product-category/artist/vietnamese-artists/nguyen-the-son/"
-   ],
-   "pages_opened": 9,
-   "problem": null,
-   "details": []
-  },
-  {
    "name": "Fan Ho",
    "photos": 150,
    "status": "following",
@@ -642,11 +593,9 @@
    "sites": [
     "https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/"
    ],
-   "pages_opened": 1,
-   "problem": "Couldn’t reach the website this time; showing the photos found before.",
-   "details": [
-    "https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/ — the site answered 403"
-   ]
+   "pages_opened": 9,
+   "problem": null,
+   "details": []
   },
   {
    "name": "Catherine Karnow",
@@ -694,6 +643,18 @@
    "details": []
   },
   {
+   "name": "Nguyen The Son",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://nguyenartfoundation.com/artist/nguyen-the-son/",
+    "https://artvietnamgallery.com/product-category/artist/vietnamese-artists/nguyen-the-son/"
+   ],
+   "pages_opened": 9,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Vietnam Streets",
    "photos": 150,
    "status": "following",
@@ -701,6 +662,17 @@
     "https://vietnamstreets.org"
    ],
    "pages_opened": 8,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Jean Gaumy",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.magnumphotos.com/photographer/jean-gaumy/"
+   ],
+   "pages_opened": 9,
    "problem": null,
    "details": []
   },
@@ -736,11 +708,9 @@
     "https://www.magnumphotos.com/photographer/alec-soth/",
     "https://alecsoth.com/photography/"
    ],
-   "pages_opened": 7,
+   "pages_opened": 18,
    "problem": null,
-   "details": [
-    "https://www.magnumphotos.com/photographer/alec-soth/ — the site answered 403"
-   ]
+   "details": []
   },
   {
    "name": "Bernd & Hilla Becher",
@@ -786,6 +756,17 @@
     "https://www.liamwong.com"
    ],
    "pages_opened": 23,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Ian Berry",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.magnumphotos.com/photographer/ian-berry/"
+   ],
+   "pages_opened": 9,
    "problem": null,
    "details": []
   },
@@ -844,6 +825,19 @@
    "pages_opened": 2,
    "problem": null,
    "details": []
+  },
+  {
+   "name": "Florian W. Mueller",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://www.thisiscolossal.com/2018/11/nightshift-by-florian-mueller/"
+   ],
+   "pages_opened": 19,
+   "problem": null,
+   "details": [
+    "https://www.thisiscolossal.com/?memberful_endpoint=auth — the site answered 403"
+   ]
   },
   {
    "name": "Franck Bohbot",
@@ -908,7 +902,7 @@
   },
   {
    "name": "Stills",
-   "photos": 3022,
+   "photos": 3010,
    "status": "following",
    "sites": [
     "https://www.stills.com/categories/transportation",
