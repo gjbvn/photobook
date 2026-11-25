@@ -435,9 +435,15 @@ EXTRACT_JS = r"""
     const full = a && isImgUrl(a.href) ? a.href : null;
     const lazy = img.getAttribute('data-image') || img.getAttribute('data-src') ||
                  img.getAttribute('data-lazy-src') || img.getAttribute('data-original') || null;
-    const sized = (ps && (!ss || ps[1] > ss[1])) ? ps : ss;
+    let sized = (ps && (!ss || ps[1] > ss[1])) ? ps : ss;
+    // The address the browser actually loaded. Some sites (e.g. Stills) put a partial
+    // address in the page and build the real, signed one with JavaScript, so when the
+    // srcset points somewhere else than what loaded, trust what loaded.
+    const cur = img.naturalWidth > 0 && /^https?:/.test(img.currentSrc || '') ? img.currentSrc : null;
+    const hostOf = u => { try { return new URL(u, location.href).host; } catch (e) { return ''; } };
+    if (cur && sized && hostOf(sized[0]) !== hostOf(cur)) sized = null;
     out.push({
-      src: full || (sized && sized[0]) || lazy || img.currentSrc || img.src,
+      src: full || (sized && sized[0]) || cur || lazy || img.currentSrc || img.src,
       nw: img.naturalWidth, nh: img.naturalHeight, rw: r.width, rh: r.height,
       sw: sized ? sized[1] : 0, alt: img.alt || '', full: !!full, lazy: !!lazy,
     });

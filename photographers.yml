@@ -495,7 +495,6 @@ following:
       - https://www.stills.com/categories/architecture?page=10
     max_depth: 0
     max_photos: 3500
-    keep_old: true
     lists: [Stills]
     note: Stills library, categories Transportation, Travel, Archival & Vintage, Community & Neighborhoods and Architecture. 10 pages of each.
 
