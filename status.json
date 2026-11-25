@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-25T07:03:18Z",
- "seconds": 1218,
+ "updated": "2026-11-25T07:49:48Z",
+ "seconds": 1554,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -203,7 +203,7 @@
   },
   {
    "name": "Jason Kummerfeldt",
-   "photos": 56,
+   "photos": 55,
    "status": "following",
    "sites": [
     "https://graincheck.darkroom.com"
@@ -211,23 +211,6 @@
    "pages_opened": 24,
    "problem": null,
    "details": []
-  },
-  {
-   "name": "Vivian Maier",
-   "photos": 62,
-   "status": "following",
-   "sites": [
-    "https://www.vivianmaier.com"
-   ],
-   "pages_opened": 14,
-   "problem": null,
-   "details": [
-    "https://www.vivianmaier.com/gallery/self-portraits-color/ — Page.goto: Timeout 40000ms exceeded.",
-    "https://www.vivianmaier.com/vivian-maier-books/vivian-maier-photographer-found/ — Page.goto: Timeout 40000ms exceeded.",
-    "https://www.vivianmaier.com/vivian-maier-books/vivian-maier-self-portraits/ — Page.goto: Timeout 40000ms exceeded.",
-    "https://www.vivianmaier.com/vivian-maier-books/vivian-maier-street-photographer/ — Page.goto: Timeout 40000ms exceeded.",
-    "https://www.vivianmaier.com/vivian-maier-books/vivian-maier-the-color-work-book/ — Page.goto: Timeout 40000ms exceeded."
-   ]
   },
   {
    "name": "Rinzi Ruiz",
@@ -270,22 +253,22 @@
    "details": []
   },
   {
-   "name": "Todd Hido",
-   "photos": 84,
+   "name": "Etienne Perrone",
+   "photos": 85,
    "status": "following",
    "sites": [
-    "https://www.toddhido.com"
+    "https://www.etienneperrone.com/"
    ],
    "pages_opened": 24,
    "problem": null,
    "details": []
   },
   {
-   "name": "Etienne Perrone",
+   "name": "Todd Hido",
    "photos": 85,
    "status": "following",
    "sites": [
-    "https://www.etienneperrone.com/"
+    "https://www.toddhido.com"
    ],
    "pages_opened": 24,
    "problem": null,
@@ -308,6 +291,17 @@
    "status": "following",
    "sites": [
     "https://www.seantucker.photography"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Vivian Maier",
+   "photos": 99,
+   "status": "following",
+   "sites": [
+    "https://www.vivianmaier.com"
    ],
    "pages_opened": 24,
    "problem": null,
@@ -361,6 +355,17 @@
    ]
   },
   {
+   "name": "Aurélien Aumond",
+   "photos": 113,
+   "status": "following",
+   "sites": [
+    "https://www.designboom.com/architecture/aurelien-aumond-serene-glow-tokyo-buildings-after-dark-iphone-lens-09-12-2024/"
+   ],
+   "pages_opened": 4,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Willem Verbeeck",
    "photos": 115,
    "status": "following",
@@ -373,24 +378,24 @@
    "details": []
   },
   {
-   "name": "Aurélien Aumond",
-   "photos": 125,
-   "status": "following",
-   "sites": [
-    "https://www.designboom.com/architecture/aurelien-aumond-serene-glow-tokyo-buildings-after-dark-iphone-lens-09-12-2024/"
-   ],
-   "pages_opened": 4,
-   "problem": null,
-   "details": []
-  },
-  {
    "name": "Daniel Soares",
-   "photos": 130,
+   "photos": 128,
    "status": "following",
    "sites": [
     "https://www.saveur.com/neon-nights-nyc"
    ],
-   "pages_opened": 12,
+   "pages_opened": 13,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Manuel Alvarez Diestro",
+   "photos": 128,
+   "status": "following",
+   "sites": [
+    "https://www.designboom.com/art/manuel-alvarez-diestro-photo-series-urban-expansion-fabric-landscapes-seas-construction-06-12-2025/"
+   ],
+   "pages_opened": 4,
    "problem": null,
    "details": []
   },
@@ -432,23 +437,12 @@
   },
   {
    "name": "Philip Jones Griffiths",
-   "photos": 137,
+   "photos": 136,
    "status": "following",
    "sites": [
     "https://philipjonesgriffiths.org/timeline/vietnam/"
    ],
-   "pages_opened": 18,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Manuel Alvarez Diestro",
-   "photos": 140,
-   "status": "following",
-   "sites": [
-    "https://www.designboom.com/art/manuel-alvarez-diestro-photo-series-urban-expansion-fabric-landscapes-seas-construction-06-12-2025/"
-   ],
-   "pages_opened": 4,
+   "pages_opened": 19,
    "problem": null,
    "details": []
   },
@@ -471,17 +465,6 @@
     "https://www.nicoletung.com"
    ],
    "pages_opened": 5,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Florian W. Mueller",
-   "photos": 147,
-   "status": "following",
-   "sites": [
-    "https://www.thisiscolossal.com/2018/11/nightshift-by-florian-mueller/"
-   ],
-   "pages_opened": 18,
    "problem": null,
    "details": []
   },
@@ -604,7 +587,18 @@
     "https://nguyenartfoundation.com/artist/nguyen-the-son/",
     "https://artvietnamgallery.com/product-category/artist/vietnamese-artists/nguyen-the-son/"
    ],
-   "pages_opened": 9,
+   "pages_opened": 10,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Florian W. Mueller",
+   "photos": 149,
+   "status": "following",
+   "sites": [
+    "https://www.thisiscolossal.com/2018/11/nightshift-by-florian-mueller/"
+   ],
+   "pages_opened": 18,
    "problem": null,
    "details": []
   },
@@ -756,10 +750,14 @@
     "https://spruethmagers.com/artists/bernd-hilla-becher/",
     "https://www.moma.org/artists/436"
    ],
-   "pages_opened": 4,
+   "pages_opened": 28,
    "problem": null,
    "details": [
-    "https://www.moma.org/artists/436 — the site answered 403"
+    "https://www.moma.org/collection/ — the site answered 403",
+    "https://www.moma.org/calendar/film — the site answered 403",
+    "https://www.moma.org/calendar/exhibitions/history — the site answered 403",
+    "https://www.moma.org/collection/works/2106?artist_id=436&page=1&sov_referrer=artist — the site answered 403",
+    "https://www.moma.org/ — the site answered 403"
    ]
   },
   {
@@ -769,7 +767,7 @@
    "sites": [
     "https://christophejacrot.com"
    ],
-   "pages_opened": 6,
+   "pages_opened": 7,
    "problem": null,
    "details": []
   },
@@ -825,7 +823,7 @@
    "sites": [
     "https://www.tbsnews.net/node/1216191"
    ],
-   "pages_opened": 5,
+   "pages_opened": 4,
    "problem": null,
    "details": []
   },
@@ -914,14 +912,61 @@
   },
   {
    "name": "Stills",
-   "photos": 150,
+   "photos": 3188,
    "status": "following",
    "sites": [
-    "https://www.stills.com",
-    "https://www.stills.com/categories",
-    "https://www.stills.com/artists"
+    "https://www.stills.com/categories/transportation",
+    "https://www.stills.com/stock-images/travel",
+    "https://www.stills.com/categories/archival-vintage",
+    "https://www.stills.com/categories/community-neighborhoods",
+    "https://www.stills.com/categories/architecture",
+    "https://www.stills.com/categories/transportation?page=2",
+    "https://www.stills.com/stock-images/travel?page=2",
+    "https://www.stills.com/categories/archival-vintage?page=2",
+    "https://www.stills.com/categories/community-neighborhoods?page=2",
+    "https://www.stills.com/categories/architecture?page=2",
+    "https://www.stills.com/categories/transportation?page=3",
+    "https://www.stills.com/stock-images/travel?page=3",
+    "https://www.stills.com/categories/archival-vintage?page=3",
+    "https://www.stills.com/categories/community-neighborhoods?page=3",
+    "https://www.stills.com/categories/architecture?page=3",
+    "https://www.stills.com/categories/transportation?page=4",
+    "https://www.stills.com/stock-images/travel?page=4",
+    "https://www.stills.com/categories/archival-vintage?page=4",
+    "https://www.stills.com/categories/community-neighborhoods?page=4",
+    "https://www.stills.com/categories/architecture?page=4",
+    "https://www.stills.com/categories/transportation?page=5",
+    "https://www.stills.com/stock-images/travel?page=5",
+    "https://www.stills.com/categories/archival-vintage?page=5",
+    "https://www.stills.com/categories/community-neighborhoods?page=5",
+    "https://www.stills.com/categories/architecture?page=5",
+    "https://www.stills.com/categories/transportation?page=6",
+    "https://www.stills.com/stock-images/travel?page=6",
+    "https://www.stills.com/categories/archival-vintage?page=6",
+    "https://www.stills.com/categories/community-neighborhoods?page=6",
+    "https://www.stills.com/categories/architecture?page=6",
+    "https://www.stills.com/categories/transportation?page=7",
+    "https://www.stills.com/stock-images/travel?page=7",
+    "https://www.stills.com/categories/archival-vintage?page=7",
+    "https://www.stills.com/categories/community-neighborhoods?page=7",
+    "https://www.stills.com/categories/architecture?page=7",
+    "https://www.stills.com/categories/transportation?page=8",
+    "https://www.stills.com/stock-images/travel?page=8",
+    "https://www.stills.com/categories/archival-vintage?page=8",
+    "https://www.stills.com/categories/community-neighborhoods?page=8",
+    "https://www.stills.com/categories/architecture?page=8",
+    "https://www.stills.com/categories/transportation?page=9",
+    "https://www.stills.com/stock-images/travel?page=9",
+    "https://www.stills.com/categories/archival-vintage?page=9",
+    "https://www.stills.com/categories/community-neighborhoods?page=9",
+    "https://www.stills.com/categories/architecture?page=9",
+    "https://www.stills.com/categories/transportation?page=10",
+    "https://www.stills.com/stock-images/travel?page=10",
+    "https://www.stills.com/categories/archival-vintage?page=10",
+    "https://www.stills.com/categories/community-neighborhoods?page=10",
+    "https://www.stills.com/categories/architecture?page=10"
    ],
-   "pages_opened": 12,
+   "pages_opened": 50,
    "problem": null,
    "details": []
   }
