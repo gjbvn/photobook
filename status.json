@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-25T07:49:48Z",
- "seconds": 1554,
+ "updated": "2026-11-25T08:36:34Z",
+ "seconds": 1502,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -157,6 +157,17 @@
    "details": []
   },
   {
+   "name": "Elliott Erwitt",
+   "photos": 3,
+   "status": "following",
+   "sites": [
+    "https://www.elliotterwitt.com"
+   ],
+   "pages_opened": 7,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Hans Kemp",
    "photos": 6,
    "status": "following",
@@ -192,7 +203,7 @@
   },
   {
    "name": "Michael Wolf",
-   "photos": 17,
+   "photos": 14,
    "status": "following",
    "sites": [
     "https://photomichaelwolf.com"
@@ -227,6 +238,20 @@
     "https://www.rinziruizphotography.com/childrencelebrations/h52552900 — the site answered 429",
     "https://www.rinziruizphotography.com/childrencelebrations/h52552913 — the site answered 429",
     "https://www.rinziruizphotography.com/childrencelebrations/h525528c3 — the site answered 429"
+   ]
+  },
+  {
+   "name": "Tristan Olphe",
+   "photos": 74,
+   "status": "following",
+   "sites": [
+    "https://tristanolphe.com",
+    "https://www.lensculture.com/projects/2040189-public-interiors"
+   ],
+   "pages_opened": 16,
+   "problem": null,
+   "details": [
+    "https://www.lensculture.com/projects/2040189-public-interiors — the site answered 403"
    ]
   },
   {
@@ -378,17 +403,6 @@
    "details": []
   },
   {
-   "name": "Daniel Soares",
-   "photos": 128,
-   "status": "following",
-   "sites": [
-    "https://www.saveur.com/neon-nights-nyc"
-   ],
-   "pages_opened": 13,
-   "problem": null,
-   "details": []
-  },
-  {
    "name": "Manuel Alvarez Diestro",
    "photos": 128,
    "status": "following",
@@ -400,29 +414,15 @@
    "details": []
   },
   {
-   "name": "Elliott Erwitt",
-   "photos": 132,
+   "name": "Daniel Soares",
+   "photos": 131,
    "status": "following",
    "sites": [
-    "https://www.elliotterwitt.com"
+    "https://www.saveur.com/neon-nights-nyc"
    ],
-   "pages_opened": 7,
+   "pages_opened": 13,
    "problem": null,
    "details": []
-  },
-  {
-   "name": "Tristan Olphe",
-   "photos": 133,
-   "status": "following",
-   "sites": [
-    "https://tristanolphe.com",
-    "https://www.lensculture.com/projects/2040189-public-interiors"
-   ],
-   "pages_opened": 16,
-   "problem": null,
-   "details": [
-    "https://www.lensculture.com/projects/2040189-public-interiors — the site answered 403"
-   ]
   },
   {
    "name": "Yash Sheth",
@@ -437,7 +437,7 @@
   },
   {
    "name": "Philip Jones Griffiths",
-   "photos": 136,
+   "photos": 137,
    "status": "following",
    "sites": [
     "https://philipjonesgriffiths.org/timeline/vietnam/"
@@ -448,7 +448,7 @@
   },
   {
    "name": "Tran Tuan Viet",
-   "photos": 142,
+   "photos": 143,
    "status": "following",
    "sites": [
     "https://trantuanviet.com"
@@ -470,12 +470,23 @@
   },
   {
    "name": "Hanoi non-intentional design (Core77)",
-   "photos": 147,
+   "photos": 146,
    "status": "following",
    "sites": [
     "https://www.core77.com/posts/15539/postcards-from-asia-hanoi-non-intentional-design-15539"
    ],
    "pages_opened": 6,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Florian W. Mueller",
+   "photos": 147,
+   "status": "following",
+   "sites": [
+    "https://www.thisiscolossal.com/2018/11/nightshift-by-florian-mueller/"
+   ],
+   "pages_opened": 18,
    "problem": null,
    "details": []
   },
@@ -587,18 +598,7 @@
     "https://nguyenartfoundation.com/artist/nguyen-the-son/",
     "https://artvietnamgallery.com/product-category/artist/vietnamese-artists/nguyen-the-son/"
    ],
-   "pages_opened": 10,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Florian W. Mueller",
-   "photos": 149,
-   "status": "following",
-   "sites": [
-    "https://www.thisiscolossal.com/2018/11/nightshift-by-florian-mueller/"
-   ],
-   "pages_opened": 18,
+   "pages_opened": 9,
    "problem": null,
    "details": []
   },
@@ -700,7 +700,7 @@
    "sites": [
     "https://vietnamstreets.org"
    ],
-   "pages_opened": 7,
+   "pages_opened": 8,
    "problem": null,
    "details": []
   },
@@ -750,14 +750,10 @@
     "https://spruethmagers.com/artists/bernd-hilla-becher/",
     "https://www.moma.org/artists/436"
    ],
-   "pages_opened": 28,
+   "pages_opened": 4,
    "problem": null,
    "details": [
-    "https://www.moma.org/collection/ — the site answered 403",
-    "https://www.moma.org/calendar/film — the site answered 403",
-    "https://www.moma.org/calendar/exhibitions/history — the site answered 403",
-    "https://www.moma.org/collection/works/2106?artist_id=436&page=1&sov_referrer=artist — the site answered 403",
-    "https://www.moma.org/ — the site answered 403"
+    "https://www.moma.org/artists/436 — the site answered 403"
    ]
   },
   {
@@ -767,7 +763,7 @@
    "sites": [
     "https://christophejacrot.com"
    ],
-   "pages_opened": 7,
+   "pages_opened": 6,
    "problem": null,
    "details": []
   },
@@ -912,7 +908,7 @@
   },
   {
    "name": "Stills",
-   "photos": 3188,
+   "photos": 3022,
    "status": "following",
    "sites": [
     "https://www.stills.com/categories/transportation",
