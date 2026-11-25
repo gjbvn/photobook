@@ -22,6 +22,7 @@
 #  max_pages: 40      how many pages to open (default 24)
 #  max_photos: 300    how many photos to keep (default 150)
 #  keep_old: true     keep earlier finds too, so the selection builds up
+#  max_depth: 0       only collect the listed pages, don't follow their links
 #
 #  After you save ("Commit changes"), the book updates itself
 #  within half an hour.
@@ -441,15 +442,62 @@ following:
     note: Photo-led history of the low plastic stool and how it turns sidewalks into cafés.
 
   - name: Stills
-    site: https://www.stills.com/artists
-    follow: /artists/[^/]+/\d+
-    shuffle: true
-    per_page: 6
-    max_pages: 40
-    max_photos: 300
+    site: https://www.stills.com/categories/transportation
+    pages:
+      - https://www.stills.com/stock-images/travel
+      - https://www.stills.com/categories/archival-vintage
+      - https://www.stills.com/categories/community-neighborhoods
+      - https://www.stills.com/categories/architecture
+      - https://www.stills.com/categories/transportation?page=2
+      - https://www.stills.com/stock-images/travel?page=2
+      - https://www.stills.com/categories/archival-vintage?page=2
+      - https://www.stills.com/categories/community-neighborhoods?page=2
+      - https://www.stills.com/categories/architecture?page=2
+      - https://www.stills.com/categories/transportation?page=3
+      - https://www.stills.com/stock-images/travel?page=3
+      - https://www.stills.com/categories/archival-vintage?page=3
+      - https://www.stills.com/categories/community-neighborhoods?page=3
+      - https://www.stills.com/categories/architecture?page=3
+      - https://www.stills.com/categories/transportation?page=4
+      - https://www.stills.com/stock-images/travel?page=4
+      - https://www.stills.com/categories/archival-vintage?page=4
+      - https://www.stills.com/categories/community-neighborhoods?page=4
+      - https://www.stills.com/categories/architecture?page=4
+      - https://www.stills.com/categories/transportation?page=5
+      - https://www.stills.com/stock-images/travel?page=5
+      - https://www.stills.com/categories/archival-vintage?page=5
+      - https://www.stills.com/categories/community-neighborhoods?page=5
+      - https://www.stills.com/categories/architecture?page=5
+      - https://www.stills.com/categories/transportation?page=6
+      - https://www.stills.com/stock-images/travel?page=6
+      - https://www.stills.com/categories/archival-vintage?page=6
+      - https://www.stills.com/categories/community-neighborhoods?page=6
+      - https://www.stills.com/categories/architecture?page=6
+      - https://www.stills.com/categories/transportation?page=7
+      - https://www.stills.com/stock-images/travel?page=7
+      - https://www.stills.com/categories/archival-vintage?page=7
+      - https://www.stills.com/categories/community-neighborhoods?page=7
+      - https://www.stills.com/categories/architecture?page=7
+      - https://www.stills.com/categories/transportation?page=8
+      - https://www.stills.com/stock-images/travel?page=8
+      - https://www.stills.com/categories/archival-vintage?page=8
+      - https://www.stills.com/categories/community-neighborhoods?page=8
+      - https://www.stills.com/categories/architecture?page=8
+      - https://www.stills.com/categories/transportation?page=9
+      - https://www.stills.com/stock-images/travel?page=9
+      - https://www.stills.com/categories/archival-vintage?page=9
+      - https://www.stills.com/categories/community-neighborhoods?page=9
+      - https://www.stills.com/categories/architecture?page=9
+      - https://www.stills.com/categories/transportation?page=10
+      - https://www.stills.com/stock-images/travel?page=10
+      - https://www.stills.com/categories/archival-vintage?page=10
+      - https://www.stills.com/categories/community-neighborhoods?page=10
+      - https://www.stills.com/categories/architecture?page=10
+    max_depth: 0
+    max_photos: 3500
     keep_old: true
     lists: [Stills]
-    note: Curated photography from the Stills library. A different set of their artists each day, about 6 photos each.
+    note: Stills library, categories Transportation, Travel, Archival & Vintage, Community & Neighborhoods and Architecture. 10 pages of each.
 
 
 suggested: []

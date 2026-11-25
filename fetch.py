@@ -619,7 +619,7 @@ async def crawl_site(context, start, follow, log, budget, ignore_robots=False):
             # From a "follow" page we only want its main photo, not more links
             if follow_re is not None and depth > 0:
                 continue
-            if depth < MAX_DEPTH:
+            if depth < budget.get("depth", MAX_DEPTH):
                 for link in data["links"]:
                     r = rank_link(link, start, follow_re)
                     if r is None:
@@ -657,7 +657,8 @@ async def collect(person, context, log):
     pages = int(person.get("max_pages") or MAX_PAGES)
     budget = {"pages": pages + 4 * (len(sites) - 1), "images": cap,
               "per_page": int(person.get("per_page") or 0), "shuffle": bool(person.get("shuffle")),
-              "seconds": max(MAX_SECONDS, pages * 15)}
+              "seconds": max(MAX_SECONDS, pages * 15),
+              "depth": int(person["max_depth"]) if person.get("max_depth") is not None else MAX_DEPTH}
     start_pages = budget["pages"]
     buckets, feeds, problems = [], list(person.get("feeds") or []), []
     person["_guess"] = None
