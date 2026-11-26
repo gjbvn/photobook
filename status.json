@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-25T22:50:28Z",
- "seconds": 1583,
+ "updated": "2026-11-26T22:51:37Z",
+ "seconds": 1455,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -40,7 +40,7 @@
    "pages_opened": 1,
    "problem": "This website couldn’t be opened automatically. It may block automated visitors, or it was down. Tap the link to visit.",
    "details": [
-    "https://joepansa.com/portfolio — the site answered 404"
+    "https://joepansa.com/portfolio — the site answered 403"
    ]
   },
   {
@@ -187,6 +187,23 @@
    "details": []
   },
   {
+   "name": "Hans Gindlesberger",
+   "photos": 24,
+   "status": "following",
+   "sites": [
+    "https://lenscratch.com/2014/07/hans-gindlesberger-weighing-rain/"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": [
+    "https://lenscratch.com/submit/submit-to-student-prize-2026/ — the site answered 429",
+    "https://lenscratch.com/2014/07/michelle-rogers-pritzl-those-whose-hands-and-hearts-are-pure/ — the site answered 429",
+    "https://lenscratch.com/2014/07/teresa-gagliano-flaneur/ — the site answered 429",
+    "https://lenscratch.com/ — the site answered 429",
+    "https://lenscratch.com/in-focus-the-mfa-review/ — the site answered 429"
+   ]
+  },
+  {
    "name": "Jason Kummerfeldt",
    "photos": 54,
    "status": "following",
@@ -241,6 +258,17 @@
    "details": []
   },
   {
+   "name": "Todd Hido",
+   "photos": 83,
+   "status": "following",
+   "sites": [
+    "https://www.toddhido.com"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Wouter Vanhees",
    "photos": 84,
    "status": "following",
@@ -248,17 +276,6 @@
     "https://www.woutervanheesphotography.com/"
    ],
    "pages_opened": 7,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Todd Hido",
-   "photos": 84,
-   "status": "following",
-   "sites": [
-    "https://www.toddhido.com"
-   ],
-   "pages_opened": 24,
    "problem": null,
    "details": []
   },
@@ -330,7 +347,7 @@
   },
   {
    "name": "Napping in Saigon (Legal Nomads)",
-   "photos": 105,
+   "photos": 104,
    "status": "following",
    "sites": [
     "https://www.legalnomads.com/adventures-in-sleeping-an-instagram-series"
@@ -350,7 +367,7 @@
    "pages_opened": 28,
    "problem": null,
    "details": [
-    "https://www.magnumphotos.com/photographer/chris-killip/ — the site answered 404"
+    "https://www.magnumphotos.com/photographer/chris-killip/ — the site answered 403"
    ]
   },
   {
@@ -378,7 +395,7 @@
   },
   {
    "name": "Manuel Alvarez Diestro",
-   "photos": 129,
+   "photos": 125,
    "status": "following",
    "sites": [
     "https://www.designboom.com/art/manuel-alvarez-diestro-photo-series-urban-expansion-fabric-landscapes-seas-construction-06-12-2025/"
@@ -416,29 +433,7 @@
    "sites": [
     "https://philipjonesgriffiths.org/timeline/vietnam/"
    ],
-   "pages_opened": 19,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Tran Tuan Viet",
-   "photos": 143,
-   "status": "following",
-   "sites": [
-    "https://trantuanviet.com"
-   ],
-   "pages_opened": 24,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Hanoi non-intentional design (Core77)",
-   "photos": 143,
-   "status": "following",
-   "sites": [
-    "https://www.core77.com/posts/15539/postcards-from-asia-hanoi-non-intentional-design-15539"
-   ],
-   "pages_opened": 6,
+   "pages_opened": 18,
    "problem": null,
    "details": []
   },
@@ -450,6 +445,17 @@
     "https://www.nicoletung.com"
    ],
    "pages_opened": 5,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Hanoi non-intentional design (Core77)",
+   "photos": 144,
+   "status": "following",
+   "sites": [
+    "https://www.core77.com/posts/15539/postcards-from-asia-hanoi-non-intentional-design-15539"
+   ],
+   "pages_opened": 6,
    "problem": null,
    "details": []
   },
@@ -593,9 +599,11 @@
    "sites": [
     "https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/"
    ],
-   "pages_opened": 9,
-   "problem": null,
-   "details": []
+   "pages_opened": 1,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": [
+    "https://www.magnumphotos.com/photographer/gueorgui-pinkhassov/ — the site answered 403"
+   ]
   },
   {
    "name": "Catherine Karnow",
@@ -643,6 +651,17 @@
    "details": []
   },
   {
+   "name": "Tran Tuan Viet",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://trantuanviet.com"
+   ],
+   "pages_opened": 15,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Nguyen The Son",
    "photos": 150,
    "status": "following",
@@ -672,9 +691,11 @@
    "sites": [
     "https://www.magnumphotos.com/photographer/jean-gaumy/"
    ],
-   "pages_opened": 9,
-   "problem": null,
-   "details": []
+   "pages_opened": 1,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": [
+    "https://www.magnumphotos.com/photographer/jean-gaumy/ — the site answered 403"
+   ]
   },
   {
    "name": "Rob Hornstra",
@@ -708,9 +729,11 @@
     "https://www.magnumphotos.com/photographer/alec-soth/",
     "https://alecsoth.com/photography/"
    ],
-   "pages_opened": 18,
+   "pages_opened": 7,
    "problem": null,
-   "details": []
+   "details": [
+    "https://www.magnumphotos.com/photographer/alec-soth/ — the site answered 403"
+   ]
   },
   {
    "name": "Bernd & Hilla Becher",
@@ -720,10 +743,14 @@
     "https://spruethmagers.com/artists/bernd-hilla-becher/",
     "https://www.moma.org/artists/436"
    ],
-   "pages_opened": 4,
+   "pages_opened": 28,
    "problem": null,
    "details": [
-    "https://www.moma.org/artists/436 — the site answered 403"
+    "https://www.moma.org/collection/ — the site answered 403",
+    "https://www.moma.org/calendar/film — the site answered 403",
+    "https://www.moma.org/calendar/exhibitions/history — the site answered 403",
+    "https://www.moma.org/collection/works/2106?artist_id=436&page=1&sov_referrer=artist — the site answered 403",
+    "https://www.moma.org/ — the site answered 403"
    ]
   },
   {
@@ -766,9 +793,11 @@
    "sites": [
     "https://www.magnumphotos.com/photographer/ian-berry/"
    ],
-   "pages_opened": 9,
-   "problem": null,
-   "details": []
+   "pages_opened": 1,
+   "problem": "Couldn’t reach the website this time; showing the photos found before.",
+   "details": [
+    "https://www.magnumphotos.com/photographer/ian-berry/ — the site answered 403"
+   ]
   },
   {
    "name": "QT Luong",
@@ -779,17 +808,6 @@
     "https://terragalleria.com/pictures-subjects/people-sleeping"
    ],
    "pages_opened": 28,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Hans Gindlesberger",
-   "photos": 150,
-   "status": "following",
-   "sites": [
-    "https://lenscratch.com/2014/07/hans-gindlesberger-weighing-rain/"
-   ],
-   "pages_opened": 22,
    "problem": null,
    "details": []
   },
@@ -857,7 +875,7 @@
    "sites": [
     "https://mymodernmet.com/neon-photography-xavier-portela/"
    ],
-   "pages_opened": 19,
+   "pages_opened": 20,
    "problem": null,
    "details": [
     "https://mymodernmet.com/?p=373856&preview=true&preview_id=373856 — the site answered 404",
@@ -896,13 +914,13 @@
    "sites": [
     "https://vietcetera.com/en/a-brief-history-of-the-vietnamese-plastic-stool"
    ],
-   "pages_opened": 11,
+   "pages_opened": 9,
    "problem": null,
    "details": []
   },
   {
    "name": "Stills",
-   "photos": 3010,
+   "photos": 3007,
    "status": "following",
    "sites": [
     "https://www.stills.com/categories/transportation",
