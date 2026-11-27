@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-26T22:51:37Z",
- "seconds": 1455,
+ "updated": "2026-11-27T22:51:46Z",
+ "seconds": 1393,
  "photographers": [
   {
    "name": "Tatsuo Suzuki",
@@ -131,6 +131,23 @@
    "details": []
   },
   {
+   "name": "Michael Wolf",
+   "photos": 4,
+   "status": "following",
+   "sites": [
+    "https://photomichaelwolf.com"
+   ],
+   "pages_opened": 24,
+   "problem": null,
+   "details": [
+    "https://photomichaelwolf.com/multiples/ — Page.goto: net::ERR_CONNECTION_REFUSED at https://photomichaelwolf.com/multiples/",
+    "https://photomichaelwolf.com/books/ — Page.goto: net::ERR_CONNECTION_REFUSED at https://photomichaelwolf.com/books/",
+    "https://photomichaelwolf.com/exhibitions/ — Page.goto: net::ERR_CONNECTION_REFUSED at https://photomichaelwolf.com/exhibitions/",
+    "https://photomichaelwolf.com/representation/ — Page.goto: net::ERR_CONNECTION_REFUSED at https://photomichaelwolf.com/representation/",
+    "https://photomichaelwolf.com/le-petit-journal/ — Page.goto: net::ERR_CONNECTION_REFUSED at https://photomichaelwolf.com/le-petit-journal/"
+   ]
+  },
+  {
    "name": "Henri Cartier-Bresson",
    "photos": 6,
    "status": "following",
@@ -176,36 +193,8 @@
    "details": []
   },
   {
-   "name": "Michael Wolf",
-   "photos": 17,
-   "status": "following",
-   "sites": [
-    "https://photomichaelwolf.com"
-   ],
-   "pages_opened": 24,
-   "problem": null,
-   "details": []
-  },
-  {
-   "name": "Hans Gindlesberger",
-   "photos": 24,
-   "status": "following",
-   "sites": [
-    "https://lenscratch.com/2014/07/hans-gindlesberger-weighing-rain/"
-   ],
-   "pages_opened": 24,
-   "problem": null,
-   "details": [
-    "https://lenscratch.com/submit/submit-to-student-prize-2026/ — the site answered 429",
-    "https://lenscratch.com/2014/07/michelle-rogers-pritzl-those-whose-hands-and-hearts-are-pure/ — the site answered 429",
-    "https://lenscratch.com/2014/07/teresa-gagliano-flaneur/ — the site answered 429",
-    "https://lenscratch.com/ — the site answered 429",
-    "https://lenscratch.com/in-focus-the-mfa-review/ — the site answered 429"
-   ]
-  },
-  {
    "name": "Jason Kummerfeldt",
-   "photos": 54,
+   "photos": 55,
    "status": "following",
    "sites": [
     "https://graincheck.darkroom.com"
@@ -258,17 +247,6 @@
    "details": []
   },
   {
-   "name": "Todd Hido",
-   "photos": 83,
-   "status": "following",
-   "sites": [
-    "https://www.toddhido.com"
-   ],
-   "pages_opened": 24,
-   "problem": null,
-   "details": []
-  },
-  {
    "name": "Wouter Vanhees",
    "photos": 84,
    "status": "following",
@@ -276,6 +254,17 @@
     "https://www.woutervanheesphotography.com/"
    ],
    "pages_opened": 7,
+   "problem": null,
+   "details": []
+  },
+  {
+   "name": "Todd Hido",
+   "photos": 84,
+   "status": "following",
+   "sites": [
+    "https://www.toddhido.com"
+   ],
+   "pages_opened": 24,
    "problem": null,
    "details": []
   },
@@ -383,19 +372,8 @@
    "details": []
   },
   {
-   "name": "Aurélien Aumond",
-   "photos": 118,
-   "status": "following",
-   "sites": [
-    "https://www.designboom.com/architecture/aurelien-aumond-serene-glow-tokyo-buildings-after-dark-iphone-lens-09-12-2024/"
-   ],
-   "pages_opened": 4,
-   "problem": null,
-   "details": []
-  },
-  {
    "name": "Manuel Alvarez Diestro",
-   "photos": 125,
+   "photos": 119,
    "status": "following",
    "sites": [
     "https://www.designboom.com/art/manuel-alvarez-diestro-photo-series-urban-expansion-fabric-landscapes-seas-construction-06-12-2025/"
@@ -433,7 +411,18 @@
    "sites": [
     "https://philipjonesgriffiths.org/timeline/vietnam/"
    ],
-   "pages_opened": 18,
+   "pages_opened": 1,
+   "problem": "No photos were found this time; showing the photos found before.",
+   "details": []
+  },
+  {
+   "name": "Aurélien Aumond",
+   "photos": 137,
+   "status": "following",
+   "sites": [
+    "https://www.designboom.com/architecture/aurelien-aumond-serene-glow-tokyo-buildings-after-dark-iphone-lens-09-12-2024/"
+   ],
+   "pages_opened": 5,
    "problem": null,
    "details": []
   },
@@ -466,8 +455,8 @@
    "sites": [
     "https://www.thomasheaton.co.uk"
    ],
-   "pages_opened": 20,
-   "problem": null,
+   "pages_opened": 1,
+   "problem": "No photos were found this time; showing the photos found before.",
    "details": []
   },
   {
@@ -555,8 +544,8 @@
    "sites": [
     "https://www.rehahnphotographer.com"
    ],
-   "pages_opened": 8,
-   "problem": null,
+   "pages_opened": 1,
+   "problem": "No photos were found this time; showing the photos found before.",
    "details": []
   },
   {
@@ -705,7 +694,7 @@
     "https://www.thesochiproject.org",
     "https://www.robhornstra.com"
    ],
-   "pages_opened": 12,
+   "pages_opened": 10,
    "problem": null,
    "details": []
   },
@@ -743,14 +732,10 @@
     "https://spruethmagers.com/artists/bernd-hilla-becher/",
     "https://www.moma.org/artists/436"
    ],
-   "pages_opened": 28,
+   "pages_opened": 4,
    "problem": null,
    "details": [
-    "https://www.moma.org/collection/ — the site answered 403",
-    "https://www.moma.org/calendar/film — the site answered 403",
-    "https://www.moma.org/calendar/exhibitions/history — the site answered 403",
-    "https://www.moma.org/collection/works/2106?artist_id=436&page=1&sov_referrer=artist — the site answered 403",
-    "https://www.moma.org/ — the site answered 403"
+    "https://www.moma.org/artists/436 — the site answered 403"
    ]
   },
   {
@@ -812,6 +797,17 @@
    "details": []
   },
   {
+   "name": "Hans Gindlesberger",
+   "photos": 150,
+   "status": "following",
+   "sites": [
+    "https://lenscratch.com/2014/07/hans-gindlesberger-weighing-rain/"
+   ],
+   "pages_opened": 22,
+   "problem": null,
+   "details": []
+  },
+  {
    "name": "Abir Abdullah",
    "photos": 150,
    "status": "following",
@@ -840,8 +836,8 @@
    "sites": [
     "https://greggirard.com"
    ],
-   "pages_opened": 2,
-   "problem": null,
+   "pages_opened": 1,
+   "problem": "No photos were found this time; showing the photos found before.",
    "details": []
   },
   {
@@ -853,9 +849,7 @@
    ],
    "pages_opened": 19,
    "problem": null,
-   "details": [
-    "https://www.thisiscolossal.com/?memberful_endpoint=auth — the site answered 403"
-   ]
+   "details": []
   },
   {
    "name": "Franck Bohbot",
@@ -920,7 +914,7 @@
   },
   {
    "name": "Stills",
-   "photos": 3007,
+   "photos": 3025,
    "status": "following",
    "sites": [
     "https://www.stills.com/categories/transportation",
